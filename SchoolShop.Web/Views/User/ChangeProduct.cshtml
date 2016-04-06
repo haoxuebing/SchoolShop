@@ -1,0 +1,319 @@
+﻿@using SchoolShop.FrameWork.Utility
+@using SchoolShop.Model
+@model SchoolShop.Model.Users
+@{
+    List<Catalogs> listCatalogs = this.ViewBag.listCatalogs;
+    Layout = null;
+}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>个人主页</title>
+    <link href="/css/base.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/ddcss/left_caidan.css" />
+    <link rel="stylesheet" href="/css/ddcss/base.css" />
+    <link rel="stylesheet" href="/css/ddcss/top2.css" />
+    <link rel="stylesheet" href="/css/ddcss/bottom.css" />
+    <link rel="stylesheet" href="/css/ddcss/personal_info.css" />
+    <script src="/js/ddjs/jquery-1.11.3.js" charset="utf-8"></script>
+    <script src="/js/ddjs/seller.js" charset="utf-8"></script>
+    <link href="/js/uploadify/uploadify.css" rel="stylesheet" />
+    <script src="/js/uploadify/jquery.uploadify.min.js"></script>
+
+    <script src="/KE/kindeditor-min.js"></script>
+    <script src="/KE/lang/zh_CN.js"></script>
+    <script type="text/javascript">
+
+
+        KindEditor.ready(function (k) {
+            k.create('#k_textarea', {
+                uploadJson: '/Public/upload_json.ashx',//使用这个一般处理程序 实现处理图片的上传
+                fileManagerJson: '/Public/file_manager_json.ashx',//使用这个一般处理程序实现实现管理服务器的图片
+                allowFileManager: true,
+                afterCreate: function () {
+                    this.sync();
+                },
+                afterBlur: function () {
+                    this.sync();
+                }
+            })
+        });
+
+        $(function () {
+
+            $('#productPicture').uploadify({
+                height: 32,
+                width: 132,
+                swf: '/js/uploadify/uploadify.swf',
+                uploader: '/user/UpLoadPicture',
+                buttonText: '上传照片',
+                formData: {
+                    action: 'ProductPic'
+                },
+                successTimeout: 99999,
+                fileSizeLimit: '2MB',
+                fileTypeExts: '*.jpg;*.jpge;*.png',
+                onUploadSuccess: function (file, data, response) {
+                    var result = JSON.parse(data);
+                    if (result.Result) {
+                        $("#productPic").attr("src", "data:image/" + result.Data.split('|')[0] + ";base64," + result.Data.split('|')[1]);
+                        $('#picUrl').val(result.NameUrl);
+
+                    }
+                }
+            });
+
+            $('input[name="update"]').click(function () {
+                var productName = $("#productName").val();
+                var picUrl = $("#picUrl").val();
+                var productPrice = $("#productPrice").val();
+                var phone = $("#phone").val();
+                var describe = $("#describe").val();
+                var k_textarea = $(".ke-content").html();
+
+            });
+
+
+            $("#selmain").change(function () {
+                var sel = $(this).val();
+                $("#selminor").html("");
+                var catalogs=@(new MvcHtmlString(SerializeHelper.SerializeToJson(listCatalogs.GroupBy(c => c.ParentID).ToDictionary(o => o.Key, o => o.ToList()))));
+                for(var key in catalogs){
+                    if(key==sel){
+                        for (var catalog in catalogs[key]) {
+                            var selHtml='<option value="'+catalogs[key][catalog].CatalogID+'">'+catalogs[key][catalog].CatalogName+'</option>';
+                            $("#selminor").append(selHtml);
+                        }
+                    }
+                }
+
+            })
+
+
+        })
+
+    </script>
+
+</head>
+
+<body>
+    <div class="Grey">
+        <!--顶部-->
+        <div class="top">
+            <div class="top-c">
+                <div class="top-left">
+                    <a href="javascript:;" class="collect">收藏</a>
+                    <a href="javascript:;" class="wechat">微信</a>
+                </div>
+                @{
+                    if (Model.UID != 0)
+                    {
+                        <div class="top-right">
+                            <p>@(Model.NickName)</p>
+                            <p><a href="/User/CancelLogin">注销</a>
+                            <p><a href="/User/UserInfo">个人中心</a> | <a href="javascript:;">我的订单</a></p>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="top-right">
+                            <p>欢迎来到石院商城</p>
+                            <p><a href="/User/Login">请登录</a> | <a href="/User/Register">免费注册</a></p>
+                            <p><a href="/User/UserInfo">个人中心</a> | <a href="javascript:;">我的订单</a></p>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+        <!--导航-->
+        <div class="nav">
+            <div class="juzhong clearfix">
+                <a href="/"><img src="/images/logo.png" /></a>
+                <a href="/User/UserInfo" class="nav_a nav_a1">个人中心</a>
+                <a href="/User/UserAttention" class="nav_a">帐户中心</a>
+                <a href="/User/UserMessage" class="nav_a">消息中心</a>
+                <div class="fr nav_div2">
+                    <input type="text" class="nav_text" id="keyWordText" value="请输入关键字" onfocus="this.value=''" onblur="if(!value){value=defaultValue;}" />
+                    <input type="button" value="搜索" class="nav_button" id="searchKeyWord" />
+                </div>
+            </div>
+        </div>
+        <!--内容左栏菜单-->
+        <div class="juzhong">
+            @Html.Action("SSLeft", "Shared")
+
+            <!-- 个人主页 -->
+            <div class="personal-info">
+                <h2>发布商品</h2>
+                <form class="personal-form" method="post" action="/User/SaveProductInfo">
+
+                    <div class="form-item">
+                        <span><b>*</b>选择分类：</span>
+
+                        <select id="selmain">
+                            <option value="-1" selected>请选择</option>
+                            @foreach (var item in listCatalogs)
+                            {
+                                if (item.ParentID == "00")
+                                {
+                                    <option value="@item.CatalogID">@item.CatalogName</option>
+                                }
+                            }
+                        </select>
+
+                        <select id="selminor" name="selminor">
+                            <option value="-1">请选择</option>
+                        </select>
+
+                    </div>
+                    <div class="form-item">
+                        <span><b>*</b>品名：</span>
+                        <input type="text" id="productName" name="productName" value="">
+                    </div>
+                    <div class="form-item clearfix">
+                        <span style="float:left;">上传照片：</span>
+                        <div style="float:left;">
+                            <a class="button" href="#" id="productPicture"></a>
+                            <img src="/images/moren.png" id="productPic" style="border-radius: 12%;" height="277" />
+                            <input type="hidden" id="picUrl" name="picUrl" value="">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <span><b>*</b>价格：</span>
+                        <input type="text" id="productPrice" name="productPrice" value="">
+                    </div>
+                    <div class="form-item">
+                        <span><b>*</b>联系方式：</span>
+                        <input type="text" id="phone" name="phone" value="">
+                    </div>
+                    <div class="form-item">
+                        <span><b>*</b>简述：</span>
+                        <input type="text" id="describe" name="describe" value="">
+                    </div>
+                    <div class="form-item">
+                        <span><b>*</b>标签：</span>
+                        <input type="text" id="remark" name="remark" value=""><span>搜索标签</span>
+                    </div>
+                    <div class="form-item">
+                        <span><b>*</b>详细介绍：</span>
+                        <textarea id="k_textarea" name="k_textarea" style="width:800px; height:400px "></textarea>
+                    </div>
+
+
+                    <div class="form-item form-item-fix">
+                        <input type="submit" name="update" value="保存">
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--底部-->
+    <div class="bottom">
+        <div class="Sbox">
+            <ul class="Atthebottom ">
+                <li>
+                    <a href="#">
+                        全程冷链配送
+                        <i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        有机绿色无公害
+                        <i class="ai"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        从基地到餐桌
+                        <i class="ai1"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        满59元免运送费
+                        <i class="ai2"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        社区最后一公里
+                        <i class="ai3"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="Safety clearfix ">
+                <dl class="Safetys">
+                    <dt>食品安全</dt>
+                    <dd><a href="#">食品卫生</a></dd>
+                    <dd><a href="#">食品监督</a></dd>
+                    <dd><a href="#">质量检测</a></dd>
+                </dl>
+                <dl class="Safetys Novice">
+                    <dt>新手上路</dt>
+                    <dd><a href="#">注册登录</a></dd>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">团购说明</a></dd>
+                </dl>
+                <dl class="Safetys Distribution">
+                    <dt>配送方式</dt>
+                    <dd><a href="#">配送范围</a></dd>
+                    <dd><a href="#">配送费用</a></dd>
+                    <dd><a href="#">配送时间</a></dd>
+                </dl>
+                <dl class="Safetys Novice">
+                    <dt>支付方式</dt>
+                    <dd><a href="#">货到付款</a></dd>
+                    <dd><a href="#">货到刷卡</a></dd>
+                    <dd><a href="#">在线支付</a></dd>
+                </dl>
+                <dl class="Safetys Service">
+                    <dt>售后服务</dt>
+                    <dd><a href="#">退换货条件</a></dd>
+                    <dd><a href="#">退换货流程</a></dd>
+                    <dd><a href="#">退换货准则</a></dd>
+                </dl>
+                <div class="Client">
+                    <p class="Client_p">
+                        手机客户端
+                        <i></i>
+                    </p>
+                    <p class="Client_p1">轻松购物，迅速到家！</p>
+                    <div class="Client_div">
+                        <i class="Client_div_i"></i>
+                        <a href="#" class="Client_div_a"></a>
+                        <a href="#" class="Client_div_a1"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom1">
+        <div class="bottom1_div">
+            <a href="#">关于我们</a>
+            <i>|</i>
+            <a href="#">法律声明</a>
+            <i>|</i>
+            <a href="#">服务条款</a>
+            <i>|</i>
+            <a href="#">隐私声名</a>
+            <i>|</i>
+            <a href="#">联系我们</a>
+            <i>|</i>
+            <a href="#">网站地图</a>
+        </div>
+        <p class="bottom1_p">北京市公安局朝阳分局备案编号110105014669<span>|</span>京ICP证070359号</p>
+        <p class="bottom1_p1">
+            Copyright © 2004-2015 呆呆购物DDGW8.com 版权所有
+        </p>
+    </div>
+
+    <!--遮罩-->
+    <div class="zhezhao" id="zhezhao" style=" display:none;"></div>
+</body>
+</html>

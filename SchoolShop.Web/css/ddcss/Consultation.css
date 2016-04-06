@@ -1,0 +1,200 @@
+@charset "utf-8";
+/* CSS Document */
+html{
+	height:100%;}
+body{
+	height:100%;}
+.Con{
+	width:287px;
+	height:70%;
+	position:fixed; right:0px; top:30%;
+	background:#eceaeb;
+	border-left:6px solid #787878;
+	border-top:6px solid #787878;
+	z-index:999;
+}
+.Con_div_p{
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#5C5C5C;
+	padding-left:37px;
+	margin-top:13px;
+	position:relative;}
+.Con_div_p i{
+	position:absolute; left:10px; top:2px;
+	width:25px;
+	height:18px;
+	background:url(../img/shangjia.png) -44px -88px;}
+.Con_em{
+	position:absolute; right:5px; top:5px;
+	width:10px;
+	height:10px;
+	background:url(../img/shangjia.png) 0 -88px;}
+.Con_p{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#5C5C5C;
+	margin-left:8px;
+	margin-top:15px;}
+.Con_p1{
+	max-width:230px;
+	background:#FFF;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#010101;
+	line-height:20px;
+	padding:10px 5px 10px;
+	margin-left:15px;
+	margin-top:5px;
+	position:relative;
+	border-radius:5px;
+	display:inline-block;
+	}
+.Con_p1 i{
+	position:absolute; left:-7px; top:0px;
+	width:8px;
+	height:8px;
+	background:url(../img/shangjia.png) 0 -100px;}
+.Con_p2{
+	width:258px;
+	text-align:right;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#08ac29;
+	margin-top:10px;}
+.Con_p3{
+	max-width:230px;
+	background:#08ac29;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#FFF;
+	line-height:20px;
+	padding:10px 5px 10px;
+	margin-left:15px;
+	margin-top:5px;
+	position:relative;
+	border-radius:5px;
+	display:inline-block;
+	}
+.Con_div1{
+	width:258px;
+	text-align:right;}
+.Con_p3 i{
+	position:absolute; right:-5px; top:0px;
+	width:8px;
+	height:8px;
+	background:url(../img/shangjia.png) -9px -100px;} 
+.Con_ta{
+	width:100%;
+	height:70px;
+	resize:none;
+	outline:none;
+	overflow:auto;
+	margin-bottom:0px;
+	display:block;}
+.Con_but{
+	width:100%;
+	height:32px;
+	background:#08ac29;
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#FFF;
+	outline:none;
+	border:none;
+	padding:0px;
+	display:block;
+	}
+.chaochu{
+	height:250px;
+	overflow:auto;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

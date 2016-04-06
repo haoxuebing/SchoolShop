@@ -1,0 +1,16 @@
+.uploadify, .swfupload {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100% !important;
+	width: 100% !important;
+}
+.uploadify-button {
+	display: none;
+}
+.uploadify-button-text {
+	height: 100% !important;
+}
+.uploadify-queue-item>span {
+	color: #000;
+}

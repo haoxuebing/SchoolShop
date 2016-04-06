@@ -1,0 +1,205 @@
+@charset "utf-8";
+/* CSS Document */
+.zx_juz{
+	width:1200px;
+	margin:0 auto;
+	margin-top:10px;
+	margin-bottom:20px;}
+.zx_left{
+	width:209px;
+	height:342px;
+	border:1px solid #ddd;}
+.zx_Infor{
+	line-height:30px;
+	background:#f7f7f7;
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#333;
+	padding-left:10px;
+	}
+.zx_Commodity{
+	display:block;
+	width:100%;
+	text-align:center;
+	margin-top:20px;}
+.zx_Commodity img{
+	width:130px;
+	height:130px;}
+.zx_name{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#666;
+	margin-left:10px;
+	margin-top:20px;
+	width:189px;}
+.zx_name a{
+	color:#005aa0;}
+.zx_Price{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#666;
+	margin-left:10px;
+	margin-top:5px;}
+.zx_Price span{
+	font-size:14px;
+	color:#E4393C;}
+.zx_Join{
+	text-align:center;
+	position:relative;
+	margin-top:10px;}
+.zx_Join_a{
+	display:block;
+	width:135px;
+	height:36px;
+	background:url(../img/shangjia.png) -65px -311px;
+	margin-left:36px;}
+.zx_right{
+	width:970px;}
+.zx_Con{
+	width:100%;
+	height:29px;
+	border:1px solid #DDD;
+	border-top:2px solid #999;
+	background:#f7f7f7;}
+.zx_Con p{
+	display:inline-block;
+	padding:0 11px 0;
+	height:34px;
+	border-top:2px solid #e4393c;
+	line-height:34px;
+	background:#FFF;
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+	margin-top:-6px;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#e4393c;
+	font-weight:bold;}
+.zx_Con a{
+	color:#005ea7;
+	line-height:30px;
+	margin-right:15px;}
+.zx_Net{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#999;
+	margin-left:20px;
+	margin-top:20px;}
+.zx_Content{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#666;
+	margin-left:20px;
+	margin-top:10px;}
+.zx_Reply{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#ff6600;
+	margin-left:20px;
+	margin-top:10px;
+	width:800px;}
+.zx_Reply_p{
+	width:670px;}
+.zx_Publish{
+	width:970px;
+	border:1px solid #DDD;
+	border-top:2px solid #999;
+	margin-top:30px;}
+.zx_Publish_h3{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#666;
+	font-weight:bold;
+	padding:10px 0 0 9px;}
+.zx_Publish_p{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#666;
+	margin-top:20px;
+	margin-left:15px;}
+.zx_Publish_div p{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#666;
+	font-weight:bold;
+	display:inline-block;}
+.zx_Publish_div textarea{
+	width:506px;
+	height:106px;}
+.zx_Publish_div{
+	margin-top:10px;
+	margin-left:20px;}
+.zx_Submit{
+	margin-left:95px;
+	margin-top:15px;
+	display:block;
+	margin-bottom:10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

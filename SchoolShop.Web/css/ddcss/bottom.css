@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* 底部 */
+.bottom{
+	min-width:1200px;
+	background:#f0f0f0;}
+.Atthebottom li{
+	float:left;
+	font-size:14px;
+	font-family:"新宋体";
+	position:relative;
+	margin-right:100px;}
+.Atthebottom{
+	height:45px;
+	border-bottom:1px solid #e0e0e0;
+	padding-top:25px;
+	padding-left:179px; }
+.Atthebottom i{
+	width:46px;
+	height:46px;
+	display:block;
+	background-image:url(../img/zonghe.png);
+	position:absolute; left:-53px; top:-16px;
+	background-position:-200px -129px;}
+.Atthebottom .ai{
+	background-position:-247px -129px;}
+.Atthebottom .ai1{
+	background-position:-297px -129px;}
+.Atthebottom .ai2{
+	background-position:-346px -129px;}
+.Atthebottom .ai3{
+	background-position:-397px -129px;}
+.Safety{
+	border-top:1px solid #FFFFFF;
+
+	padding-left:30px;
+	padding-top:20px;}
+.Safetys{
+	margin-right:120px;
+	float:left;}
+.Safetys dt{
+	font-size:16px;
+	font-family:"新宋体";
+	margin-bottom:15px;}
+.Safetys a{
+	font-size:12px;
+	color:#948e8e;
+	}
+.Safetys dd{
+	margin-bottom:18px;}
+.Novice{
+	margin-right:137px;}
+.Distribution{
+	margin-right:145px;}
+.Service{
+	padding-right:60px;
+	margin-right:0px;
+	border-right:1px solid #FFFFFF;}
+.Client{
+	float:left;
+	border-left:1px solid #e0e0e0;
+	padding-left:23px;}
+.Client_p{
+	font-size:16px;
+	font-family:"微软雅黑";
+	color:#474646;
+	position:relative;}
+.Client_p i{
+	display:block;
+	width:23px;
+	height:11px;
+	background:url(../img/zonghe.png) no-repeat -362px -185px;
+	position:absolute; right:33px; top:6px;}
+.Client_p1{
+	font-size:14px;
+	color:#908f8f;
+	margin-top:13px;
+	font-family:"微软雅黑";}
+.Client_div{
+	position:relative;
+	margin-top:10px;}
+.Client_div_i{
+	display:block;
+	width:60px;
+	height:60px;
+	background:url(../img/zonghe.png) no-repeat -283px -230px;
+	position:absolute; left:0px; top:0px;}
+.Client_div_a{
+	display:block;
+	width:110px;
+	height:26px;
+	background:url(../img/zonghe.png) no-repeat -353px -230px;
+	position:absolute; left:70px; top:0px;}
+.Client_div_a1{
+	display:block;
+	width:110px;
+	height:26px;
+	background:url(../img/zonghe.png) no-repeat -353px -263px;
+	position:absolute; left:70px; top:33px;}
+.bottom1{
+	min-width:1200px;
+	background:#ebebeb;
+	height:85px;
+	text-align:center;
+	padding-top:10px;}
+.bottom1_div a{
+	font-size:14px;
+	font-family:"新宋体";}
+.bottom1_div i{
+	margin:0 25px 0;}
+.bottom1_p{
+	font-size:14px;
+	font-family:"新宋体";
+	color:#8a8a8a;
+	margin-top:18px;}
+.bottom1_p span{
+	margin:0 20px 0;}
+.bottom1_p1{
+	font-size:14px;
+	font-family:"新宋体";
+	color:#8a8a8a;
+	margin-top:10px;}
+

@@ -1,0 +1,189 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>安全中心</title>
+    <link href="/css/base.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/ddcss/Account_security.css" />
+    <link rel="stylesheet" href="/css/ddcss/left_caidan.css" />
+    <link rel="stylesheet" href="/css/ddcss/base.css" />
+    <link rel="stylesheet" href="/css/ddcss/top2.css" />
+    <link rel="stylesheet" href="/css/ddcss/bottom.css" />
+    <script src="/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $('#searchKeyWord').click(function () {
+                var keyWord = $('#keyWordText').val();
+                window.open("/Product/SearchProduct?keyWord=" + keyWord, "_self");
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="Grey">
+        <!--顶部-->
+        @Html.Action("SSTop", "Shared")
+        <!--导航-->
+        <div class="nav">
+            <div class="juzhong clearfix">
+                <a href="/"><img src="/images/logo.png" /></a>
+                <a href="/User/UserInfo" class="nav_a nav_a1">个人中心</a>
+                <a href="/Security/UserSecurity" class="nav_a  nav_a4">帐户中心</a>
+                <a href="/User/UserMessage" class="nav_a">消息中心</a>
+                <div class="fr nav_div2">
+                    <input type="text" class="nav_text" id="keyWordText" value="请输入关键字" onfocus="this.value=''" onblur="if(!value){value=defaultValue;}" />
+                    <input type="button" value="搜索" class="nav_button" id="searchKeyWord" />
+                </div>
+            </div>
+        </div>
+        <!--内容左栏菜单-->
+        <div class="juzhong clearfix">
+            @Html.Action("SSLeft", "Shared")
+
+            <!--内容右栏菜单-->
+            <div class="right_caidan fl">
+                <h3 class="Safety_h3">安全中心</h3>
+                <div class="Level clearfix">
+                    <p class="Level_p fl">安全级别</p>
+                    <div class="Level_div fl"><i></i></div>
+                    <p class="Level_p1 fl">较高</p>
+                    <p class="Level_p2 fl"><span>建议您启动全部安全设置，以保障账户及资金安全。</span></p>
+                    <a href="#" class="Level_a fr">账号解绑</a>
+                </div>
+                <div class="Password clearfix">
+                    <i class="Password_i fl Password_i1"></i>
+                    <p class="Password_p fl">登录密码</p>
+                    <p class="Password_p1 fl">互联网账号存在被盗风险，建议您定期更改密码以保账户安全</p>
+                    <a href="/Security/Security_Password" class="Password_a fr">修改</a>
+                </div>
+                @*<div class="Password clearfix">
+                    <i class="Password_i fl Password_i2"></i>
+                    <p class="Password_p fl">邮箱验证<i></i></p>
+                    <p class="Password_p1 fl">您的验证邮箱：<em>8******1@qq.com</em></p>
+                    <a href="" class="Password_a fr">修改</a>
+                </div>
+                <div class="Password clearfix">
+                    <i class="Password_i fl"></i>
+                    <p class="Password_p fl">手机验证<i></i></p>
+                    <p class="Password_p1 fl">您验证的手机：<em>135***198</em>若已丢失或停用，请立即更换，<span>避免账号被盗</span></p>
+                    <a href="" class="Password_a fr">修改</a>
+                </div>
+                <div class="Password clearfix">
+                    <i class="Password_i fl"></i>
+                    <p class="Password_p fl icon-03">支付密码<i></i></p>
+                    <p class="Password_p1 fl">安全程度：<strong class="Password_p1_st"><i></i></strong>建议您设置更高强度的密码。</p>
+                    <a href="" class="Password_a1 fr">支付密码管理</a>
+                </div>*@
+                <!--<div class="Password clearfix">
+                    <i class="Password_i fl icon-01"></i>
+                    <p class="Password_p fl icon-04">数字证书<i></i></p>
+                    <p class="Password_p1 fl">启用数字证书，修改密码等账户安全操作将只能在安装了数字证书的设备上进行。</p>
+                    <a href="" class="Password_a1 Password_a2 fr">立即启用</a>
+                </div>-->
+            </div>
+        </div>
+
+        <!--底部-->
+        <div class="bottom">
+            <div class="Sbox">
+                <ul class="Atthebottom ">
+                    <li>
+                        <a href="#">
+                            全程冷链配送
+                            <i></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            有机绿色无公害
+                            <i class="ai"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            从基地到餐桌
+                            <i class="ai1"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            满59元免运送费
+                            <i class="ai2"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            社区最后一公里
+                            <i class="ai3"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="Safety clearfix ">
+                    <dl class="Safetys">
+                        <dt>食品安全</dt>
+                        <dd><a href="#">食品卫生</a></dd>
+                        <dd><a href="#">食品监督</a></dd>
+                        <dd><a href="#">质量检测</a></dd>
+                    </dl>
+                    <dl class="Safetys Novice">
+                        <dt>新手上路</dt>
+                        <dd><a href="#">注册登录</a></dd>
+                        <dd><a href="#">购物流程</a></dd>
+                        <dd><a href="#">团购说明</a></dd>
+                    </dl>
+                    <dl class="Safetys Distribution">
+                        <dt>配送方式</dt>
+                        <dd><a href="#">配送范围</a></dd>
+                        <dd><a href="#">配送费用</a></dd>
+                        <dd><a href="#">配送时间</a></dd>
+                    </dl>
+                    <dl class="Safetys Novice">
+                        <dt>支付方式</dt>
+                        <dd><a href="#">货到付款</a></dd>
+                        <dd><a href="#">货到刷卡</a></dd>
+                        <dd><a href="#">在线支付</a></dd>
+                    </dl>
+                    <dl class="Safetys Service">
+                        <dt>售后服务</dt>
+                        <dd><a href="#">退换货条件</a></dd>
+                        <dd><a href="#">退换货流程</a></dd>
+                        <dd><a href="#">退换货准则</a></dd>
+                    </dl>
+                    <div class="Client">
+                        <p class="Client_p">
+                            手机客户端
+                            <i></i>
+                        </p>
+                        <p class="Client_p1">轻松购物，迅速到家！</p>
+                        <div class="Client_div">
+                            <i class="Client_div_i"></i>
+                            <a href="#" class="Client_div_a"></a>
+                            <a href="#" class="Client_div_a1"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom1">
+            <div class="bottom1_div">
+                <a href="#">关于我们</a>
+                <i>|</i>
+                <a href="#">法律声明</a>
+                <i>|</i>
+                <a href="#">服务条款</a>
+                <i>|</i>
+                <a href="#">隐私声名</a>
+                <i>|</i>
+                <a href="#">联系我们</a>
+                <i>|</i>
+                <a href="#">网站地图</a>
+            </div>
+            <p class="bottom1_p">北京市公安局朝阳分局备案编号110105014669<span>|</span>京ICP证070359号</p>
+            <p class="bottom1_p1">
+                Copyright © 2004-2015 呆呆购物DDGW8.com 版权所有
+            </p>
+        </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+﻿@model SchoolShop.Model.Users
+
+<link href="/js/easydialog/easydialog.css" rel="stylesheet" />
+<script src="/js/easydialog/easydialog.min.js"></script>
+<script type="text/javascript">
+    function showLoading() {
+        //easyDialog.open({
+        //    container: 'loading',
+        //    fixed: true,
+        //    drag: false,
+        //});
+
+        easyDialog.open({
+            container: 'imgBox',
+            autoClose: 2000,
+            fixed: false
+        });
+    }
+
+    function closeLoading() {
+        easyDialog.close();
+        setTimeout("easyDialog.close()", 2000);
+    }
+
+    function showDialog(title, msg) {
+        easyDialog.open({
+            container: {
+                header: title,
+                content: msg,
+                yesFn: btnFn
+            },
+            fixed: true,
+            drag: false
+        });
+    }
+
+    var btnFn = function () {
+        return true;
+    };
+
+</script>
+@*等待加载*@
+<div id="imgBox" style="display:none">
+    <img src="/images/fancybox_loading@2x.gif" alt="" />
+</div>
+
+<div class="top">
+    <div class="top-c">
+        <div class="top-left">
+            <a href="javascript:;" class="collect">收藏</a>
+            <a href="javascript:;" class="wechat">微信</a>
+        </div>
+        @{
+            if (Model.UID != 0)
+            {
+                <div class="top-right">
+                    <p>@(Model.NickName)</p>
+                    <p><a href="/User/CancelLogin">注销</a>
+                    <p><a href="/User/UserInfo">个人中心</a> | <a href="javascript:;">我的订单</a></p>
+                </div>
+            }
+            else
+            {
+                 <div class="top-right">
+                    <p>欢迎来到石院商城</p>
+                    <p><a href="/User/Login">请登录</a> | <a href="/User/Register">免费注册</a></p>
+                    <p><a href="/User/UserInfo">个人中心</a> | <a href="javascript:;">我的订单</a></p>
+                </div>
+            }
+        }
+    </div>
+</div>
+

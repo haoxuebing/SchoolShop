@@ -1,0 +1,100 @@
+﻿/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    font-size: 12px;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+ol, ul, li, dt, dd, dl {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin-top: 0px;
+    color: black;
+}
+
+i, em {
+    font-style: normal;
+}
+
+b, strong {
+    font-weight: normal;
+}
+
+a img {
+    border: none;
+    margin-left: -592px;
+    margin-top: -6px;
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.por {
+    position: relative;
+}
+
+.poab {
+    position: absolute;
+}
+
+a, input, button, textarea, select {
+    outline: none;
+}
+
+    a,
+    input[type=submit],
+    input[type=button],
+    button {
+        cursor: pointer;
+    }
+
+/*页码fix*/
+.kkpager, #kkpager {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pageBtnWrap, .pageBtnWrap span, .pageBtnWrap a {
+    float: none !important;
+}
+
+.infoTextAndGoPageBtnWrap {
+    display: none;
+}

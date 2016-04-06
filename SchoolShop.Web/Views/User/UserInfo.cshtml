@@ -1,0 +1,378 @@
+﻿@using SchoolShop.Model
+@model SchoolShop.Model.Users
+@{
+    //Users Model = this.ViewBag.Model;
+    Layout = null;
+}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>个人主页</title>
+    <link href="/css/base.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/ddcss/left_caidan.css" />
+    <link href="/css/ddcss/base.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/ddcss/top2.css" />
+    <link rel="stylesheet" href="/css/ddcss/bottom.css" />
+    <link rel="stylesheet" href="/css/ddcss/personal_info.css" />
+    <script src="/js/ddjs/jquery-1.11.3.js"></script>
+    @*<script src="/js/ddjs/seller2.js" charset="utf-8"></script>*@
+    <link href="/js/uploadify/uploadify.css" rel="stylesheet" />
+    <script src="/js/uploadify/jquery.uploadify.min.js"></script>
+    <script src="/js/DateSelector.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            //搜索
+            $('#searchKeyWord').click(function () {
+                var keyWord = $('#keyWordText').val();
+                window.open("/Product/SearchProduct?keyWord=" + keyWord, "_self");
+            })
+
+            //获取出生日期
+            var selYear = window.document.getElementById("selYear");
+            var selMonth = window.document.getElementById("selMonth");
+            var selDay = window.document.getElementById("selDay");
+            // 新建一个DateSelector类的实例，将三个select对象传进去
+            new DateSelector(selYear, selMonth ,selDay, @(Model.Birthday.Value.Year), @(Model.Birthday.Value.Month), @(Model.Birthday.Value.Day));
+            //出生日期修改后
+            $("#selYear").change(function(){
+                setbirthDay();
+            });
+            $("#selMonth").change(function(){
+                setbirthDay();
+            });
+            $("#selDay").change(function(){
+                setbirthDay();
+            });
+            $("input[name='gender']").eq(@(Model.Gender)).click();
+            $("input[name='gender']").click(function(){
+                $("#genderValue").val($(this).val());
+            });
+
+            //上传头像 备注：这里曾经遇到一个BUG,  Layout = null;使用这个控件不能使用模版,也不知道为啥
+
+            $('#headPicture').uploadify({
+                height: 32,
+                width: 132,
+                swf: '/js/uploadify/uploadify.swf',
+                uploader: '/user/UpLoadPicture',
+                buttonText: '上传头像',
+                formData: {
+                    action: 'HeadPic'
+                },
+                successTimeout: 99999,
+                fileSizeLimit: '9MB',
+                fileTypeExts: '*.jpg;*.jpge;*.png',
+                onUploadSuccess: function (file, data, response) {
+                    var result = JSON.parse(data);
+                    if (result.Result) {
+                        $("#headPic").attr("src", "data:image/" + result.Data.split('|')[0] + ";base64," + result.Data.split('|')[1]);
+                    }
+                }
+            });
+
+            @*提交保存*@
+            $('#update').click(function(){
+                var userid=$('#uid').val();
+                var nickname=$('#nickname').val();
+                var genderValue=$('#genderValue').val();
+                var birthDay=$('#birthDay').val();
+                var rname=$('#rname').val();
+                var idNumber=$('#idNumber').val();
+                var address=$('input[name="address"]').val();
+                var mobile=$('#phone').val();
+                var email=$('#email').val();
+                var qqnumber=$('#qqnumber').val();
+                $.ajax({
+                    async:true,
+                    type:'post',
+                    url:"/User/UserSubmit",
+                    dataType:'text',
+                    data:{
+                        userid:userid,
+                        nickname:nickname,
+                        genderValue:genderValue,
+                        birthDay:birthDay,
+                        rname:rname,
+                        idNumber:idNumber,
+                        Address:address,
+                        mobile:mobile,
+                        email:email,
+                        qqnumber:qqnumber
+                    },
+                    success:function(msg){
+                        if(msg=="ok"){
+                            alert("保存成功");
+                            location.href="/User/UserInfo";
+                        }else{
+                            alert("保存失败");
+                            location.href="/User/UserInfo";
+                        }
+
+                    },
+                    error:function() {
+                        location.href="/User/UserInfo";
+                    }
+
+                });
+            });
+
+
+
+
+
+        })
+
+        function setbirthDay(){
+            $("#birthDay").val($("#selYear").val() + "-" + $("#selMonth").val() + "-" + $("#selDay").val());
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="Grey">
+        <!--顶部-->
+        <div class="top">
+            <div class="top-c">
+                <div class="top-left">
+                    <a href="javascript:;" class="collect">收藏</a>
+                    <a href="javascript:;" class="wechat">微信</a>
+                </div>
+                @{
+                    if (Model.UID != 0)
+                    {
+                        <div class="top-right">
+                            <p>@(Model.NickName)</p>
+                            <p><a href="/User/CancelLogin">注销</a>
+                            <p><a href="/User/UserInfo">个人中心</a> | <a href="javascript:;">我的订单</a></p>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="top-right">
+                            <p>欢迎来到石院商城</p>
+                            <p><a href="/User/Login">请登录</a> | <a href="/User/Register">免费注册</a></p>
+                            <p><a href="/User/UserInfo">个人中心</a> | <a href="javascript:;">我的订单</a></p>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+        <input type="hidden" id="uid" value="@(Model.UID)" />
+        <!--导航-->
+        <div class="nav">
+            <div class="juzhong clearfix">
+                <a href="/"><img src="/images/logo.png" /></a>
+                <a href="/User/UserInfo" class="nav_a nav_a1 nav_a4">个人中心</a>
+                <a href="/Security/UserSecurity" class="nav_a">帐户中心</a>
+                <a href="/User/UserMessage" class="nav_a">消息中心</a>
+                <div class="fr nav_div2">
+                    <input type="text" class="nav_text" id="keyWordText" value="请输入关键字" onfocus="this.value=''" onblur="if(!value){value=defaultValue;}" />
+                    <input type="button" value="搜索" class="nav_button" id="searchKeyWord" />
+                </div>
+            </div>
+        </div>
+        <!--内容左栏菜单-->
+        <div class="juzhong">
+            <div class="box_left">
+                <dl class="box_Order">
+                    <dt>商品发布</dt>
+                    <dd><a href="/User/PublishProduct">我要发布商品</a></dd>
+                    <dd><a href="/User/MyPublish">我发布的商品</a></dd>
+                    <dd><a href="/User/UserDelProduct">回收站</a></dd>
+                 
+                </dl>
+                <dl class="box_Order box_Order1">
+                    <dt>关注中心</dt>
+                    <dd><a href="/User/userAttention">我关注的商品</a></dd>
+                    <dd><a href="/User/WhoAttentionMe">被关注的商品</a></dd>
+                    
+                </dl>
+                <dl class="box_Order box_Order1">
+                    <dt>我的订单</dt>
+                    <dd><a href="#">已付款</a></dd>
+                    <dd><a href="#">未付款</a></dd>
+                </dl>
+            </div>
+
+            <!-- 个人主页 -->
+            <div class="personal-info">
+
+                <div class="EX_Gold_div clearfix fl">
+                    <img src="@(Model.HeadImage)" class="EX_Gold_img fl" height="173" id="headPic" />
+                </div>
+
+                <h2>个人信息</h2>
+                <form class="personal-form">
+                    <div class="form-item">
+                        <span><b>*</b>昵称：</span>
+                        <input type="text" name="nickname" id="nickname" value="@(Model.NickName)">
+                    </div>
+                    <div class="form-item">
+                        <span><b>*</b>真实姓名：</span>
+                        <input type="text" name="name" id="rname" value="@(Model.RealName)">
+                    </div>
+                    <div class="form-item">
+                        <span><b>*</b>性别：</span>
+                        <input type="radio" name="gender" id="nan" value="0"><label for="nan">男</label>
+                        <input type="radio" name="gender" id="nv" value="1"><label for="nv">女</label>
+                        <input type="radio" name="gender" id="baomi" value="2"><label for="baomi">保密</label>
+                        <input type="hidden" name="genderValue" id="genderValue" value="@(Model.Gender)" />
+                    </div>
+                    <div class="form-item">
+                        <span>生日：</span>
+                        <select id="selYear"></select>
+                        <label>年</label>
+                        <select id="selMonth"></select>
+                        <label>月</label>
+                        <select id="selDay"></select>
+                        <label>日</label>
+                        <input type="hidden" id="birthDay" name="birthDay" value="@(Model.Birthday)" />
+                    </div>
+                    <div class="form-item clearfix">
+                        <span style="float:left;">上传头像：</span>
+                        <div style="float:left;"><a class="button" href="#" id="headPicture"></a></div>
+                    </div>
+                    <div class="form-item">
+                        <span>邮箱：</span>
+                        <input type="text" name="email" id="email" value="@(Model.Email)"><span>找回密码</span>
+                    </div>
+                    <div class="form-item">
+                        <span>手机：</span>
+                        <input type="text" name="phone" id="phone" value="@(Model.Mobile)">
+                    </div>
+                    <div class="form-item">
+                        <span><b>*</b>QQ号：</span>
+                        <input type="text" name="qqnumber" id="qqnumber" value="@(Model.QQNumber)">
+                    </div>
+                    <div class="form-item">
+                        <span><b>*</b>所在地：</span>
+                        <input type="text" name="address" value="@(Model.Address)">
+                    </div>
+                    <div class="form-item">
+                        <span><b>*</b>身份证号：</span>
+                        <div class="form-item item-company">
+                            <input type="text" name="company-name" id="idNumber" value="@(Model.IDNumber)">
+                        </div>
+
+                    </div>
+
+                    <div class="form-item form-item-fix">
+                        <input type="button" name="update" id="update" value="保存">
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--底部-->
+    <div class="bottom">
+        <div class="Sbox">
+            <ul class="Atthebottom ">
+                <li>
+                    <a href="#">
+                        全程冷链配送
+                        <i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        有机绿色无公害
+                        <i class="ai"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        从基地到餐桌
+                        <i class="ai1"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        满59元免运送费
+                        <i class="ai2"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        社区最后一公里
+                        <i class="ai3"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="Safety clearfix ">
+                <dl class="Safetys">
+                    <dt>食品安全</dt>
+                    <dd><a href="#">食品卫生</a></dd>
+                    <dd><a href="#">食品监督</a></dd>
+                    <dd><a href="#">质量检测</a></dd>
+                </dl>
+                <dl class="Safetys Novice">
+                    <dt>新手上路</dt>
+                    <dd><a href="#">注册登录</a></dd>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">团购说明</a></dd>
+                </dl>
+                <dl class="Safetys Distribution">
+                    <dt>配送方式</dt>
+                    <dd><a href="#">配送范围</a></dd>
+                    <dd><a href="#">配送费用</a></dd>
+                    <dd><a href="#">配送时间</a></dd>
+                </dl>
+                <dl class="Safetys Novice">
+                    <dt>支付方式</dt>
+                    <dd><a href="#">货到付款</a></dd>
+                    <dd><a href="#">货到刷卡</a></dd>
+                    <dd><a href="#">在线支付</a></dd>
+                </dl>
+                <dl class="Safetys Service">
+                    <dt>售后服务</dt>
+                    <dd><a href="#">退换货条件</a></dd>
+                    <dd><a href="#">退换货流程</a></dd>
+                    <dd><a href="#">退换货准则</a></dd>
+                </dl>
+                <div class="Client">
+                    <p class="Client_p">
+                        手机客户端
+                        <i></i>
+                    </p>
+                    <p class="Client_p1">轻松购物，迅速到家！</p>
+                    <div class="Client_div">
+                        <i class="Client_div_i"></i>
+                        <a href="#" class="Client_div_a"></a>
+                        <a href="#" class="Client_div_a1"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom1">
+        <div class="bottom1_div">
+            <a href="#">关于我们</a>
+            <i>|</i>
+            <a href="#">法律声明</a>
+            <i>|</i>
+            <a href="#">服务条款</a>
+            <i>|</i>
+            <a href="#">隐私声名</a>
+            <i>|</i>
+            <a href="#">联系我们</a>
+            <i>|</i>
+            <a href="#">网站地图</a>
+        </div>
+        <p class="bottom1_p">北京市公安局朝阳分局备案编号110105014669<span>|</span>京ICP证070359号</p>
+        <p class="bottom1_p1">
+            Copyright © 2004-2015 呆呆购物DDGW8.com 版权所有
+        </p>
+    </div>
+
+    <!--遮罩-->
+    <div class="zhezhao" id="zhezhao" style=" display:none;"></div>
+</body>
+</html>

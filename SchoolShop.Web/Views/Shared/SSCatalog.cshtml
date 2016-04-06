@@ -1,0 +1,45 @@
+﻿@using SchoolShop.FrameWork.Utility
+@using SchoolShop.Model
+@{
+    Dictionary<string, List<Catalogs>> dicCatalog = this.ViewBag.dicCatalog;//分类字典
+}
+<script type="text/javascript">
+    $(function () {
+        /*******************分类*********************/
+        var catalogs=@(new MvcHtmlString(SerializeHelper.SerializeToJson(dicCatalog)));
+        for (var key in catalogs) {
+            if(key=="00"){
+                for (var v1 in catalogs[key]) {
+                    var firstCatalog='<li name="fuck"><h3><a href="/Product/ProductList?catalogID='+catalogs[key][v1].CatalogID+'">'+catalogs[key][v1].CatalogName+'</a></h3><a href="/Product/ProductList?catalogID='+catalogs[key][v1].CatalogID+'">'+catalogs[key][v1].Remark+'</a><div class="prosmore hide" id="catalog'+catalogs[key][v1].CatalogID+'"></div></li>';
+                    $(firstCatalog).appendTo("#proinfo");
+                }
+            }
+        }
+
+        for (var key in catalogs) {
+            if(key!="00"){
+                for (var v2 in catalogs[key]) {
+                    var secondCatalog='<span><em><a href="/Product/ProductList?catalogID='+catalogs[key][v2].CatalogID+'">'+ catalogs[key][v2].CatalogName+'</a></em></span>';
+                    $(secondCatalog).appendTo("#catalog"+catalogs[key][v2].ParentID);
+                }
+            }
+        }
+
+        $('li[name="fuck"]').mousemove(function(){
+            $(this).children("div").removeClass("hide");
+        });
+
+        $('li[name="fuck"]').mouseleave(function(){
+            $(this).children("div").addClass("hide");
+        });
+
+    })
+</script>
+
+<!------------header-wrap---------------->
+<div class="pros subpage">
+    <h2>全部商品分类</h2>
+    <ul class="prosul clearfix" id="proinfo" style="display:none">
+        
+    </ul>
+</div>

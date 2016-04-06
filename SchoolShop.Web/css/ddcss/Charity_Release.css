@@ -1,0 +1,205 @@
+@charset "utf-8";
+/* CSS Document */
+.Gray_background{
+	width:100%;
+	background:#f7f7f7;
+	padding-bottom:75px;}
+.Middle_white{
+	width:1076px;
+	margin:0 auto;
+	border:1px solid #f7f7f7;}
+.Fb_top_nav{
+	width:100%;
+	height:45px;
+	background:#FFF;
+	line-height:45px;
+	margin-top:13px;}
+.Fb_h2{
+	font-size:18px;
+	font-family:"Microsoft YaHei";
+	color:#323232;
+	font-weight:bold;
+	display:inline-block;}
+.Fb_a{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#606060;}
+.Fb_Content{
+	width:100%;
+	background:#FFF;
+	margin-top:10px;
+	border:1px solid #FFF;
+	padding-bottom:85px;}
+.Fb_img_p{
+	width:126px;
+	text-align:right;
+	font-size:14px;
+	font-family:"Arial";
+	color:#444;
+	font-weight:bold;
+	line-height: 22px;
+	margin-right:50px;}
+.Fb_imgS{
+	width:155px;
+	height:174px;
+	border:3px solid #d6d6d6;}
+.Fb_img_p1{
+	font-size:13px;
+	font-family:"The new song";
+	color:#9a9a9a;
+	margin-top:8px;
+	/*margin-left:15px;*/
+	}
+.Fb_img{
+	margin-top:26px;}
+.Fb_text{
+	width:277px;
+	height:19px;
+	border:1px solid #d6d6d6;
+	padding:0 4px;}
+.Fb_area{
+	width:715px;
+	height:145px;
+	outline:none;
+	resize:none;
+	padding:6px;
+  border: 1px solid #d6d6d6;
+	}
+.Fb_img_text1{
+	width:42px;
+	height:19px;
+	padding:0;
+	border:1px solid #d6d6d6;
+	float:left;}
+.Fb_img_p2{
+	font-size:13px;
+	font-family:"The new song";
+	color:#9a9a9a;
+	line-height:21px;
+	padding:0 4px 0;
+	float:left;}
+.Fb_area1{
+	height:49px;}
+.Fb_but{
+	width:321px;
+	height:30px;
+	background:#08ac29;
+	border:none;
+	font-size:14px;
+	font-family:"Arial";
+	color:#FFF;
+	font-weight:bold;
+	margin-top:60px;
+	margin-left:380px;
+	}
+.Fb_img_text2{
+	width:131px;
+	height:34px;
+	background:#08ac29;
+	text-align:left;
+	padding-left:10px;
+	border:none;
+	font-family:"Arial";
+	color:#FFF;
+	font-weight:bold;}
+.Fb_i{
+	position:absolute; right:8px; top:8px;
+	width:18px;
+	height:17px;
+	background:url(../img/shangjia.png) -182px -221px;
+	font-size:14px;
+	}
+.Fb_img_p3{
+	font-size:13px;
+	font-family:"The new song";
+	color:#9a9a9a;
+	width:560px;
+	margin-left:10px;}
+.Fb_div{
+	margin-top:13px;}
+.Fb_text_fix{
+	box-sizing: border-box;
+	width: 100px;
+	height: 30px;
+}
+.Fb_img_yz {
+	width: 100px;
+	height: 30px;
+	margin-left: 12px;
+}
+.Fb_img_p4 {
+	line-height: 24px;
+	font-size:13px;
+	font-family:"The new song";
+	color:#9a9a9a;
+	margin-left:10px;
+	display: inline-block;
+  vertical-align: top;
+}
+.Fb_img_p5 {
+	color:#666;
+	line-height: 30px;
+}
+.Fb_img_p4 a {
+	color: #005ea7;
+}
+.Fb_center {
+	text-align: center;
+	margin-bottom: 24px;
+}
+.Fb_center h2 {
+	font-size: 20px;
+	color: #7abd54;
+	font-family: "Microsoft YaHei";
+	line-height: 66px;
+}
+.hidden {
+  display: none !important;
+}
+.Fb_Content .upload-area {
+    display: inline-block;
+    height: auto;
+    width: 700px;
+    word-spacing: -6px;
+}
+.Fb_Content .upload-box {
+    word-spacing: 0;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 154px;
+    height: 174px;
+
+		display: inline-block;
+		vertical-align: bottom;
+		border: 2px solid #d7d7d7;
+    position: relative;
+}
+.Fb_Content .upload-box img {
+	max-width: 100%;
+	max-height: 100%;
+	width: 100%;
+	height: 100%;
+}
+.Fb_Content .upload-box>span {
+    position: absolute;
+    display: block;
+    background-color: #d7d7d7;
+    left: 0;
+    top: 0;
+		height: 174px;
+		line-height: 174px;
+    width: 100%;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    text-align: center;
+}
+.Fb_Content .upload-box .close {
+	background: url(../img/close2.png);
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 6px;
+  right: 6px;
+  z-index: 1000;
+	cursor: pointer;
+}

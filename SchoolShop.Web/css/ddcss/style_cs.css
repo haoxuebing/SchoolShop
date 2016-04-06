@@ -1,0 +1,217 @@
+@charset "utf-8";
+/* CSS Document */
+.beijing{
+	width:100%;
+	height:100%;
+	background:#f3f3f3;}
+.right{
+	width:988px;
+	background:#FFF;
+	margin-top:6px;
+	padding-bottom:217px;}
+.Baby{
+	margin-top:11px;
+	padding-bottom:9px;
+	border-bottom:1px solid #f7f7f7;}
+.Baby p{
+	font-size:12px;
+	font-family:"The new song";
+	color:#383838;
+	line-height:22px;
+	margin-left:25px;}
+.Baby_text{
+	width:153px;
+	height:20px;
+	border:1px solid #d6d6d6;
+	margin-left:24px;}
+.Baby_but{
+	width:66px;
+	height:24px;
+	border:1px solid #d6d6d6;
+	background:#f5f5f5;
+	font-size:12px;
+	font-family:"The new song";
+	color:#000;
+	margin-left:28px;}
+.Sell{
+	margin-top:10px;}
+.Sell li{
+	height:28px;
+	line-height:28px;
+	padding:0 20px 0;
+	display:inline-block;
+	float:left;
+	font-size:14px;
+	font-family:"The new song";
+	color:#000;}
+.Sell .Sell_li{
+	color:#FFF;
+	background:#1eb43a;}
+
+.Information{
+	width:100%;
+	height:30px;
+	background:#e0e0e0;
+	line-height:30px;}
+.Information p{
+	float:left;
+	font-size:14px;
+	font-family:"The new song";
+	color:#000;}
+.In_p1{
+	margin-left:25px;}
+.In_p2{
+	margin-left:229px;}
+.In_p3{
+	margin-left:84px;}
+.In_p4{
+	margin-left:94px;}
+.In_p5{
+	margin-left:100px;
+	float:left;
+	margin-top:5px;}
+.In_p6{
+	margin-left:98px;}
+.Mask{
+	width:280px;
+	height:87px;
+	border-bottom:1px solid #CCC;
+	border-right:1px solid #CCC;}
+.Mask a{
+	margin:17px 0 0 21px;
+	width:51px;
+	height:51px;
+	border:1px solid #CCC;}
+.Mask p{
+	width:174px;
+	font-size:12px;
+	font-family:"The new song";
+	color:#8c8c8c;
+	margin-left:13px;
+	margin-bottom:10px;}
+.Mask div{
+	margin-top:22px;}
+.Price{
+	width: 96px;
+	height: 88px;
+	text-align: center;
+	font-size: 16px;
+	font-family: "The new song";
+	color: #F00;
+	border-bottom: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	box-sizing: border-box;
+	padding-top: 32px;
+}
+.number{
+	width:148px;
+	height:87px;
+	line-height:87px;
+	text-align:center;
+	font-size:16px;
+	font-family:"The new song";
+	color:#787878;
+	border-bottom:1px solid #CCC;
+	border-right:1px solid #CCC;
+	font-weight:bold;}
+.Classifi{
+	width:150px;
+	height:87px;
+	line-height:87px;
+	text-align:center;
+	font-size:14px;
+	font-family:"The new song";
+	color:#787878;
+	border-bottom:1px solid #CCC;
+	border-right:1px solid #CCC;}
+.State{
+	width:181px;
+	height:87px;
+	line-height:87px;
+	text-align:center;
+	font-size:14px;
+	font-family:"The new song";
+	color:#787878;
+	border-bottom:1px solid #CCC;
+	border-right:1px solid #CCC;}
+.Edit{
+	width:128px;
+	height:88px;
+	/*line-height:87px;*/
+	text-align:center;
+	font-size:14px;
+	font-family:"The new song";
+	color:#787878;
+	border-bottom:1px solid #CCC;
+	border-right:1px solid #CCC;
+	padding: 10px 0;
+	box-sizing: border-box;
+}
+
+.Edit button {
+	border: none;
+	margin-bottom: 5px;
+	background: none;
+	text-decoration: underline;
+	font-size: 12px;
+}
+
+
+.tuihuo .Mask {
+	height: 100px;
+}
+.tuihuo .Price {
+  width: 60px;
+	line-height: 100px;
+	height: 100px;
+}
+.tuihuo .number {
+  width: 100px;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: left;
+	padding: 5px;
+	height: 100px;
+}
+.tuihuo .Classifi {
+	width: 318px;
+	text-align: left;
+	padding: 5px;
+	overflow-y: hidden;
+	overflow-x: auto;
+	height: 100px;
+}
+.tuihuo .Classifi img {
+	vertical-align: top;
+}
+.tuihuo .State {
+  width: 150px;
+	line-height: 100px;
+	height: 100px;
+}
+.tuihuo .Edit {
+	width: 80px;
+	line-height: 100px;
+	height: 100px;
+}
+
+.tuihuo * {
+	box-sizing: border-box;
+}
+.tuihuo .In_p2 {
+  margin-left: 202px;
+}
+.tuihuo .In_p3 {
+  margin-left: 30px;
+}
+.tuihuo .In_p4 {
+  margin-left: 150px;
+}
+.tuihuo .In_p5 {
+  margin-left: 200px;
+  margin-top: 0;
+}
+.tuihuo .In_p6 {
+  margin-left: 48px;
+}

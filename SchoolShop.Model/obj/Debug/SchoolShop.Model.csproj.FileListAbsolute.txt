@@ -1,0 +1,5 @@
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.Model\bin\Debug\SchoolShop.Model.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.Model\bin\Debug\SchoolShop.Model.pdb
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.Model\obj\Debug\SchoolShop.Model.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.Model\obj\Debug\SchoolShop.Model.pdb
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.Model\obj\Debug\SchoolShop.Model.csprojResolveAssemblyReference.cache

@@ -1,0 +1,289 @@
+/* CSS Document */
+
+/* ���������� */
+.juzhong{
+	width:1200px;
+	margin:0 auto;
+	margin-top:10px;}
+.h2{
+	font-size:18px;
+	font-family:"Microsoft YaHei";
+	color:#323232;
+	font-weight:bold;}
+.h2 span{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#606060;
+	font-weight:none;}
+.Tab_ul img{
+	display:block;}
+.Tab_ul li{
+	display:none;}
+.Tab_ul .Tab_ul_li{
+	display:block;}
+.Tab_ul1{
+	position:absolute; left:286px; bottom:22px;}
+.Tab_ul1 li{
+	float:left;
+	width:12px;
+	height:12px;
+	background:#FFF;
+	border-radius:6px;
+	margin-right:10px;
+	}
+.Tab_ul1 .Tab_li1{
+	background:#0F0;}
+.Join{
+	width:468px;
+	padding:0 44px 0 43px;
+	border-top:2px solid #f0f0f0;
+	border-bottom:2px solid #f0f0f0;
+	padding-bottom:37px;}
+.Join_h3{
+	font-size:24px;
+	font-family:"Microsoft YaHei";
+	color:#007516;
+	text-align:center;
+	margin-top:30px;}
+.Join_p{
+	text-indent:2em;
+	line-height:28px;
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#000;
+	margin-top:60px;}
+.Join_div {
+	text-align: center;
+}
+.Join_div input{
+	width:127px;
+	height:36px;
+	border:2px solid #007516;
+	background:#08ac29;
+	margin-top:65px;
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#FFF;
+	}
+.Join_div_but{
+	margin:0 35px 0 35px;}
+
+
+/* ���� */
+.process{
+	width:1200px;
+	height:359px;
+	background:url(../img/Charity.png);
+	margin-top:50px;}
+.process_p{
+	font-size:30px;
+	font-family:"Microsoft YaHei";
+	color:#fff;
+	margin-left:28px;
+	margin-top:51px;
+	font-weight:bold;}
+.process_p1{
+	font-size:18px;
+	font-family:"Microsoft YaHei";
+	color:#fff;
+	font-weight:bold;
+	margin-left:146px;
+	margin-top:-29px;}
+.process_p2{
+	font-size:18px;
+	font-family:"Microsoft YaHei";
+	color:#fff;
+	font-weight:bold;
+	margin-top:92px;
+	margin-left:20px;}
+.process_p2s{
+	margin-left:102px;}
+.process_p3{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	margin-left:20px;
+	line-height:30px;
+	width:320px;
+	color:#fff;}
+.process_p4{
+	margin-left:67px;
+	margin-top:51px;}
+.process_p2s{
+	margin-left:146px;}
+.process_p2d{
+	margin-left:74px;}
+.process_p1s{
+	margin-left:57px;}
+.process_p5{
+	margin-left:0px;}
+.process_p6{
+	margin-left:86px;}
+
+
+.Report{
+	width:586px;}
+.Report_div{
+	line-height:55px;
+	border-bottom:1px solid #08ac29;
+	margin-top:40px;}
+.Report_div1{
+	line-height:55px;
+	margin-top:40px;}
+.Report_div i,.Report_div1 i{
+	width:5px;
+	height:30px;
+	background:#08ac29;
+	float:left;
+	margin-top:10px;
+	margin-right:5px;}
+.Report_h3{
+	font-size:22px;
+	font-family:"Microsoft YaHei";
+	color:#000;}
+.Report_a{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#0066ff;
+	margin-top:40px;
+	margin-right:10px;
+	line-height:0px;}
+
+.seek{
+	padding-top:20px;
+	padding-bottom:20px;
+
+	}
+.seek_img{
+	width:174px;
+	height:137px;}
+.seek_div{
+	width:365px;
+	margin-left:25px;}
+.seek_h4{
+	font-size:18px;
+	font-family:"Microsoft YaHei";
+	color:#383838;
+	font-weight:bold;}
+.seek_span{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#383838;
+	font-weight:normal;
+	}
+.seek_ps{
+	margin-top:15px;
+	width:100%;
+	text-align:right;
+	}
+.seek_p{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#383838;
+	line-height:24px;
+	margin-top:19px;
+	text-indent:2em ;}
+.seek_p a{
+	color:#0066ff;}
+
+
+
+.Volunteer{
+	width:552px;}
+.Volunteer_div a{
+	width:265px;
+	height:69px;
+	float:left;
+	margin-top:30px;
+	text-align:center;}
+.gao{
+	margin-bottom:50px;}
+
+
+.Report_img img{
+	width:146px;
+	height:39px;
+	margin-left:60px;
+	margin-top:5px;}
+
+.Report_left{
+	width:599px;
+	height:558px;
+	border-bottom:1px solid #08ac29;}
+.seek2{
+	margin-top:129px;
+	padding-left:30px;}
+
+.Activity{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#383838;
+	margin-left:30px;}
+.Activity_p{
+	width:98px;
+	height:30px;
+	text-align:center;
+	line-height:30px;
+	background:#08ac29;
+	display:block;
+	border-radius:3px;
+	font-size:18px;
+	font-family:"Microsoft YaHei";
+	color:#FFF;
+	margin-left:499px;
+	margin-top:-20px;}
+.height{
+	height:325px;
+	border-left:1px solid #08ac29;
+	display:block;
+	margin-top:166px;}
+.seek3{
+	margin-bottom:40px;}
+.Lb li{
+	display:none;}
+.Lb_xz{
+	margin-left:536px;
+	margin-top:20px;}
+.Lb_xz li{
+	width:11px;
+	height:11px;
+	background:url(../img/shangjia.png) -189px -207px;
+	float:left;
+	margin-left:10px;}
+.Lb_xz .Lb_li{
+	background-position:-189px -196px;}
+
+/*轮播图*/
+.swiper-container.swiper2 {
+	height: 420px;
+}
+.swiper2 .swiper-pagination {
+  text-align: right;
+}
+.swiper2 .swiper-pagination-bullet {
+	background-color: #08ac29;
+	width: 10px;
+	height: 10px;
+}
+
+.swiper1 {
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+.swiper1, .swiper1 .swiper-container1 {
+	width: 644px;
+	height: 375px;
+
+}
+.swiper1 .swiper-pagination1 {
+	z-index: 2;
+}
+.swiper1 .swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+	background: #0F0 none repeat scroll 0% 0%;
+	margin-right: 10px;
+}
+/*.swiper-pagination-bullet-active {
+	background: #0F0 none repeat scroll 0% 0%;
+}*/

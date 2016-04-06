@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+.ly_Message{
+	width:794px;
+	background:#FFF;
+	padding:21px 147px 58px 47px;
+	}
+.ly_h3{
+	font-size: 16px;
+  	font-family: "microsoft yahei";
+  	color: #1e1e1e;
+	padding-bottom:16px;
+	border-bottom:1px solid #f2f2f2;}
+.ly_li{
+	padding-top:15px;
+	height:85px;
+	border-bottom:1px dotted #f2f2f2;}
+.ly_img{
+	width:51px;
+	height:51px;
+	border-radius:10px;}
+.ly_p{
+	font-size:18px;
+	font-family: "microsoft yahei";
+	color:#08ac29;
+	margin-left:35px;}
+.ly_p1{
+	font-size:12px;
+	font-family: "microsoft yahei";
+	color:#757575;
+	width:453px;
+	height:48px;
+	overflow:hidden;
+	margin-left:42px;}
+.ly_p2{
+	font-size:12px;
+	font-family: "microsoft yahei";
+	color:#bbb;
+	margin-left:39px;}
+.ly_No1 li{
+	width:24px;
+	height:24px;
+	background:url(../img/shangjia.png) -176px -279px;
+	text-align:center;
+	line-height:24px;
+	font-weight:bold;
+	font-size:12px;
+	font-family: "microsoft yahei";
+	color:#727272;
+	float:left;
+	margin-left:9px;
+	}
+.ly_No1 a{
+	display:block;
+	width:100%;
+	height:100%;}
+.ly_no_i{
+	float:left;
+	margin-left:9px;
+	line-height:24px;}
+
+.ly_No1 .ly_no_l{
+	background-position: -104px -279px;}
+.ly_No1 .ly_no_r{
+	background-position: -128px -279px;}
+.ly_No1 .ly_no_li{
+	background-position: -152px -279px;
+	color:#FFF;}
+.ly_no_li a{
+	color:#FFF;}
+.ly_No1{
+	margin-top:50px;
+	margin-left:487px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

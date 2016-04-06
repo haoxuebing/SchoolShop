@@ -1,0 +1,179 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.Con {
+    width: 870px;
+    background: #FFF;
+    float: left;
+}
+
+.Reply li {
+    width: 65px;
+    height: 25px;
+    background: #e5e5e5;
+    border-top: 2px solid #e5e5e5;
+    font-size: 15px;
+    font-family: "Microsoft YaHei";
+    color: #FFF;
+    line-height: 25px;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+}
+
+.Reply .Reply_li {
+    background: #fff;
+    border-top: 2px solid #48af5e;
+    font-size: 15px;
+    font-family: "Microsoft YaHei";
+    color: #48af5e;
+    cursor: pointer;
+}
+
+.Reply {
+    margin: 16px 0 0 20px;
+}
+
+.Replycontent {
+    width: 828px;
+    border: 1px solid #f1f1f1;
+    border-bottom: none;
+    background: #FFF;
+    margin: 0 auto;
+}
+
+.R_content_li {
+    height: 85px;
+    border-bottom: 1px solid #F1F1F1;
+}
+
+.R_C_p {
+    font-size: 13px;
+    font-family: "Microsoft YaHei";
+    color: #303030;
+    margin-top: 23px;
+    margin-left: 45px;
+}
+
+.R_C_p1 {
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    color: #a2a2a2;
+    margin-right: 26px;
+    margin-top: 15px;
+}
+
+.R_C_p2 {
+    font-size: 13px;
+    font-family: "Microsoft YaHei";
+    color: #303030;
+    margin-top: 5px;
+    margin-left: 94px;
+}
+
+    .R_C_p2 i {
+        color: #e2712f;
+    }
+
+.Page li {
+    height: 21px;
+    padding: 0 10px 0;
+    font-size: 13px;
+    font-family: "Microsoft YaHei";
+    color: #424242;
+    line-height: 21px;
+    border: 1px solid #cacaca;
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+}
+
+.Page {
+    margin: 28px 0 16px 582px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+/*遮罩	
+.Mask{
+	width:100%;
+	height:100%;
+	background:#000;
+	opacity:0.5;
+    filter:alpha(opacity:50);
+	position:fixed; left:0px; top:0px;}	
+.Verification{
+	width:680px;
+	height:205px;
+	position:fixed; left:25%; top:50%;
+	margin-top:-103px;
+	background:#FFF;}	
+.Verif{
+	height:25px;
+	background:#f5f5f5;
+	line-height:25px;
+	position:relative;}	
+.Verif p{
+	font-size:13px;
+	font-family:"Microsoft YaHei";
+	color:#777;
+	margin-left:22px;}	
+.Verif i{
+	position:absolute; right:8px; top:8px;
+	width:13px;
+	height:13px;
+	background:url(../img/hedaohang.png) -285px 0;
+	cursor:pointer;}	
+.Verif_p{
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#848484;
+	margin-top:8px;
+	margin-left:60px;}	
+.Verif_p1{
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#848484;
+	margin-top:15px;
+	margin-left:60px;}		
+.Verif_p1 span{
+	font-size:20px;
+	font-family:"Microsoft YaHei";
+	color:#08ac29;}	
+.Verif_div{
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#848484;
+	margin-top:15px;
+	margin-left:60px;}	
+.Verif_text{
+	width:133px;
+	height:26px;
+	border:1px solid #CCC;}	
+.Verif_a{
+	width:81px;
+	height:27px;
+	display:block;
+	background:#08ac29;
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#FFF;
+	line-height:27px;
+	text-align:center;
+	margin:20px 0 0 300px;}	*/
+
+
+
+
+
+
+
+
+
+

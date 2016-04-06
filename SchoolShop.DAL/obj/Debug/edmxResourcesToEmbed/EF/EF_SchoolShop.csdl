@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="schoolshopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="schoolshopEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SS_Catalogs" EntityType="schoolshopModel.SS_Catalogs" />
+    <EntitySet Name="SS_UserBrowse" EntityType="schoolshopModel.SS_UserBrowse" />
+    <EntitySet Name="SS_Users" EntityType="schoolshopModel.SS_Users" />
+    <EntitySet Name="SS_UserAttention" EntityType="schoolshopModel.SS_UserAttention" />
+    <EntitySet Name="SS_Products" EntityType="schoolshopModel.SS_Products" />
+    <EntitySet Name="View_WhoAttention" EntityType="schoolshopModel.View_WhoAttention" />
+    <EntitySet Name="SS_Dialog" EntityType="schoolshopModel.SS_Dialog" />
+    <EntitySet Name="SS_ShopCart" EntityType="schoolshopModel.SS_ShopCart" />
+    <EntitySet Name="View_ShopCartView" EntityType="schoolshopModel.View_ShopCartView" />
+    <EntitySet Name="View_MyAttentions" EntityType="schoolshopModel.View_MyAttentions" />
+    <EntitySet Name="View_UserOrder" EntityType="schoolshopModel.View_UserOrder" />
+    <EntitySet Name="SS_UserOrder" EntityType="schoolshopModel.SS_UserOrder" />
+  </EntityContainer>
+  <EntityType Name="SS_Catalogs">
+    <Key>
+      <PropertyRef Name="CatalogID" />
+    </Key>
+    <Property Name="CatalogID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CatalogName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CatalogLevel" Type="Int32" Nullable="false" />
+    <Property Name="ParentID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="SS_UserBrowse">
+    <Key>
+      <PropertyRef Name="BroeseID" />
+    </Key>
+    <Property Name="BroeseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UID" Type="Int32" Nullable="false" />
+    <Property Name="PID" Type="Int32" Nullable="false" />
+    <Property Name="ImgUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProductPrice" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CatalogID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DelFlag" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SS_Users">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="NickName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RealName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Birthday" Type="DateTime" Precision="3" />
+    <Property Name="RegistTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastLoginTime" Type="DateTime" Precision="3" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="Int32" />
+    <Property Name="HeadImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IDNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="QQNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="note" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreditValue" Type="Int32" />
+    <Property Name="DelFlag" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SS_UserAttention">
+    <Key>
+      <PropertyRef Name="UserAttentionID" />
+    </Key>
+    <Property Name="UserAttentionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AttrntionUID" Type="Int32" />
+    <Property Name="AttentionPID" Type="Int32" />
+    <Property Name="ProductUID" Type="Int32" />
+    <Property Name="AttentionTime" Type="DateTime" Precision="3" />
+    <Property Name="DelFalg" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SS_Products">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UID" Type="Int32" Nullable="false" />
+    <Property Name="CatalogID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProductPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ImgURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ViewsCount" Type="Int32" />
+    <Property Name="Describe" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SaleTime" Type="DateTime" Precision="3" />
+    <Property Name="PrudouctDetail" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="AskCount" Type="Int32" />
+    <Property Name="DelFlag" Type="Int32" />
+  </EntityType>
+  <EntityType Name="View_WhoAttention">
+    <Key>
+      <PropertyRef Name="UserAttentionID" />
+    </Key>
+    <Property Name="UserAttentionID" Type="Int32" Nullable="false" />
+    <Property Name="AttrntionUID" Type="Int32" />
+    <Property Name="AttentionPID" Type="Int32" />
+    <Property Name="ProductUID" Type="Int32" />
+    <Property Name="AttentionTime" Type="DateTime" Precision="3" />
+    <Property Name="DelFalg" Type="Int32" />
+    <Property Name="ImgURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProductPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Mobile" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="NickName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RealName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Birthday" Type="DateTime" Precision="3" />
+    <Property Name="LastLoginTime" Type="DateTime" Precision="3" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="Int32" />
+    <Property Name="HeadImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="QQNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SS_Dialog">
+    <Key>
+      <PropertyRef Name="DialogID" />
+    </Key>
+    <Property Name="DialogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DialogPID" Type="Int32" Nullable="false" />
+    <Property Name="ConsultUID" Type="Int32" Nullable="false" />
+    <Property Name="ConsultContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsultTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ReplyUID" Type="Int32" Nullable="false" />
+    <Property Name="ReplyContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ReplyTime" Type="DateTime" Precision="3" />
+    <Property Name="DialogOver" Type="Int32" Nullable="false" />
+    <Property Name="DelFlag" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SS_ShopCart">
+    <Key>
+      <PropertyRef Name="ShopCartID" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" />
+    <Property Name="PUID" Type="Int32" Nullable="false" />
+    <Property Name="UID" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="BuyTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DelFlag" Type="Int32" />
+    <Property Name="ShopCartID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="View_ShopCartView">
+    <Key>
+      <PropertyRef Name="ShopCartID" />
+      <PropertyRef Name="PID" />
+      <PropertyRef Name="UID" />
+      <PropertyRef Name="PUID" />
+      <PropertyRef Name="BuyTime" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="Price" />
+    </Key>
+    <Property Name="ShopCartID" Type="Int32" Nullable="false" />
+    <Property Name="PID" Type="Int32" Nullable="false" />
+    <Property Name="UID" Type="Int32" Nullable="false" />
+    <Property Name="PUID" Type="Int32" Nullable="false" />
+    <Property Name="BuyTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DelFlag" Type="Int32" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ImgURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="View_MyAttentions">
+    <Key>
+      <PropertyRef Name="UserAttentionID" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="ProductPrice" />
+    </Key>
+    <Property Name="AttentionPID" Type="Int32" />
+    <Property Name="ProductUID" Type="Int32" />
+    <Property Name="AttentionTime" Type="DateTime" Precision="3" />
+    <Property Name="UserAttentionID" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProductPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ImgURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Describe" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="AttrntionUID" Type="Int32" />
+    <Property Name="NickName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RealName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="Int32" />
+    <Property Name="DelFalg" Type="Int32" />
+  </EntityType>
+  <EntityType Name="View_UserOrder">
+    <Key>
+      <PropertyRef Name="OrderID" />
+      <PropertyRef Name="PID" />
+      <PropertyRef Name="UID" />
+      <PropertyRef Name="PUID" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="ProductPrice" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="PID" Type="Int32" Nullable="false" />
+    <Property Name="UID" Type="Int32" Nullable="false" />
+    <Property Name="PUID" Type="Int32" Nullable="false" />
+    <Property Name="ISPay" Type="Int32" />
+    <Property Name="OrderTime" Type="DateTime" Precision="3" />
+    <Property Name="DelFlag" Type="Int32" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProductPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ImgURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SS_UserOrder">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PID" Type="Int32" Nullable="false" />
+    <Property Name="UID" Type="Int32" Nullable="false" />
+    <Property Name="PUID" Type="Int32" Nullable="false" />
+    <Property Name="ISPay" Type="Int32" />
+    <Property Name="OrderTime" Type="DateTime" Precision="3" />
+    <Property Name="DelFlag" Type="Int32" />
+  </EntityType>
+</Schema>

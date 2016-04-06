@@ -1,0 +1,152 @@
+@charset "utf-8";
+/* CSS Document */
+html{
+		height:100%;}
+	body{
+		height:100%}
+	.divs{
+		
+		height:100%;}
+	.div2{
+		position:absolute; width:200px; height:200px; background:#F00;}
+	.nsparent{
+		width:100%;
+		height:100%;
+		background:#000;
+		opacity:0.5;
+		filter:alpha(opacity:50);
+		position:fixed; left:0px; top:0px;}
+	.div{
+		width:10px;
+		height:12px;
+		position:fixed;
+		right:0;
+		bottom:0;
+		animation-fill-mode:forwards;
+		background:url(../img/Noname1__hb.gif) no-repeat 0 0px;
+		background-size:contain;
+		margin:0 -150px -180px 0;
+		z-index:999;}
+	.div1{
+		position:fixed; left:40%; top:10%;
+		background:url(../img/Noname_hb1.gif) no-repeat 0 0px;
+		height:420px;
+		width:300px;
+		background-size:contain;}
+	/*.div1{
+		height:420px;
+		width:300px;
+		background:url(../img/Noname.png) no-repeat;
+		animation-fill-mode:forwards;
+		right:50%;
+		bottom:50%;
+		margin:0 -150px -150px 0;
+		position:absolute;}*/
+	.div1 .ia{
+		position:absolute; left:25px; top:439px;
+		width:250px;
+		height:29px;
+		background:url(../img/Noname2.png);
+		}
+	.div1 .ema,.div1_s .ema{
+		position:absolute; right:-16px; top:0px;
+		width:24px;
+		height:23px;
+		background:url(../img/Noname7.png) no-repeat;
+		background-size:contain;}
+	.dh_p{
+		font-size:34px;
+		color:#ffcd38;
+		font-family: "Microsoft YaHei";
+		position:absolute; right:17px; top:211px;}
+	.div1 .ema1,.div1_s .ema1{
+		position:absolute; left:28%; bottom:-13%;
+		background:url(../img/Noname_hb12.png) no-repeat;
+		height:40px;
+		width:144px;
+		background-size:contain;}
+	.div1_s{
+		position:fixed; left:32%; top:10%;
+		background:url(../img/Noname_hb21.gif) no-repeat 0 0px;
+		height:500px;
+		width:500px;
+		background-size:contain;}
+	.div1_s .ia{
+		position:absolute; left:36px; top:125px;
+		width:300px;
+		height:36px;
+		background:url(../img/Noname_hb14.png);
+		}
+	.dh_p1{
+		font-size:30px;
+		color:#ffcd38;
+		font-family: "Microsoft YaHei";
+		position:absolute; right:67px; top:125px;}
+	.dh_yu{
+		position:absolute; left:121px; top:472px;
+		width:240px;
+		height:28px;
+		background:url(../img/Noname2.png);}
+	.div1_you{
+		background:url(../img/Noname_hb.gif) no-repeat 0 0px;}	
+	.div1_hui{
+		background:url(../img/Noname_hb22.png) no-repeat 0 0px;
+		height:355px;}	
+	.dh_yuo{
+		top:360px;
+		background:url(../img/Noname_hb23.png) no-repeat 0 0px;
+		width:112px;
+		height:40px;
+		left:202px;}	
+	.div1_guang{
+		background:url(../img/Noname_hb15.gif) no-repeat 0 0px;
+		width:700px;
+		height:700px;
+		left:25%;
+		top:1%;}	
+	.div1_guang .ema_guang{
+		right:51px;
+		top:96px;}	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+

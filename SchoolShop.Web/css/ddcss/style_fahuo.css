@@ -1,0 +1,284 @@
+@charset "utf-8";
+/* CSS Document */
+.beijing{
+	width:100%;
+	height:100%;
+	background:#f3f3f3;}
+.right{
+	width:988px;
+	margin-top:6px;
+	padding-bottom:217px;}
+.Information{
+	width:100%;
+	height:30px;
+	background:#e0e0e0;
+	line-height:30px;}	
+.Information p{
+	float:left;
+	font-size:14px;
+	font-family:"The new song";
+	color:#000;}	
+
+.In_p1{
+	margin-left:33px;}		
+.In_p6{
+	margin-left:765px;}	
+.Logistics{
+	width:100%;
+	height:128px;
+	}
+.Order{
+	background:#FFF;
+	margin-bottom:11px;}
+.Order_a{
+	width:106px;
+	height:106px;
+	border:1px solid #d7d7d7;
+	display:block;
+	margin:15px 0 0 15px;}
+.Order_div{
+	width:317px;
+	margin-top:15px;
+	margin-left:12px;}	
+.Order_div_p{
+	font-size:13px;
+	font-family:"Microsoft YaHei";
+	color:#606060;}	
+.Order_div_p1{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#1eb43a;
+	margin-top:3px;}	
+.Order_div_p1 span{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#383838;}	
+.Order_div_p2{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#1eb43a;
+	line-height:20px;}	
+.Order_div_se{
+	width:166px;
+	height:20px;
+	border:1px solid #CCC;
+	outline:none;
+	}	
+.Order_div_text{
+	width:166px;
+	height:16px;
+	border:1px solid #CCC;
+	outline:none;}	
+.Order_div1{
+	margin-top:5px;}	
+.Immediately{
+	width:230px;
+	height:128px;
+	border-left:1px solid #e0e0e0;
+	float:right;}	
+.Immed_a{
+	display:block;
+	width:105px;
+	height:30px;
+	border-radius:5px;
+	background:#000;
+	font-size:15px;
+	font-family:"Microsoft YaHei";
+	color:#FFF;
+	line-height:30px;
+	text-align:center;
+	margin:46px 0 10px 63px;}	
+	
+	
+	
+	
+	
+/*遮罩*/		
+.Mask{
+	width:100%;
+	height:100%;
+	background:#000;
+	opacity:0.5;
+    filter:alpha(opacity:50);
+	position:fixed; left:0px; top:0px;
+	z-index:998;}	
+.Verification{
+	width:705px;
+	height:400px;
+	position:fixed; left:25%; top:30%;
+	margin-top:-103px;
+	background:#FFF;
+	z-index:999;}	
+.Verif{
+	height:25px;
+	background:#f5f5f5;
+	line-height:25px;
+	position:relative;}	
+.Verif p{
+	font-size:13px;
+	font-family:"Microsoft YaHei";
+	color:#777;
+	margin-left:22px;}	
+.Verif i{
+	position:absolute; right:8px; top:8px;
+	width:13px;
+	height:13px;
+	background:url(../img/hedaohang.png) -285px 0;
+	cursor:pointer;}	
+.Goods_h3{
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#656565;
+	width:155px;
+	text-align:right;
+	margin-top:47px;}
+.Goods_div{
+	width:420px;
+	margin-left:175px;
+	margin-top:10px;}
+.Goods_div p{
+	font-size:15px;
+	font-family:"Microsoft YaHei";
+	color:#303030;}
+.Goods_div1{
+	width:445px;
+	padding-left:25px;
+	margin-top:15px;
+	margin-left:150px;
+	border-bottom:1px solid #d9d9d9;}
+.Goods_div1 img{
+	width:53px;
+	height:53px;
+	border:1px solid #b4b4b4;}
+.Goods_div1_div{
+	width:345px;
+	margin-left:9px;
+	}
+.Goods_ntrod{
+	font-size:13px;
+	font-family:"The new song";
+	color:#303030;}
+.Payment{
+	font-size:15px;
+	font-family:"The new song";
+	color:#656565;}
+.Payment_div{
+	text-align:right;
+	margin-top:12px;}
+.Payment span{
+	font-size:17px;
+	font-family:"Microsoft YaHei";
+	color:#08ac29;
+	font-weight:bold;}
+.Verif_a{
+	padding:0 26px 0;
+	height:27px;
+	display:inline-block;
+	background:#08ac29;
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#FFF;
+	line-height:27px;
+	text-align:center;
+	margin:20px 0 0 300px;}	
+	
+.Goods_h31{
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#656565;
+	width:155px;
+	text-align:right;}
+.Goods_p{
+	width:185px;
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#656565;}
+.Goods_p1{
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#656565;}	
+.goods_div{
+	margin-top:20px;}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

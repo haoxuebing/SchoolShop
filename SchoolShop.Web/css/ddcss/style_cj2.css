@@ -1,0 +1,159 @@
+
+
+/*����*/
+.Vertical{
+	margin:25px 0 0;
+	border-bottom:1px solid #e5e5e5;
+	padding-bottom:25px;
+	/*display:none;*/
+	}
+.Vertical img{
+	width:81px;
+	height:81px;}
+.Vertical_div{
+	margin-left:20px;}
+.Vertical_div1{
+	margin-left:106px;}
+.Vertical_div2{
+	margin-left:64px;}
+.Vertical_div_a{
+	font-size:14px;
+	color:#414141;
+	font-family:"Microsoft YaHei";
+	width:297px;
+	display:block;
+	height:66px;}
+.Vertical_div_a1{
+	font-size:12px;
+	color:#888;
+	font-family:"Microsoft YaHei";
+	text-decoration:underline;
+	position:relative;
+	margin-left:12px;}
+.Vertical_div_a1 i{
+	position:absolute; left:-13px; top:4px;
+	width:10px;
+	height:10px;
+	background:url(../img/zonghe1.png) no-repeat -71px -186px;}
+.Vertical_p{
+	font-size:20px;
+	color:#ff3b25;
+	font-family:"Microsoft YaHei";
+	font-weight:bold;
+	margin-left:41px;}
+.Vertical_div1_p{
+	font-size:12px;
+	color:#888;
+	font-family:"Microsoft YaHei";}
+.Vertical_div1_a{
+	font-size:12px;
+	color:#888;
+	font-family:"Microsoft YaHei";
+	text-decoration:underline;}
+.Vertical_div2_p{
+	font-size:12px;
+	color:#414141;
+	font-family:"Microsoft YaHei";
+	position:relative;
+	margin-bottom:10px;}
+.Vertical_div2_p i{
+	position:absolute; left:-20px; top:-1px;
+	width:16px;
+	height:16px;
+	background:url(../img/zonghe1.png) no-repeat -98px -174px;}
+.Vertical_div2_p1{
+	font-size:12px;
+	color:#414141;
+	font-family:"Microsoft YaHei";
+	position:relative;}
+.Vertical_div2_p1 i{
+	position:absolute; left:-20px; top:-1px;
+	width:16px;
+	height:16px;
+	background:url(../img/zonghe1.png) no-repeat -98px -197px;}
+
+
+
+.Page_a{
+	width:51px;
+	height:32px;
+	display:block;
+	border:1px solid #CCC;
+	line-height:32px;
+	padding-left:24px;
+	font-size:14px;
+	color:#CCC;
+	font-family:"Microsoft YaHei";
+	position:relative;}
+.Page_a i{
+	width:6px;
+	height:11px;
+	position:absolute; left:13px; top:11px;
+	background:url(../img/zonghe1.png) 0 -217px;}
+.Page_a1{
+	height:32px;
+	display:inline-block;
+	line-height:32px;
+	text-align:center;
+	font-size:16px;
+	color:#F00;
+	font-family:"Microsoft YaHei";
+	margin-left:4px;
+	padding:0 12px 0;}
+.Page_a2{
+	padding:0 12px 0;
+	height:32px;
+	display:inline-block;
+	line-height:32px;
+	text-align:center;
+	font-size:16px;
+	color:#666;
+	font-family:"Microsoft YaHei";
+	margin-left:4px;
+	border:1px solid #e1e1e1;
+	background:#f1f3f2;}
+.Page_a3{
+	width:63px;
+	height:32px;
+	display:block;
+	border:1px solid #CCC;
+	line-height:32px;
+	padding-left:12px;
+	font-size:14;
+	color:#CCC;
+	font-family:"Microsoft YaHei";
+	position:relative;
+	background:#f1f3f2;
+	margin-left:5px;}
+.Page_a3 i{
+	width:6px;
+	height:11px;
+	position:absolute; right:13px; top:11px;
+	background:url(../img/zonghe1.png) -7px -217px;}
+.Page_p i{
+	width:32px;
+	height:32px;
+	display:inline-block;
+	line-height:32px;
+	text-align:center;
+	font-size:16px;
+	color:#666;
+	font-family:"Microsoft YaHei";
+	margin:0 4px 0;
+	border:1px solid #CCC;}
+.Page_p{
+	font-size:12px;
+	color:#666;
+	font-family:"Microsoft YaHei";
+	margin-left:15px;}
+.Page_p1{
+	line-height:37px;
+	margin-left:22px;
+	font-size:12px;
+	color:#666;
+	font-family:"Microsoft YaHei";}
+.Page{
+	margin:50px 0 0 375px;}
+#blocks1{
+	display: none;
+}

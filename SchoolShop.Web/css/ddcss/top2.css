@@ -1,0 +1,644 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.header_yc {
+    width: 310px;
+    height: 245px;
+    position: absolute;
+    left: 198px;
+    top: 30px;
+    border: 1px solid #ddd;
+    padding-top: 6px;
+    z-index: 2;
+    background: #FFF;
+    display: none;
+}
+
+    .header_yc li {
+        width: 42px;
+        height: 26px;
+        float: left;
+        line-height: 26px;
+        text-align: center;
+        margin: 4px 10px 0;
+    }
+
+.class:hover .header_yc {
+    display: block;
+}
+
+
+
+
+/* 顶部 */
+.top_background {
+    min-width: 1200px;
+    height: 30px;
+    background: #e1e1e1;
+}
+
+.top_center {
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 30px;
+    font-size: 13px;
+    font-family: "微软雅黑";
+}
+
+.top_hy {
+    color: #1b9950;
+    margin-left: 8px;
+}
+
+.top_zc {
+    color: #3f3f3f;
+    margin-left: 4px;
+}
+
+.top_cs {
+    color: #3f3f3f;
+    margin-left: 9px;
+}
+
+.top_qh {
+    color: #94979f;
+}
+
+.top_r a {
+    color: #94979f;
+}
+
+.top_r li {
+    float: left;
+    position: relative;
+}
+
+.top_r_li {
+    color: #c8c8c8;
+}
+
+.top_r_li1 {
+    padding: 0 8px 0;
+    position: relative;
+}
+
+.top_wddd, .top_sjdd {
+    padding-right: 17px;
+}
+
+.wd {
+    width: 100px;
+    height: 160px;
+    border: 1px solid #CCC;
+    border-top: none;
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    background: #FFF;
+    z-index: 2;
+    display: none;
+}
+
+    .wd a {
+        display: block;
+        font-size: 13px;
+        font-family: "Microsoft YaHei";
+        color: #3f3f3f;
+        line-height: 25px;
+        margin-left: 10px;
+    }
+
+.gzdd {
+    width: 88px;
+    height: 102px;
+    border: 1px solid #CCC;
+    border-top: none;
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    background: #FFF;
+    z-index: 2;
+    display: none;
+}
+
+    .gzdd i {
+        width: 78px;
+        height: 77px;
+        display: block;
+        background: url(../img/zonghe.png) -475px -184px;
+        position: absolute;
+        left: 5px;
+        top: 15px;
+    }
+
+.top_r_li2:hover .wd,
+.top_r_li2:hover .gzdd {
+    display: block;
+}
+
+.top_i {
+    background: url(../img/zonghe.png) no-repeat;
+    width: 11px;
+    height: 5px;
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 13px;
+}
+
+.Mobilephone {
+    width: 225px;
+    height: 178px;
+    background: #FFFFFF;
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    z-index: 2;
+    border: 1px solid #CCCCCC;
+    border-top: 1px solid #FFFFFF;
+}
+
+.Mobile {
+    height: 89px;
+    border-bottom: 1px dotted #CCCCCC;
+    display: block;
+    position: relative;
+}
+
+    .Mobile i {
+        display: block;
+        background-image: url(../img/zonghe.png);
+        position: absolute;
+    }
+
+.Mobile_1 {
+    width: 74px;
+    height: 74px;
+    background-position: -660px -5px;
+    left: 7px;
+    top: 9px;
+}
+
+.Mobile_2 {
+    width: 66px;
+    height: 13px;
+    background-position: -741px -6px;
+    left: 88px;
+    top: 9px;
+}
+
+.Mobile_3 {
+    width: 112px;
+    height: 11px;
+    background-position: -741px -22px;
+    left: 88px;
+    top: 25px;
+}
+
+.Mobile_4 {
+    width: 37px;
+    height: 35px;
+    background-position: -740px -42px;
+    left: 88px;
+    top: 46px;
+}
+
+.Mobile_5 {
+    width: 42px;
+    height: 32px;
+    background-position: -789px -42px;
+    left: 136px;
+    top: 46px;
+}
+
+.Mobile_6 {
+    width: 21px;
+    height: 33px;
+    background-position: -848px -42px;
+    left: 190px;
+    top: 46px;
+}
+
+.Mobile_7 {
+    width: 74px;
+    height: 74px;
+    background-position: -660px -93px;
+    left: 7px;
+    top: 7px;
+}
+
+.Mobile_8 {
+    width: 92px;
+    height: 13px;
+    background-position: -741px -95px;
+    left: 88px;
+    top: 9px;
+}
+
+.Mobile_9 {
+    width: 112px;
+    height: 11px;
+    background-position: -741px -110px;
+    left: 88px;
+    top: 25px;
+}
+
+.Mobilephone {
+    display: none;
+}
+
+.top_r_li1:hover .Mobilephone,
+.top_r_li1:hover .header_div_ul10_div {
+    display: block;
+}
+
+.top_r_li2:hover {
+    background: #FFF;
+}
+
+    .top_r_li2:hover .top_i {
+        transform: rotate(180deg);
+    }
+
+/* 搜索框 */
+.header_div_ul10_div {
+    width: 1210px;
+    height: 200px;
+    position: absolute;
+    right: -1px;
+    top: 30px;
+    border: 1px solid #CCC;
+    z-index: 9;
+    background: #FFF;
+    display: none;
+}
+
+.header_div_ul10_dl {
+    width: 347px;
+    padding-left: 20px;
+    line-height: normal;
+    border-right: 1px solid #CCC;
+    height: 155px;
+    margin-top: 20px;
+}
+
+.header_div_ul10_div dl {
+    float: left;
+}
+
+.header_div_ul10_dl dt,
+.header_div_ul10_dl1 dt {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+}
+
+.header_div_ul10_dl dd,
+.header_div_ul10_dl1 dd {
+    width: 85px;
+    float: left;
+    margin-top: 10px;
+}
+
+.header_div_ul10_dl1 {
+    width: 260px;
+    padding-left: 20px;
+    line-height: normal;
+    border-right: 1px solid #CCC;
+    height: 155px;
+    margin-top: 25px;
+}
+
+.qrbk {
+    border: none;
+}
+/* 搜索框 */
+
+/* 搜索框 */
+.Sbox {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    width: 268px;
+    height: 78px;
+    background: url(../img/zonghe.png) no-repeat 0 -15px;
+    text-indent: -1000em;
+    margin-top: 35px;
+}
+
+.box {
+    margin-top: 25px;
+    margin-left: 45px;
+}
+
+.box_ul_sp a {
+    color: #6d6d6d;
+}
+
+.box_ul_sp {
+    width: 78px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    margin-right: 1px;
+    background: #e6e6e6;
+    font-size: 20px;
+    font-family: "微软雅黑";
+    display: block;
+}
+
+    .box_ul_sp .box_sps {
+        background: #1eb43a;
+        display: block;
+        color: #fff;
+    }
+
+.box_sps a {
+    color: #FFFFFF;
+}
+
+.box_center_T {
+    width: 525px;
+    height: 28px;
+    border: 3px solid #1eb43a;
+    outline: none;
+    font-size: 14px;
+    font-family: "新宋体";
+    padding-left: 5px;
+}
+
+.box_center_B {
+    width: 76px;
+    height: 36px;
+    background: #1eb43a;
+    border: none;
+    cursor: pointer;
+}
+
+.box_bottom li {
+    font-size: 13px;
+    font-family: "微软雅黑";
+    color #9c9393;
+    float: left;
+}
+
+.box_bottom {
+    margin: 10px 0 0 12px;
+}
+
+.box_bottom_sx {
+    margin: 0 7px 0;
+}
+
+.Sbox_i {
+    width: 356px;
+    height: 159px;
+    display: block;
+    background: url(../img/zonghe1.png) no-repeat -287px 0;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+
+/* 导航 */
+.Grey {
+    width: 100%;
+    padding-bottom: 30px;
+    background: #f5f5f5;
+}
+
+.nav {
+    height: 78px;
+    background: #48af5e;
+    min-width: 1200px;
+    border: 1px solid #e1e1e1;
+}
+
+.juzhong {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.h1 {
+    width: 240px;
+    height: 66px;
+    background: url(/images/logo.png) no-repeat -271px -134px;
+    text-indent: -1000em;
+    margin-top: 6px;
+}
+
+.nav_a {
+    line-height: 78px;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    color: #fff;
+    padding: 0 20px 0;
+    float: left;
+}
+
+.nav_a1 {
+    margin-left: 246px;
+}
+
+.nav_a2 {
+    padding-left: 53px;
+    position: relative;
+}
+
+.nav_a5 {
+    background: #3c8f4d;
+}
+
+.nav_a i {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    width: 33px;
+    height: 34px;
+    background: url(../img/hedaohang.png) no-repeat;
+}
+
+.nav_a4 {
+    background: #3c8f4d;
+}
+
+.nav_a3 {
+    padding-left: 53px;
+    position: relative;
+}
+
+    .nav_a3 i {
+        position: absolute;
+        left: 15px;
+        top: 20px;
+        width: 33px;
+        height: 33px;
+        background: url(../img/hedaohang.png) no-repeat -37px 0;
+    }
+
+.nav_div {
+    width: 61px;
+    height: 28px;
+    background: #eaeaea;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    color: #2c2d2c;
+    line-height: 28px;
+    text-align: center;
+    position: relative;
+    border-right: 1px solid #c8c8c8;
+}
+
+    .nav_div i {
+        position: absolute;
+        right: 4px;
+        top: 11px;
+        width: 9px;
+        height: 8px;
+        background: url(../img/hedaohang.png) -79px 0;
+    }
+
+.nav_text {
+    width: 172px;
+    height: 26px;
+    border: none;
+    float: left;
+    line-height: 26px;
+}
+
+.nav_button {
+    width: 61px;
+    height: 26px;
+    border: none;
+    border-left: 1px solid #c8c8c8;
+    float: left;
+}
+
+.nav_div2 {
+    margin-top: 25px;
+}
+
+.Home_page {
+    display: none;
+}
+
+.nav_por:hover .Home_page {
+    display: block;
+    background: #FFF;
+    left: -1px;
+    top: 78px;
+    padding: 5px;
+    z-index: 3;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    color: #333;
+    line-height: 25px;
+    border: 1px solid #ccc;
+    border-top: none;
+    width: 92px;
+    text-align: center;
+}
+
+    .nav_por:hover .Home_page a {
+        width: 94px;
+        display: block;
+        line-height: 30px;
+    }
+
+.nav_por:hover .Home_page_em {
+    position: absolute;
+    right: 0px;
+    top: 35px;
+    width: 15px;
+    height: 8px;
+    background: url(../img/shangjia.png) -163px -151px;
+}
+
+.Home_page_em {
+    position: absolute;
+    right: 0px;
+    top: 35px;
+    width: 15px;
+    height: 8px;
+    background: url(../img/shangjia.png) -178px -151px;
+}
+
+.nav_por:hover {
+    background: #FFF;
+    color: #000;
+    border: 1px solid #CCC;
+    border-bottom: none;
+    box-sizing: border-box;
+    width: 104px;
+    padding: 0 19px 0;
+}
+
+
+
+
+.wd-user {
+    /*display: block;*/
+    width: 220px;
+    word-spacing: -6px;
+}
+
+    .wd-user .user-info {
+        margin: 17px 0px;
+        height: 46px;
+    }
+
+    .wd-user img {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        top: 10px;
+        left: 12px;
+        border-radius: 50%;
+    }
+
+    .wd-user .user-info a {
+        padding-left: 85px;
+        line-height: 1.8;
+    }
+
+    .wd-user .news {
+        position: relative;
+    }
+
+        .wd-user .news i {
+            color: #FFF;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            background: #08ac29;
+            border-radius: 50%;
+            font-weight: bold;
+            position: absolute;
+            top: 1px;
+            left: 118px;
+            font-size: 12px;
+        }
+
+    .wd-user .user-link {
+        padding-left: 7px;
+    }
+
+    .wd-user .col {
+        display: inline-block;
+        width: 92px;
+    }
+
+.nav_a .dian {
+    position: absolute;
+    left: 55px;
+    top: 26px;
+    width: 5px;
+    height: 5px;
+    background: url(../img/shangjia.png) -6px -325px;
+    border-radius: 50%;
+}

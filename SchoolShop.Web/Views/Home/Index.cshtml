@@ -1,0 +1,340 @@
+﻿@using SchoolShop.Model
+@using SchoolShop.FrameWork.Utility
+@{
+    Dictionary<string, List<Catalogs>> dicCatalog = this.ViewBag.dicCatalog;//分类字典
+    List<Products> hotProducts = this.ViewBag.hotProducts;//热门商品
+    List<Products> newProducts = this.ViewBag.newProducts;//最新商品
+    List<Products> sportProducts = this.ViewBag.sportProducts;//运动商品
+    List<Products> bookProducts = this.ViewBag.bookProducts;//书籍
+    List<Products> electronicsProducts = this.ViewBag.electronicsProducts;//电子商品
+    List<Products> musicProducts = this.ViewBag.musicProducts;//音乐器材
+    List<Products> otherProducts = this.ViewBag.otherProducts;//其他
+    List<Products> lowPriceProducts = this.ViewBag.lowPriceProducts; //特价商品
+}
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>商城首页</title>
+    <link href="/css/base.css" rel="stylesheet" type="text/css" />
+    <link href="/css/index.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#proinfo").css("display", "block");
+            $('li[name="banner"]').mouseover(function () {
+                $('li[name = "banner"]').each(function (i, u) {
+                    $(u).removeClass("on");
+                    $('#banner' + i).css("display", "none");
+                });
+                $(this).addClass("on");
+                $('#banner' + $(this).text()).css("display", "list-item");
+            })
+
+        })
+    </script>
+
+
+</head>
+
+<body>
+    <!------------top---------------->
+    @Html.Action("SSTop", "Shared")
+
+    <!------------header---------------->
+    <div class="header">
+        <div class="logo"><a href="/"><img src="/images/logo.png" width="190" /></a></div>
+
+        <div class="header-right">
+            @Html.Action("Search", "Shared")
+
+            @Html.Action("SUserShopCart", "Shared")
+        </div>
+    </div>
+
+    <!------------header-wrap---------------->
+    <div class="header-wrap">
+        <div class="navwrap">
+            <div id="nav">
+                @Html.Action("SSHeadLink", "Shared")
+                @Html.Action("SSCatalog", "Shared")
+            </div>
+        </div>
+    </div>
+
+    <!------------banner---------------->
+    @*<div id="banner">
+            <div class="fullSlide">
+                <div class="bd">
+                    <ul>
+                        <li _src="url(/images/2.jpg)" style="background:#DED5A1 center 0 no-repeat;"><a href="#"></a></li>
+                        <li _src="url(/images/banner.jpg)" style="background:#000 center 0 no-repeat;"><a href="#"></a></li>
+                        <li _src="url(/images/5.jpg)" style="background:#FEFF19 center 0 no-repeat;"><a href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="hd"><ul></ul></div>
+                <span class="prev"></span>
+                <span class="next"></span>
+            </div>
+        </div>*@
+
+    <div id="banner">
+        <div class="fullSlide">
+            <div class="bd">
+                <ul style="position: relative; width: 1349px; height: 420px;">
+                    <li id="banner0"  style="position: absolute; width: 1349px; left: 0px; top: 0px; display: list-item; background: url(/images/2.jpg) 50% 0px no-repeat rgb(0, 0, 0);"><a href="javascript:void(0);"></a></li>
+                    <li id="banner1"  style="position: absolute; width: 1349px; left: 0px; top: 0px; display: none; background: url(/images/banner.jpg) 50% 0px no-repeat rgb(222, 213, 161);"><a href="javascript:void(0);"></a></li>
+                    <li id="banner2" style="position: absolute; width: 1349px; left: 0px; top: 0px; display: none; background: url(/images/5.jpg) 50% 0px no-repeat rgb(254, 255, 25);"><a href="javascript:void(0);"></a></li>
+                </ul>
+            </div>
+            <div class="hd">
+                <ul>
+                    <li name="banner" class="on">0</li>
+                    <li name="banner" class="">1</li>
+                    <li name="banner" class="">2</li>
+                </ul>
+            </div>
+            <span class="prev" style="opacity: 0.5; display: none;"></span>
+            <span class="next" style="opacity: 0.5; display: none;"></span>
+        </div>
+    </div>
+    
+    <!------------main---------------->
+    <div class="main">
+        <!------热门推荐-------->
+        <div class="recommend">
+            <div class="title"><img src="/images/rt.png" /><p>热门商品</p></div>
+            <div class="clr20"></div>
+            <div class="left">
+                @foreach (var item in hotProducts)
+                {
+                    <div class="img img_309"><p><strong><a href="/Product/ProductDetail?pid=@(item.PID)">@(item.ProductName)</a></strong><span>@(item.ProductPrice)元</span></p><a href="/Product/ProductDetail?pid=@(item.PID)"><img src="@(item.ImgURL)" width="220" height="220" /></a></div>
+                }
+
+
+
+            </div>
+            <div class="right">
+                <h2><span>TOP 5</span>最新商品</h2>
+                <ul class="board-list">
+                    @for (int i = 0; i < newProducts.Count; i++)
+                    {
+                        <li>
+                            <span class="item-num top3">@(i + 1)</span>
+                            <span class="item-info">
+                                <span class="item-title"><a href="/Product/ProductDetail?pid=@(newProducts[i].PID)">@(newProducts[i].ProductName)</a></span>
+                                <span class="item-price">@(newProducts[i].ProductPrice)元 </span>
+                            </span>
+                            <span class="item-thumb"><a href="/Product/ProductDetail?pid=@(newProducts[i].PID)"><img src="@(newProducts[i].ImgURL)" width="70" height="70" /></a></span>
+                        </li>
+                    }
+
+
+                </ul>
+            </div>
+        </div>
+
+        <!------运动器材-------->
+        <div class="list-title">
+            <p><strong style="border-bottom:solid 2px #00c3d5;">运动器材</strong></p><a href="/Product/ProductList?catalogID=01">More</a>
+        </div>
+        <div class="list-div">
+            <ul>
+                @foreach (var item in sportProducts)
+                {
+                    <li>
+                        <a href="/Product/ProductDetail?pid=@(item.PID)"><img src="@(item.ImgURL)" width="220" height="220" /></a>
+                        <p><a href="/Product/ProductDetail?pid=@(item.PID)">@(item.ProductName)</a></p>
+                        <span>@(item.ProductPrice)元</span>
+                        <pre>@(item.Describe)</pre>
+                    </li>
+                }
+
+
+            </ul>
+        </div>
+
+        <!------大学书籍-------->
+        <div class="list-title">
+            <p><strong style="border-bottom:solid 2px #54cb00;">大学书籍</strong></p><a href="/Product/ProductList?catalogID=02">More</a>
+        </div>
+        <div class="list-div">
+            <ul>
+                @foreach (var item in bookProducts)
+                {
+                    <li>
+                        <a href="/Product/ProductDetail?pid=@(item.PID)"><img src="@(item.ImgURL)" width="220" height="220" /></a>
+                        <p><a href="/Product/ProductDetail?pid=@(item.PID)">@(item.ProductName)</a></p>
+                        <span>@(item.ProductPrice)元</span>
+                        <pre>@(item.Describe)</pre>
+                    </li>
+                }
+
+            </ul>
+        </div>
+
+        <!------电子产品-------->
+        <div class="list-title">
+            <p><strong style="border-bottom:solid 2px #1d7ad9;">电子产品</strong></p><a href="/Product/ProductList?catalogID=03">More</a>
+        </div>
+        <div class="list-div">
+            <ul>
+                @foreach (var item in electronicsProducts)
+                {
+                    <li>
+                        <a href="/Product/ProductDetail?pid=@(item.PID)"><img src="@(item.ImgURL)" width="220" height="220" /></a>
+                        <p><a href="/Product/ProductDetail?pid=@(item.PID)">@(item.ProductName)</a></p>
+                        <span>@(item.ProductPrice)元</span>
+                        <pre>@(item.Describe)</pre>
+                    </li>
+                }
+
+            </ul>
+        </div>
+
+        <!------音乐器材-------->
+        <div class="list-title">
+            <p><strong style="border-bottom:solid 2px #f26d7e;">音乐器材</strong></p><a href="/Product/ProductList?catalogID=04">More</a>
+        </div>
+        <div class="list-div">
+            <ul>
+                @foreach (var item in musicProducts)
+                {
+                    <li>
+                        <a href="/Product/ProductDetail?pid=@(item.PID)"><img src="@(item.ImgURL)" width="220" height="220" /></a>
+                        <p><a href="/Product/ProductDetail?pid=@(item.PID)">@(item.ProductName)</a></p>
+                        <span>@(item.ProductPrice)元</span>
+                        <pre>@(item.Describe)</pre>
+                    </li>
+                }
+            </ul>
+        </div>
+
+        <!------其他-------->
+        <div class="list-title">
+            <p><strong style="border-bottom:solid 2px #f9ee30;">其他</strong></p><a href="/Product/ProductList?catalogID=05">More</a>
+        </div>
+        <div class="list-div">
+            <ul>
+                @foreach (var item in otherProducts)
+                {
+                    <li>
+                        <a href="/Product/ProductDetail?pid=@(item.PID)"><img src="@(item.ImgURL)" width="220" height="220" /></a>
+                        <p><a href="/Product/ProductDetail?pid=@(item.PID)">@(item.ProductName)</a></p>
+                        <span>@(item.ProductPrice)元</span>
+                        <pre>@(item.Describe)</pre>
+                    </li>
+                }
+            </ul>
+        </div>
+
+        <!------特价商品-------->
+        <div class="list-title">
+            <p><strong style="border-bottom:solid 2px #dfdfdf;">低价商品</strong></p><a href="javascript:void(0);">More</a>
+        </div>
+        <div class="list-div">
+            <ul>
+                @foreach (var item in lowPriceProducts)
+                {
+                    <li>
+                        <label><a href="/Product/ProductDetail?pid=@(item.PID)">@(item.ProductName)</a></label>
+                        <dfn>@(Math.Round(item.ProductPrice, 0))元</dfn>
+
+                        <a href="/Product/ProductDetail?pid=@(item.PID)"><img src="@(item.ImgURL)" width="220" height="220" /></a>
+                        <pre>@(item.Describe)</pre>
+                    </li>
+                }
+
+            </ul>
+        </div>
+
+    </div>
+
+    <!------底部-------->
+    <div class="footer">
+        <div class="footer-c">
+            <dl>
+                <dt>购买指南</dt>
+                <dd><a href="#">第一次购物体验</a></dd>
+                <dd><a href="#">品质保证原则</a></dd>
+                <dd><a href="#">会员申请条件</a></dd>
+            </dl>
+            <dl>
+                <dt>支付方式</dt>
+                <dd><a href="#">网银在线支付</a></dd>
+                <dd><a href="#">支付宝支付</a></dd>
+                <dd><a href="#">银联在线支付</a></dd>
+            </dl>
+            <dl>
+                <dt>配送方式</dt>
+                <dd><a href="#">配送方式</a></dd>
+            </dl>
+            <dl>
+                <dt>售后服务</dt>
+                <dd><a href="#">联系客服</a></dd>
+                <dd><a href="#">订单查询</a></dd>
+                <dd><a href="#">退换货流程及原则</a></dd>
+            </dl>
+
+            <div class="col-contact">
+                <p class="phone">400-100-5678</p>
+                <p>周一至周日 8:00-18:00<br />（仅收市话费）</p>
+                <input type="button" value="在线客户" />
+            </div>
+            <div class="clr20"></div>
+            <div class="footer-b">
+                <p><a href="#">关于我们</a>  |  <a href="https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-11895250131.3.YOZUX7&id=521741523734">手机商城</a>  |  <a href="#">联系我们</a></p>
+                <p>2013 © DEHUA.com,All Rights Reserver. cz科技 版权所有　　网站备案号：闽ICP备0000号-1</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+
+<!--------banner特效--------------->
+<script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript">
+    $(function () {
+        /*------------------------------购物车效果-----------------------------------*/
+        $(".cart-section").hover(function () {
+            $(".hidden-cart").css("display", "block");
+            $(".hidden-cart-c").css("display", "block");
+        }, function () {
+            $(".hidden-cart").css("display", "none");
+            $(".hidden-cart-c").css("display", "none");
+        })
+
+        $(".hidden-cart-c ul li ins").click(function () {
+            $(this).parents('li').remove();
+        })
+
+    })
+
+    /*------------------------------banner特效-----------------------------------*/
+    //$(".fullSlide").hover(function () {
+    //    $(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5)
+    //},
+	//function () {
+	//    $(this).find(".prev,.next").fadeOut()
+	//});
+    //$(".fullSlide").slide({
+    //    titCell: ".hd ul",
+    //    mainCell: ".bd ul",
+    //    effect: "fold",
+    //    autoPlay: true,
+    //    autoPage: true,
+    //    trigger: "click",
+    //    startFun: function (i) {
+    //        var curLi = jQuery(".fullSlide .bd li").eq(i);
+    //        if (!!curLi.attr("_src")) {
+    //            curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+    //        }
+    //    }
+    //});
+
+</script>
+</html>

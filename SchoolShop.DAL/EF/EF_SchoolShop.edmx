@@ -1,0 +1,752 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="schoolshopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SS_Catalogs">
+          <Key>
+            <PropertyRef Name="CatalogID" />
+          </Key>
+          <Property Name="CatalogID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CatalogName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CatalogLevel" Type="int" Nullable="false" />
+          <Property Name="ParentID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SS_Dialog">
+          <Key>
+            <PropertyRef Name="DialogID" />
+          </Key>
+          <Property Name="DialogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DialogPID" Type="int" Nullable="false" />
+          <Property Name="ConsultUID" Type="int" Nullable="false" />
+          <Property Name="ConsultContent" Type="nvarchar" MaxLength="500" />
+          <Property Name="ConsultTime" Type="datetime" Nullable="false" />
+          <Property Name="ReplyUID" Type="int" Nullable="false" />
+          <Property Name="ReplyContent" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReplyTime" Type="datetime" />
+          <Property Name="DialogOver" Type="int" Nullable="false" />
+          <Property Name="DelFlag" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SS_Products">
+          <Key>
+            <PropertyRef Name="PID" />
+          </Key>
+          <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UID" Type="int" Nullable="false" />
+          <Property Name="CatalogID" Type="varchar" MaxLength="50" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ProductPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="ImgURL" Type="nvarchar" MaxLength="100" />
+          <Property Name="ViewsCount" Type="int" />
+          <Property Name="Describe" Type="nvarchar" MaxLength="200" />
+          <Property Name="PhoneNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+          <Property Name="SaleTime" Type="datetime" />
+          <Property Name="PrudouctDetail" Type="nvarchar" MaxLength="4000" />
+          <Property Name="AskCount" Type="int" />
+          <Property Name="DelFlag" Type="int" />
+        </EntityType>
+        <EntityType Name="SS_ShopCart">
+          <Key>
+            <PropertyRef Name="ShopCartID" />
+          </Key>
+          <Property Name="ShopCartID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PID" Type="int" Nullable="false" />
+          <Property Name="PUID" Type="int" Nullable="false" />
+          <Property Name="UID" Type="int" Nullable="false" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="BuyTime" Type="datetime" Nullable="false" />
+          <Property Name="DelFlag" Type="int" />
+        </EntityType>
+        <EntityType Name="SS_UserAttention">
+          <Key>
+            <PropertyRef Name="UserAttentionID" />
+          </Key>
+          <Property Name="UserAttentionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AttrntionUID" Type="int" />
+          <Property Name="AttentionPID" Type="int" />
+          <Property Name="ProductUID" Type="int" />
+          <Property Name="AttentionTime" Type="datetime" />
+          <Property Name="DelFalg" Type="int" />
+        </EntityType>
+        <EntityType Name="SS_UserBrowse">
+          <Key>
+            <PropertyRef Name="BroeseID" />
+          </Key>
+          <Property Name="BroeseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UID" Type="int" Nullable="false" />
+          <Property Name="PID" Type="int" Nullable="false" />
+          <Property Name="ImgUrl" Type="nvarchar" MaxLength="100" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ProductPrice" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="CatalogID" Type="varchar" MaxLength="20" />
+          <Property Name="BDateTime" Type="datetime" Nullable="false" />
+          <Property Name="DelFlag" Type="int" />
+        </EntityType>
+        <EntityType Name="SS_UserOrder">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PID" Type="int" Nullable="false" />
+          <Property Name="UID" Type="int" Nullable="false" />
+          <Property Name="PUID" Type="int" Nullable="false" />
+          <Property Name="ISPay" Type="int" />
+          <Property Name="OrderTime" Type="datetime" />
+          <Property Name="DelFlag" Type="int" />
+        </EntityType>
+        <EntityType Name="SS_Users">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Mobile" Type="varchar" MaxLength="15" />
+          <Property Name="Email" Type="varchar" MaxLength="30" />
+          <Property Name="NickName" Type="nvarchar" MaxLength="20" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Birthday" Type="datetime" />
+          <Property Name="RegistTime" Type="datetime" Nullable="false" />
+          <Property Name="LastLoginTime" Type="datetime" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="Gender" Type="int" />
+          <Property Name="HeadImage" Type="varchar" MaxLength="100" />
+          <Property Name="IDNumber" Type="varchar" MaxLength="30" />
+          <Property Name="QQNumber" Type="varchar" MaxLength="15" />
+          <Property Name="note" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreditValue" Type="int" />
+          <Property Name="DelFlag" Type="int" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“schoolshop.dbo.View_MyAttentions”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="View_MyAttentions">
+          <Key>
+            <PropertyRef Name="UserAttentionID" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="ProductPrice" />
+          </Key>
+          <Property Name="AttentionPID" Type="int" />
+          <Property Name="ProductUID" Type="int" />
+          <Property Name="AttentionTime" Type="datetime" />
+          <Property Name="UserAttentionID" Type="int" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ProductPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="ImgURL" Type="nvarchar" MaxLength="100" />
+          <Property Name="PhoneNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Describe" Type="nvarchar" MaxLength="200" />
+          <Property Name="AttrntionUID" Type="int" />
+          <Property Name="NickName" Type="nvarchar" MaxLength="20" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gender" Type="int" />
+          <Property Name="DelFalg" Type="int" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“schoolshop.dbo.View_ShopCartView”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="View_ShopCartView">
+          <Key>
+            <PropertyRef Name="ShopCartID" />
+            <PropertyRef Name="PID" />
+            <PropertyRef Name="UID" />
+            <PropertyRef Name="PUID" />
+            <PropertyRef Name="BuyTime" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="Price" />
+          </Key>
+          <Property Name="ShopCartID" Type="int" Nullable="false" />
+          <Property Name="PID" Type="int" Nullable="false" />
+          <Property Name="UID" Type="int" Nullable="false" />
+          <Property Name="PUID" Type="int" Nullable="false" />
+          <Property Name="BuyTime" Type="datetime" Nullable="false" />
+          <Property Name="DelFlag" Type="int" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ImgURL" Type="nvarchar" MaxLength="100" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“schoolshop.dbo.View_UserOrder”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="View_UserOrder">
+          <Key>
+            <PropertyRef Name="OrderID" />
+            <PropertyRef Name="PID" />
+            <PropertyRef Name="UID" />
+            <PropertyRef Name="PUID" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="ProductPrice" />
+          </Key>
+          <Property Name="OrderID" Type="int" Nullable="false" />
+          <Property Name="PID" Type="int" Nullable="false" />
+          <Property Name="UID" Type="int" Nullable="false" />
+          <Property Name="PUID" Type="int" Nullable="false" />
+          <Property Name="ISPay" Type="int" />
+          <Property Name="OrderTime" Type="datetime" />
+          <Property Name="DelFlag" Type="int" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ProductPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="ImgURL" Type="nvarchar" MaxLength="100" />
+          <Property Name="PhoneNumber" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“schoolshop.dbo.View_WhoAttention”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="View_WhoAttention">
+          <Key>
+            <PropertyRef Name="UserAttentionID" />
+            
+            
+          </Key>
+          <Property Name="UserAttentionID" Type="int" Nullable="false" />
+          <Property Name="AttrntionUID" Type="int" />
+          <Property Name="AttentionPID" Type="int" />
+          <Property Name="ProductUID" Type="int" />
+          <Property Name="AttentionTime" Type="datetime" />
+          <Property Name="DelFalg" Type="int" />
+          <Property Name="ImgURL" Type="nvarchar" MaxLength="100" />
+          <Property Name="ProductPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Mobile" Type="varchar" MaxLength="15" />
+          <Property Name="Email" Type="varchar" MaxLength="30" />
+          <Property Name="NickName" Type="nvarchar" MaxLength="20" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Birthday" Type="datetime" />
+          <Property Name="LastLoginTime" Type="datetime" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="Gender" Type="int" />
+          <Property Name="HeadImage" Type="varchar" MaxLength="100" />
+          <Property Name="QQNumber" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityContainer Name="schoolshopModelStoreContainer">
+          <EntitySet Name="SS_Catalogs" EntityType="Self.SS_Catalogs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SS_Dialog" EntityType="Self.SS_Dialog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SS_Products" EntityType="Self.SS_Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SS_ShopCart" EntityType="Self.SS_ShopCart" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SS_UserAttention" EntityType="Self.SS_UserAttention" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SS_UserBrowse" EntityType="Self.SS_UserBrowse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SS_UserOrder" EntityType="Self.SS_UserOrder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SS_Users" EntityType="Self.SS_Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="View_MyAttentions" EntityType="Self.View_MyAttentions" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_MyAttentions].[AttentionPID] AS [AttentionPID], 
+    [View_MyAttentions].[ProductUID] AS [ProductUID], 
+    [View_MyAttentions].[AttentionTime] AS [AttentionTime], 
+    [View_MyAttentions].[UserAttentionID] AS [UserAttentionID], 
+    [View_MyAttentions].[ProductName] AS [ProductName], 
+    [View_MyAttentions].[ProductPrice] AS [ProductPrice], 
+    [View_MyAttentions].[ImgURL] AS [ImgURL], 
+    [View_MyAttentions].[PhoneNumber] AS [PhoneNumber], 
+    [View_MyAttentions].[Describe] AS [Describe], 
+    [View_MyAttentions].[AttrntionUID] AS [AttrntionUID], 
+    [View_MyAttentions].[NickName] AS [NickName], 
+    [View_MyAttentions].[RealName] AS [RealName], 
+    [View_MyAttentions].[Gender] AS [Gender], 
+    [View_MyAttentions].[DelFalg] AS [DelFalg]
+    FROM [dbo].[View_MyAttentions] AS [View_MyAttentions]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_ShopCartView" EntityType="Self.View_ShopCartView" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_ShopCartView].[ShopCartID] AS [ShopCartID], 
+    [View_ShopCartView].[PID] AS [PID], 
+    [View_ShopCartView].[UID] AS [UID], 
+    [View_ShopCartView].[PUID] AS [PUID], 
+    [View_ShopCartView].[BuyTime] AS [BuyTime], 
+    [View_ShopCartView].[DelFlag] AS [DelFlag], 
+    [View_ShopCartView].[ProductName] AS [ProductName], 
+    [View_ShopCartView].[ImgURL] AS [ImgURL], 
+    [View_ShopCartView].[Price] AS [Price]
+    FROM [dbo].[View_ShopCartView] AS [View_ShopCartView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_UserOrder" EntityType="Self.View_UserOrder" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_UserOrder].[OrderID] AS [OrderID], 
+    [View_UserOrder].[PID] AS [PID], 
+    [View_UserOrder].[UID] AS [UID], 
+    [View_UserOrder].[PUID] AS [PUID], 
+    [View_UserOrder].[ISPay] AS [ISPay], 
+    [View_UserOrder].[OrderTime] AS [OrderTime], 
+    [View_UserOrder].[DelFlag] AS [DelFlag], 
+    [View_UserOrder].[ProductName] AS [ProductName], 
+    [View_UserOrder].[ProductPrice] AS [ProductPrice], 
+    [View_UserOrder].[ImgURL] AS [ImgURL], 
+    [View_UserOrder].[PhoneNumber] AS [PhoneNumber]
+    FROM [dbo].[View_UserOrder] AS [View_UserOrder]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_WhoAttention" EntityType="Self.View_WhoAttention" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_WhoAttention].[UserAttentionID] AS [UserAttentionID], 
+    [View_WhoAttention].[AttrntionUID] AS [AttrntionUID], 
+    [View_WhoAttention].[AttentionPID] AS [AttentionPID], 
+    [View_WhoAttention].[ProductUID] AS [ProductUID], 
+    [View_WhoAttention].[AttentionTime] AS [AttentionTime], 
+    [View_WhoAttention].[DelFalg] AS [DelFalg], 
+    [View_WhoAttention].[ImgURL] AS [ImgURL], 
+    [View_WhoAttention].[ProductPrice] AS [ProductPrice], 
+    [View_WhoAttention].[ProductName] AS [ProductName], 
+    [View_WhoAttention].[Mobile] AS [Mobile], 
+    [View_WhoAttention].[Email] AS [Email], 
+    [View_WhoAttention].[NickName] AS [NickName], 
+    [View_WhoAttention].[RealName] AS [RealName], 
+    [View_WhoAttention].[Birthday] AS [Birthday], 
+    [View_WhoAttention].[LastLoginTime] AS [LastLoginTime], 
+    [View_WhoAttention].[Address] AS [Address], 
+    [View_WhoAttention].[Gender] AS [Gender], 
+    [View_WhoAttention].[HeadImage] AS [HeadImage], 
+    [View_WhoAttention].[QQNumber] AS [QQNumber]
+    FROM [dbo].[View_WhoAttention] AS [View_WhoAttention]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="schoolshopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="schoolshopEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SS_Catalogs" EntityType="schoolshopModel.SS_Catalogs" />
+          <EntitySet Name="SS_UserBrowse" EntityType="schoolshopModel.SS_UserBrowse" />
+          <EntitySet Name="SS_Users" EntityType="schoolshopModel.SS_Users" />
+          <EntitySet Name="SS_UserAttention" EntityType="schoolshopModel.SS_UserAttention" />
+          <EntitySet Name="SS_Products" EntityType="schoolshopModel.SS_Products" />
+          <EntitySet Name="View_WhoAttention" EntityType="schoolshopModel.View_WhoAttention" />
+          <EntitySet Name="SS_Dialog" EntityType="schoolshopModel.SS_Dialog" />
+          <EntitySet Name="SS_ShopCart" EntityType="schoolshopModel.SS_ShopCart" />
+          <EntitySet Name="View_ShopCartView" EntityType="schoolshopModel.View_ShopCartView" />
+          <EntitySet Name="View_MyAttentions" EntityType="schoolshopModel.View_MyAttentions" />
+          <EntitySet Name="View_UserOrder" EntityType="schoolshopModel.View_UserOrder" />
+          <EntitySet Name="SS_UserOrder" EntityType="schoolshopModel.SS_UserOrder" />
+        </EntityContainer>
+        <EntityType Name="SS_Catalogs">
+          <Key>
+            <PropertyRef Name="CatalogID" />
+          </Key>
+          <Property Name="CatalogID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CatalogName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CatalogLevel" Type="Int32" Nullable="false" />
+          <Property Name="ParentID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="SS_UserBrowse">
+          <Key>
+            <PropertyRef Name="BroeseID" />
+          </Key>
+          <Property Name="BroeseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UID" Type="Int32" Nullable="false" />
+          <Property Name="PID" Type="Int32" Nullable="false" />
+          <Property Name="ImgUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ProductPrice" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CatalogID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="BDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DelFlag" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SS_Users">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="NickName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="RealName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Birthday" Type="DateTime" Precision="3" />
+          <Property Name="RegistTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastLoginTime" Type="DateTime" Precision="3" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="Int32" />
+          <Property Name="HeadImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IDNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="QQNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="note" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreditValue" Type="Int32" />
+          <Property Name="DelFlag" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SS_UserAttention">
+          <Key>
+            <PropertyRef Name="UserAttentionID" />
+          </Key>
+          <Property Name="UserAttentionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AttrntionUID" Type="Int32" />
+          <Property Name="AttentionPID" Type="Int32" />
+          <Property Name="ProductUID" Type="Int32" />
+          <Property Name="AttentionTime" Type="DateTime" Precision="3" />
+          <Property Name="DelFalg" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SS_Products">
+          <Key>
+            <PropertyRef Name="PID" />
+          </Key>
+          <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UID" Type="Int32" Nullable="false" />
+          <Property Name="CatalogID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ProductPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="ImgURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ViewsCount" Type="Int32" />
+          <Property Name="Describe" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SaleTime" Type="DateTime" Precision="3" />
+          <Property Name="PrudouctDetail" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="AskCount" Type="Int32" />
+          <Property Name="DelFlag" Type="Int32" />
+        </EntityType>
+        <EntityType Name="View_WhoAttention">
+          <Key>
+            <PropertyRef Name="UserAttentionID" />
+          </Key>
+          <Property Name="UserAttentionID" Type="Int32" Nullable="false" />
+          <Property Name="AttrntionUID" Type="Int32" />
+          <Property Name="AttentionPID" Type="Int32" />
+          <Property Name="ProductUID" Type="Int32" />
+          <Property Name="AttentionTime" Type="DateTime" Precision="3" />
+          <Property Name="DelFalg" Type="Int32" />
+          <Property Name="ImgURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ProductPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mobile" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="NickName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="RealName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Birthday" Type="DateTime" Precision="3" />
+          <Property Name="LastLoginTime" Type="DateTime" Precision="3" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="Int32" />
+          <Property Name="HeadImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="QQNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SS_Dialog">
+          <Key>
+            <PropertyRef Name="DialogID" />
+          </Key>
+          <Property Name="DialogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DialogPID" Type="Int32" Nullable="false" />
+          <Property Name="ConsultUID" Type="Int32" Nullable="false" />
+          <Property Name="ConsultContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ConsultTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ReplyUID" Type="Int32" Nullable="false" />
+          <Property Name="ReplyContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ReplyTime" Type="DateTime" Precision="3" />
+          <Property Name="DialogOver" Type="Int32" Nullable="false" />
+          <Property Name="DelFlag" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SS_ShopCart">
+          <Key>
+            <PropertyRef Name="ShopCartID" />
+          </Key>
+          <Property Name="PID" Type="Int32" Nullable="false" />
+          <Property Name="PUID" Type="Int32" Nullable="false" />
+          <Property Name="UID" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="BuyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DelFlag" Type="Int32" />
+          <Property Name="ShopCartID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="View_ShopCartView">
+          <Key>
+            <PropertyRef Name="ShopCartID" />
+            <PropertyRef Name="PID" />
+            <PropertyRef Name="UID" />
+            <PropertyRef Name="PUID" />
+            <PropertyRef Name="BuyTime" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="Price" />
+          </Key>
+          <Property Name="ShopCartID" Type="Int32" Nullable="false" />
+          <Property Name="PID" Type="Int32" Nullable="false" />
+          <Property Name="UID" Type="Int32" Nullable="false" />
+          <Property Name="PUID" Type="Int32" Nullable="false" />
+          <Property Name="BuyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DelFlag" Type="Int32" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ImgURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="View_MyAttentions">
+          <Key>
+            <PropertyRef Name="UserAttentionID" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="ProductPrice" />
+          </Key>
+          <Property Name="AttentionPID" Type="Int32" />
+          <Property Name="ProductUID" Type="Int32" />
+          <Property Name="AttentionTime" Type="DateTime" Precision="3" />
+          <Property Name="UserAttentionID" Type="Int32" Nullable="false" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ProductPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="ImgURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Describe" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AttrntionUID" Type="Int32" />
+          <Property Name="NickName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="RealName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="Int32" />
+          <Property Name="DelFalg" Type="Int32" />
+        </EntityType>
+        <EntityType Name="View_UserOrder">
+          <Key>
+            <PropertyRef Name="OrderID" />
+            <PropertyRef Name="PID" />
+            <PropertyRef Name="UID" />
+            <PropertyRef Name="PUID" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="ProductPrice" />
+          </Key>
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="PID" Type="Int32" Nullable="false" />
+          <Property Name="UID" Type="Int32" Nullable="false" />
+          <Property Name="PUID" Type="Int32" Nullable="false" />
+          <Property Name="ISPay" Type="Int32" />
+          <Property Name="OrderTime" Type="DateTime" Precision="3" />
+          <Property Name="DelFlag" Type="Int32" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ProductPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="ImgURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SS_UserOrder">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PID" Type="Int32" Nullable="false" />
+          <Property Name="UID" Type="Int32" Nullable="false" />
+          <Property Name="PUID" Type="Int32" Nullable="false" />
+          <Property Name="ISPay" Type="Int32" />
+          <Property Name="OrderTime" Type="DateTime" Precision="3" />
+          <Property Name="DelFlag" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="schoolshopModelStoreContainer" CdmEntityContainer="schoolshopEntities">
+          <EntitySetMapping Name="SS_Catalogs">
+            <EntityTypeMapping TypeName="schoolshopModel.SS_Catalogs">
+              <MappingFragment StoreEntitySet="SS_Catalogs">
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="CatalogLevel" ColumnName="CatalogLevel" />
+                <ScalarProperty Name="CatalogName" ColumnName="CatalogName" />
+                <ScalarProperty Name="CatalogID" ColumnName="CatalogID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SS_UserBrowse">
+            <EntityTypeMapping TypeName="schoolshopModel.SS_UserBrowse">
+              <MappingFragment StoreEntitySet="SS_UserBrowse">
+                <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+                <ScalarProperty Name="BDateTime" ColumnName="BDateTime" />
+                <ScalarProperty Name="CatalogID" ColumnName="CatalogID" />
+                <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ImgUrl" ColumnName="ImgUrl" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+                <ScalarProperty Name="BroeseID" ColumnName="BroeseID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SS_Users">
+            <EntityTypeMapping TypeName="schoolshopModel.SS_Users">
+              <MappingFragment StoreEntitySet="SS_Users">
+                <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+                <ScalarProperty Name="CreditValue" ColumnName="CreditValue" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="QQNumber" ColumnName="QQNumber" />
+                <ScalarProperty Name="IDNumber" ColumnName="IDNumber" />
+                <ScalarProperty Name="HeadImage" ColumnName="HeadImage" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="LastLoginTime" ColumnName="LastLoginTime" />
+                <ScalarProperty Name="RegistTime" ColumnName="RegistTime" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="NickName" ColumnName="NickName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SS_UserAttention">
+            <EntityTypeMapping TypeName="schoolshopModel.SS_UserAttention">
+              <MappingFragment StoreEntitySet="SS_UserAttention">
+                <ScalarProperty Name="DelFalg" ColumnName="DelFalg" />
+                <ScalarProperty Name="AttentionTime" ColumnName="AttentionTime" />
+                <ScalarProperty Name="ProductUID" ColumnName="ProductUID" />
+                <ScalarProperty Name="AttentionPID" ColumnName="AttentionPID" />
+                <ScalarProperty Name="AttrntionUID" ColumnName="AttrntionUID" />
+                <ScalarProperty Name="UserAttentionID" ColumnName="UserAttentionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SS_Products">
+            <EntityTypeMapping TypeName="schoolshopModel.SS_Products">
+              <MappingFragment StoreEntitySet="SS_Products">
+                <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+                <ScalarProperty Name="AskCount" ColumnName="AskCount" />
+                <ScalarProperty Name="PrudouctDetail" ColumnName="PrudouctDetail" />
+                <ScalarProperty Name="SaleTime" ColumnName="SaleTime" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Describe" ColumnName="Describe" />
+                <ScalarProperty Name="ViewsCount" ColumnName="ViewsCount" />
+                <ScalarProperty Name="ImgURL" ColumnName="ImgURL" />
+                <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="CatalogID" ColumnName="CatalogID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_WhoAttention">
+            <EntityTypeMapping TypeName="schoolshopModel.View_WhoAttention">
+              <MappingFragment StoreEntitySet="View_WhoAttention">
+                <ScalarProperty Name="QQNumber" ColumnName="QQNumber" />
+                <ScalarProperty Name="HeadImage" ColumnName="HeadImage" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="LastLoginTime" ColumnName="LastLoginTime" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="NickName" ColumnName="NickName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+                <ScalarProperty Name="ImgURL" ColumnName="ImgURL" />
+                <ScalarProperty Name="DelFalg" ColumnName="DelFalg" />
+                <ScalarProperty Name="AttentionTime" ColumnName="AttentionTime" />
+                <ScalarProperty Name="ProductUID" ColumnName="ProductUID" />
+                <ScalarProperty Name="AttentionPID" ColumnName="AttentionPID" />
+                <ScalarProperty Name="AttrntionUID" ColumnName="AttrntionUID" />
+                <ScalarProperty Name="UserAttentionID" ColumnName="UserAttentionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SS_Dialog">
+            <EntityTypeMapping TypeName="schoolshopModel.SS_Dialog">
+              <MappingFragment StoreEntitySet="SS_Dialog">
+                <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+                <ScalarProperty Name="DialogOver" ColumnName="DialogOver" />
+                <ScalarProperty Name="ReplyTime" ColumnName="ReplyTime" />
+                <ScalarProperty Name="ReplyContent" ColumnName="ReplyContent" />
+                <ScalarProperty Name="ReplyUID" ColumnName="ReplyUID" />
+                <ScalarProperty Name="ConsultTime" ColumnName="ConsultTime" />
+                <ScalarProperty Name="ConsultContent" ColumnName="ConsultContent" />
+                <ScalarProperty Name="ConsultUID" ColumnName="ConsultUID" />
+                <ScalarProperty Name="DialogPID" ColumnName="DialogPID" />
+                <ScalarProperty Name="DialogID" ColumnName="DialogID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SS_ShopCart">
+            <EntityTypeMapping TypeName="schoolshopModel.SS_ShopCart">
+              <MappingFragment StoreEntitySet="SS_ShopCart">
+                <ScalarProperty Name="ShopCartID" ColumnName="ShopCartID" />
+                <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+                <ScalarProperty Name="BuyTime" ColumnName="BuyTime" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+                <ScalarProperty Name="PUID" ColumnName="PUID" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_ShopCartView">
+            <EntityTypeMapping TypeName="schoolshopModel.View_ShopCartView">
+              <MappingFragment StoreEntitySet="View_ShopCartView">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ImgURL" ColumnName="ImgURL" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+                <ScalarProperty Name="BuyTime" ColumnName="BuyTime" />
+                <ScalarProperty Name="PUID" ColumnName="PUID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="ShopCartID" ColumnName="ShopCartID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_MyAttentions">
+            <EntityTypeMapping TypeName="schoolshopModel.View_MyAttentions">
+              <MappingFragment StoreEntitySet="View_MyAttentions">
+                <ScalarProperty Name="DelFalg" ColumnName="DelFalg" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="NickName" ColumnName="NickName" />
+                <ScalarProperty Name="AttrntionUID" ColumnName="AttrntionUID" />
+                <ScalarProperty Name="Describe" ColumnName="Describe" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="ImgURL" ColumnName="ImgURL" />
+                <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="UserAttentionID" ColumnName="UserAttentionID" />
+                <ScalarProperty Name="AttentionTime" ColumnName="AttentionTime" />
+                <ScalarProperty Name="ProductUID" ColumnName="ProductUID" />
+                <ScalarProperty Name="AttentionPID" ColumnName="AttentionPID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_UserOrder">
+            <EntityTypeMapping TypeName="schoolshopModel.View_UserOrder">
+              <MappingFragment StoreEntitySet="View_UserOrder">
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="ImgURL" ColumnName="ImgURL" />
+                <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+                <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
+                <ScalarProperty Name="ISPay" ColumnName="ISPay" />
+                <ScalarProperty Name="PUID" ColumnName="PUID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SS_UserOrder">
+            <EntityTypeMapping TypeName="schoolshopModel.SS_UserOrder">
+              <MappingFragment StoreEntitySet="SS_UserOrder">
+                <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+                <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
+                <ScalarProperty Name="ISPay" ColumnName="ISPay" />
+                <ScalarProperty Name="PUID" ColumnName="PUID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

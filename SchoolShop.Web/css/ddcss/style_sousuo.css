@@ -1,0 +1,260 @@
+/* CSS Document */
+
+
+
+/* ������Ϣ */
+.left{
+	width:967px;}
+.juzhong{
+	width:1200px;
+	margin:0 auto;}
+.Find{
+	margin-top:10px;}
+.Find_p{
+	font-size:13px;
+	font-family:"Microsoft YaHei";
+	color:#424242;
+	margin-right:10px;}
+.Find_p span{
+	color:#08ac29;}
+.Find_a{
+	float:right;
+	width:57px;
+	height:17px;
+	border:1px solid #d4d4d4;
+	line-height:18px;
+	padding-left:8px;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#08ac29;
+	position:relative;
+	margin-left:5px;}
+.Find_a i{
+	position:absolute; right:8px; top:4px;
+	width:8px;
+	height:9px;
+	background:url(../img/zonghe1.png) no-repeat -204px -266px;}
+.navph{
+	width:100%;
+	height:27px;
+	border:1px solid #CCC;
+	border-top:2px solid #08ac29;
+	background:#f3f3f3;
+	margin-top:16px;}
+.navph_a{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#08ac29;
+	font-weight:bold;
+	line-height:27px;
+	margin-left:6px;}
+.navph_a1{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#424242;
+	position:relative;
+	padding:0 17px 0 7px}
+.navph_a1 i{
+	position:absolute; right:10px; top:3px;
+	width:6px;
+	height:12px;
+	background:url(../img/zonghe1.png) no-repeat -217px -267px;}
+.r_bk{
+	border-right:1px solid #CCC;}
+.navph_a2{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#424242;
+	padding-left:17px;
+	position:relative;
+	margin-left:14px;}
+.navph_a2 i{
+	position:absolute; left:0px; top:1px;
+	width:13px;
+	height:13px;
+	background:url(../img/zonghe1.png) no-repeat -248px -265px;}
+.navph_div{
+	border:1px solid #CCC;
+	background:#FFF;
+	padding:0 21px 0 4px;
+	display:inline-block;
+	height:17px;
+	line-height:17px;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#424242;
+	position:relative;
+	margin-top:4px;
+	margin-right:5px;}
+
+.navph_div i{
+	position:absolute; right:0px; top:0px;
+	width:16px;
+	height:17px;
+	background:url(../img/zonghe1.png) no-repeat -213px -279px;}
+.Shop1{
+	width:967px;
+	height:200px;
+	border-bottom:1px solid #CCC;}
+.Shop1_img{
+	height: 72px;
+	width: 72px;
+	margin-top:23px;}
+.Shop1_div{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#424242;
+	margin:53px 0 0 25px;}
+.Shop1_div p{
+	margin-top:6px;
+	width:220px;
+	height:15px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;}
+.Shop1_div a{
+	color:#08ac29;}
+.Shop1_div .Shop1_div_p{
+	margin-top:66px;
+	margin-left:-98px;}
+.Shop1_a{
+	margin-top:22px;
+	margin-left:14px;
+	display:block;
+	float:right;}
+.Shop1_a img {
+	width: 140px;
+	height: 156px;
+}
+
+.shuzi a{
+	display:inline-block;
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#26232e;
+	line-height:25px;
+	padding:0 13px 0;
+	background:#f7f7f7;
+	border:1px solid #CCC;}
+.shuzi .shuzi_1{
+	background:#FFF;
+	border:none;}
+.shuzi{
+	margin-left:632px;
+	margin-top:14px;
+	margin-bottom:27px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ������������ */
+.Fast_r{
+	width:190px;
+	height:332px;
+	border:1px solid #CCC;
+	padding:0 9px 0;
+	margin-top:30px;}
+.Fast_r img {
+	width: 190px;
+	height: 135px;
+}
+.Extension{
+	width:190px;
+	height:935px;
+	border:1px solid #CCC;
+	padding:0 9px 0;}
+.Fast_h3{
+	font-size:14px;
+	color:#6e6e6e;
+	font-family:"Microsoft YaHei";
+	font-weight:bold;
+	margin-top:15px;
+	margin-bottom:20px;}
+.Fast_a{
+	font-size:12px;
+	color:#6e6e6e;
+	font-family:"Microsoft YaHei";
+	margin-top:10px;
+	height:34px;
+	overflow:hidden;
+	display:block;}
+.Fast_p{
+	font-size:14px;
+	color:#F00;
+	font-family:"Microsoft YaHei";
+	font-weight:bold;
+	margin-top:10px;
+	position:relative;}
+.Fast_p i{
+	width:28px;
+	height:16px;
+	position:absolute; left:66px; top:0px;
+	background:url(../img/zonghe1.png) -18px -215px;}
+.Fast_p1{
+	font-size:12px;
+	color:#CCC;
+	font-family:"Microsoft YaHei";}
+.Fast_p1 i{
+	color:#1b567e;
+	margin-top:7px;}
+.Fast_div{
+	margin-top:15px;}
+.Fast_div p{
+	font-size:18px;
+	color:#FFF;
+	font-family:"Microsoft YaHei";
+	font-weight:bold;
+	width:20px;
+	height:28px;
+	background:url(../img/zonghe1.png) -43px -184px;
+	line-height:28px;
+	text-align:center;
+	float:left;
+	margin-left:3px;}
+.Fast_div i{
+	font-size:20px;
+	color:#CCC;
+	float:left;}
+.Extension_a{
+	display:block;
+	margin-top:14px;}
+	.Extension_a img {
+	  width: 190px;
+	  height: 190px;
+	}
+
+
+
+
+
+
+/* hoverЧ�� */
+.navph_div_ul{
+	width:73px;
+	border:1px solid #CCC;
+	position:absolute; left:-1px; top:17px;
+	background:#FFF;
+	text-align:center;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	display:none;
+	}
+.navph_div_ul a{
+	color:#424242;}
+.navph_div_ul li{
+	line-height:23px;}
+.navph_div_ul li:hover{
+	background:#CCC;}
+.navph_div:hover .navph_div_ul{
+	display:block;}
+.navph_div_ul1{
+	width:61px;}

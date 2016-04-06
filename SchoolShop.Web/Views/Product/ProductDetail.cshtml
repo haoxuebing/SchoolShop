@@ -1,0 +1,423 @@
+﻿@using SchoolShop.Model
+@{
+    Products product = this.ViewBag.product;//当前产品
+    List<UserBrowse> userBrowse = this.ViewBag.userBrowse;//当前用户浏览历史
+    List<Products> likeProducts = this.ViewBag.likeProducts;//推荐商品
+    string catalogID = this.ViewBag.catalogID;//分类ID
+    Users user = this.ViewBag.user;//发布商品用户信息
+    int AttentionCount = this.ViewBag.AttentionCount;//该商品被关注的人数
+    List<Dialog> dialogList =this.ViewBag.dialogList;//商品咨询
+}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>产品列表</title>
+    <link href="/css/base.css" rel="stylesheet" type="text/css" />
+    <link href="/css/pro-detailed.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/js/Public.js"></script>
+
+    <script type="text/javascript">
+
+    $(function () {
+        var replyUID=@(user.UID);
+        var catalogID= @(catalogID);
+        var pid=@(product.PID);
+        $("a[name=index]").removeClass("current");
+        if(catalogID=="01"){
+            $('a[name="sport"]').addClass("current");
+            $('#subhead').text("运动器材");
+        }else if(catalogID=="02"){
+            $('a[name="book"]').addClass("current");
+            $('#subhead').text("大学书籍");
+        }else if(catalogID=="03"){
+            $('a[name="electronic"]').addClass("current");
+            $('#subhead').text("电子产品");
+        }else if(catalogID=="04"){
+            $('a[name="music"]').addClass("current");
+            $('#subhead').text("音乐器材");
+        }else if(catalogID=="05"){
+            $('a[name="other"]').addClass("current");
+            $('#subhead').text("其他");
+        }
+
+        /*--添加评论--*/
+        $("#AddConsult").click(function(){
+            var consult=$("#consult").val();
+            $.post("/Dialog/AddConsult",{dialogPID:pid,consult:consult,replyUID:replyUID},function(msg){
+                if(msg=="ok"){
+                    var myDate = new Date();
+                    var consultHtml='<li><div class="question"><i>Q</i><h3>'+consult+'<span style="float:right;">'+myDate.toLocaleString()+'</span></h3></div><div class="answer"><i>A</i><p>尚未答复,请等待。。<span style="float:right;"></span></p></div></li>';
+                    $("#consultUL").append(consultHtml);
+                }else{
+                    alert("请登录");
+                    window.location.href="/User/Login?returnurl=/Product/ProductDetail?pid="+pid;
+                }
+            },"text")
+
+
+
+        })
+
+        /**加入购物车**/
+        $("#addShopCart").click(function(){
+            var imgURL=$("#imgURL").attr("src");
+            var price=$("#price").text();
+            var productName=$("#productName").text();
+            $.post("/Product/AddCart",{puid:replyUID,productName:productName,price:price,imgURL:imgURL,pid:pid},function(msg){
+                if(msg>0){
+                    showDialog("提示","已加入购物车");
+                    var total= $("#totalmoney").text();
+                    var newhtml='<li id="id'+msg+'"><a href="/Product/ProductDetail?pid='+pid+'"><img src="'+imgURL+'"  height="60" /></a><p><a href="/Product/ProductDetail?pid='+pid+'">'+productName+'</a></p><pre>'+price+'元 x 1</pre><ins onclick="insclick('+msg+','+price+');">x</ins></li>';
+                    $("#cartUL").append(newhtml);
+                    $(".scls").each(function(i,u){
+                        var num=parseInt($(u).text())+1;
+                        $(u).text(num);
+                    });
+                    var money=parseInt($("#totalmoney").text())+parseInt(price);
+                    $("#totalmoney").text(money);
+
+
+                }else if(msg=="error")
+                {
+                    showDialog("提示","加入失败");
+                    window.location.href="/User/Login?returnurl=/Product/ProductDetail?pid="+pid;
+                }else{
+                    window.location.href="/User/Login?returnurl=/Product/ProductDetail?pid="+pid;
+                }
+            },"text");
+
+        })
+
+
+
+
+        /*----加关注---*/
+        $('#shoppingCart').click(function(){
+            $.post("/Product/AddShopCart",{pid:pid},function(msg){
+                if(msg=="ok"){
+                    showDialog("提示","你已关注该商品,请及时与发布商品人联系");
+                }else if(msg=="error")
+                {
+                    showDialog("提示","关注失败");
+                    window.location.href="/User/Login?returnurl=/Product/ProductDetail?pid="+pid;
+                }else{
+                    
+                    showDialog("提示","关注失败");
+                }
+
+            },"text");
+
+
+        })
+
+        /*-----------------优势页面点击子导航-----------------*/
+        var subNav_active = $(".active");
+        var subNav_scroll = function (target) {
+            subNav_active.removeClass("active");
+            target.parent().addClass("active");
+            subNav_active = target.parent();
+        };
+        $(".pro-detailed-left-title a").click(function () {
+            subNav_scroll($(this));
+            if ($(this).parent().attr("id") != "join") {
+                var target = $(this).attr("href");
+                var targetScroll = $(target).offset().top - 90;
+                $("html,body").animate({ scrollTop: targetScroll }, 300);
+                return false;
+            }
+        });
+
+        /*----------------滚动页面跳转时定位---------------*/
+        $(window).scroll(function () {
+            var $this = $(this);
+            var targetTop = $(this).scrollTop();
+            var height = $(window).height();
+
+            //document.title=targetTop;
+            //控制导航悬浮
+            if (targetTop > 860) {
+                $(".pro-detailed-left-title").addClass("detailed-title-top");
+            }
+            else {
+                $(".pro-detailed-left-title").removeClass("detailed-title-top");
+            }
+
+            //$("#goodsParam").offset().top
+
+            if (targetTop > $("#goodsDesc").offset().top - 100 && targetTop < $("#goodsParam").offset().top - 100) {
+                $(".pro-detailed-left-title").find("li").removeClass("active");
+                $(".pro-detailed-left-title").find("li").eq(0).addClass("active");
+            } else if (targetTop > $("#goodsParam").offset().top - 100 && targetTop < $("#goodsComment").offset().top - 100) {
+                $(".pro-detailed-left-title").find("li").removeClass("active");
+                $(".pro-detailed-left-title").find("li").eq(1).addClass("active");
+            } else if (targetTop > $("#goodsComment").offset().top - 100 && targetTop < $("#goodsFaq").offset().top - 100) {
+                $(".pro-detailed-left-title").find("li").removeClass("active");
+                $(".pro-detailed-left-title").find("li").eq(2).addClass("active");
+            } else if (targetTop > $("#goodsFaq").offset().top - 100 && targetTop < $("#serQue").offset().top - 100) {
+                $(".pro-detailed-left-title").find("li").removeClass("active");
+                $(".pro-detailed-left-title").find("li").eq(3).addClass("active");
+            } else if (targetTop > $("#serQue").offset().top - 100) {
+                $(".pro-detailed-left-title").find("li").removeClass("active");
+                $(".pro-detailed-left-title").find("li").eq(4).addClass("active");
+            }
+        });
+
+        //*--------------主图特效-----------*//
+        $(".img_hd").width($(".img_hd").find("li").size() * ($(".img_hd").find("li").width() + 12));
+        $(".img_hd ul").width($(".img_hd").find("li").size() * ($(".img_hd").find("li").width() + 12));
+
+
+        //加
+        $('.add_btn').click(function () {
+            var onum = Number($('.input-count').val()) + 1;
+            $('.input-count').attr('value', onum);
+        })
+        //减
+        $('.min_btn').click(function () {
+            var onum = Number($('.input-count').val()) - 1;
+            if (onum >= 1) {
+                $('.input-count').attr('value', onum);
+            }
+        });
+
+    });
+
+    /*---------选项卡-----------------------*/
+    function nTabs(thisObj, Num) {
+        if (thisObj.className == "active") return;
+        var tabObj = thisObj.parentNode.id;
+        var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+        for (i = 0; i < tabList.length; i++) {
+            if (i == Num) {
+                thisObj.className = "active";
+                document.getElementById(tabObj + "_Content" + i).style.display = "block";
+            } else {
+                tabList[i].className = "normal";
+                document.getElementById(tabObj + "_Content" + i).style.display = "none";
+            }
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!------------top---------------->
+    @Html.Action("SSTop", "Shared")
+
+    <!------------header---------------->
+    <div class="header">
+        <div class="logo"><a href="/"><img src="/images/logo.png" width="190" /></a></div>
+        <div class="header-right">
+            @Html.Action("Search", "Shared")
+
+            @Html.Action("SUserShopCart", "Shared")
+        </div>
+    </div>
+
+    <!------------header-wrap---------------->
+    <div class="header-wrap">
+        <div class="navwrap">
+            <div id="nav">
+                @Html.Action("SSHeadLink", "Shared")
+
+                @Html.Action("SSCatalog", "Shared")
+            </div>
+        </div>
+    </div>
+
+
+    <!------------main---------------->
+    <div class="main">
+        <div class="current-position"><h2><a href="/">首页</a> > <a href="/Product/ProductList?catalogID=@(product.CatalogID)" id="subhead"></a><span>>@(product.ProductName)</span></h2></div>
+        <div class="goods-detail-info">
+            <div class="left">
+                <div id="play">
+                    <a class="img_a"><img src="@(product.ImgURL)" style="width:430px;" id="imgURL" /></a>
+                </div>
+
+
+            </div>
+            <div class="right">
+                <h1 id="productName">@(product.ProductName)</h1>
+                <p class="money">¥<span id="price">@(product.ProductPrice)</span></p>
+                <p class="comment"><span>@(product.ViewsCount)次浏览<ins>|</ins>@(AttentionCount)个人关注</span></p>
+                <div class="styles">
+                    <p style="font-size: 13px; margin-top: 16px;">联系人：<span>@user.NickName</span></p>
+                    <p style="font-size: 13px; margin-top: 16px;">发布时间：<span>@product.SaleTime</span></p>
+                    <p style="font-size: 13px; margin-top: 16px;">联系方式：<span>@product.PhoneNumber</span></p>
+                    <p style="font-size: 13px; margin-top: 16px;">QQ：<span>@user.QQNumber</span></p>
+                    <p style="font-size: 13px; margin-top: 16px;padding-bottom:13px;">联系人地址：<span>@user.Address</span></p>
+                </div>
+                <div class="pro-detai-cart">
+                    <a href="javascript:void(0);" class="cart" id="shoppingCart"><p>关注该商品</p></a>
+                </div>
+                <div class="pro-detai-cart">
+                    <a href="javascript:void(0);" class="cart" id="addShopCart"><p>加入购物车</p></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pro-detailed">
+
+            <div class="pro-detailed-left">
+                <ul class="pro-detailed-left-title">
+                    <li class="active"><a href="#goodsDesc">详细信息</a></li>
+                    <li><a href="#goodsParam">规格参数</a></li>
+                    <li><a href="#goodsComment"></a></li>
+                    <li><a href="#goodsFaq">商品提问</a></li>
+                    <li><a href="#serQue">售后服务</a></li>
+                </ul>
+                <div class="pro-detailed-left-c">
+                    <!--------详细信息---------->
+                    <div id="goodsDesc">
+                        @(new MvcHtmlString(product.PrudouctDetail))
+                    </div>
+                    <!--------规格参数---------->
+                    <div id="goodsParam">
+                        <div class="title">规格参数</div>
+                        <ul>
+                            <li><p><span>品名 ： </span>@product.ProductName</p></li>
+                            <li><p><span>价格 ： </span>@product.ProductPrice</p></li>
+                            <li><p><span>地址 ： </span>@user.Address</p></li>
+                            <li><p><span>电话 ： </span>@product.PhoneNumber</p></li>
+                            <li><p><span>自述 ： </span>@product.Describe</p></li>
+                        </ul>
+                    </div>
+                    <!--------评价晒单---------->
+                    <div id="goodsComment">
+                    </div>
+                    <!--------商品提问---------->
+                    <div id="goodsFaq">
+                        <div class="title"><strong>产品提问</strong><p><a href="#">查看全部 ></a></p></div>
+                        <div class="goodsFaq-c">
+                            <ul id="consultUL">
+                                @foreach (var item in dialogList)
+                                {
+                                    <li>
+                                        <div class="question"><i>Q</i><h3>@item.ConsultContent<span style="float:right;">@item.ConsultTime</span></h3></div>
+                                        <div class="answer"><i>A</i><p>@(item.ReplyContent??"尚未答复,请等待。。")<span style="float:right;">@(item.ReplyTime??null)</span></p></div>
+                                    </li>
+                                }
+
+                            </ul>
+                        </div>
+                        <div class="faq-input">
+                            <span>我要提问</span>
+                            <input type="text" value="输入你的提问" id="consult" onfocus="this.value=''" onblur="if(!value){value=defaultValue;}" />
+                            <button type="button" id="AddConsult">提交</button>
+                        </div>
+                    </div>
+                    <!--------售后服务---------->
+                    <div id="serQue">
+                        <div class="nTab3">
+                            <!-- 标题开始 -->
+                            <div class="TabTitle">
+                                <ul id="myTab0">
+                                    <li class="active" onclick="nTabs(this,0);">常见问题</li>
+                                    <li class="normal" onclick="nTabs(this,1);">售后服务</li>
+                                </ul>
+                            </div>
+                            <!-- 内容开始 -->
+                            <div class="TabContent">
+                                <!--常见问题-->
+                                <div id="myTab0_Content0" class="intro">
+                                    <h2>如何挑选商品？</h2>
+                                    <p>点击页面上方“加入购物车”按钮或页面下拉时顶部导航上的“加入购物车”按钮将商品加入购物车，再点击页面右上角的“购物车”前往购物车页面进行结算。</p>
+
+                                    <h2>收藏商品功能</h2>
+                                    <p>点击“收藏按钮”后，按钮中的白心亮起,背景由黑色变为黄色代表收藏成功，再次点击取消收藏。您可在“个人中心”中的我的收藏查看所有收藏商品。</p>
+
+                                    <h2>维修网点销售配件吗？</h2>
+                                    <p>所有授权维修网点具备维修手机标配里配件的功能，部分指定授权维修网点可销售标配及部分官网配件，具体销售的产品及价格请以修网点信息为准。</p>
+
+                                    <h2>退换货办理流程</h2>
+                                    <p>您可拨打小米客服中心400-100-5678与客服人员沟通，或登录小米网“我的订单” ->“订单详情”下方点击“申请售后服务”并填写相应信息，小米看到您的申请，会安排工作人员与您进行退换货质量确认并办理相关事宜.</p>
+                                </div>
+                                <!--售后服务-->
+                                <div id="myTab0_Content1" class="intro" style="display:none;">
+                                    <p>1.自签收之日起，如商品及包装保持小米出售时原状且配件齐全，七天退货，十五天换货。</p>
+                                    <p> 2.退换凭证：用户提供相关订单号。</p>
+                                    <p>3.非质量问题的退换，需要产品包装完好、不影响二次销售，且需用户承担退换运费；非质量问题退换次数仅限一次。</p>
+                                    <p>4.因质量问题办理退换服务，在邮寄商品时，用户须将快递发票一并寄回，此过程中产生的相关运费凭快递发票最高可报销15元/单。质量问题的退换，用户在线咨询，上传凭证，经确认后寄回检测，然后进入相关流程。</p>
+                                    <p>1.自签收之日起，如商品及包装保持小米出售时原状且配件齐全，七天退货，十五天换货。</p>
+                                    <p> 2.退换凭证：用户提供相关订单号。</p>
+                                    <p>3.非质量问题的退换，需要产品包装完好、不影响二次销售，且需用户承担退换运费；非质量问题退换次数仅限一次。</p>
+                                    <p>4.因质量问题办理退换服务，在邮寄商品时，用户须将快递发票一并寄回，此过程中产生的相关运费凭快递发票最高可报销15元/单。质量问题的退换，用户在线咨询，上传凭证，经确认后寄回检测，然后进入相关流程。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="pro-detailed-right">
+                <div class="pro-detailed-right-title"><h3>猜你喜欢</h3></div>
+                <div class="pro-detailed-right-c">
+                    <ul class="buy-list">
+                        @foreach (var item in likeProducts)
+                        {
+                            <li><a href="/Product/ProductDetail?pid=@(item.PID)"><img src="@(item.ImgURL)" width="80" /></a><p><strong><a href="#">@(item.ProductName)</a></strong><i>@(item.ProductPrice)元</i></p></li>
+                        }
+                    </ul>
+
+                    <h3>最近浏览</h3>
+                    <ul class="buy-list">
+                        @foreach (var item in userBrowse)
+                        {
+                            <li><a href="/Product/ProductDetail?pid=@(item.PID)"><img src="@(item.ImgUrl)" width="80" /></a><p><strong><a href="#">@(item.ProductName)</a></strong><i>@(item.ProductPrice)元</i></p></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------底部-------->
+    <div class="footer">
+        <div class="footer-c">
+            <dl>
+                <dt>购买指南</dt>
+                <dd><a href="#">第一次购物体验</a></dd>
+                <dd><a href="#">品质保证原则</a></dd>
+                <dd><a href="#">会员申请条件</a></dd>
+            </dl>
+            <dl>
+                <dt>支付方式</dt>
+                <dd><a href="#">网银在线支付</a></dd>
+                <dd><a href="#">支付宝支付</a></dd>
+                <dd><a href="#">银联在线支付</a></dd>
+            </dl>
+            <dl>
+                <dt>配送方式</dt>
+                <dd><a href="#">配送方式</a></dd>
+            </dl>
+            <dl>
+                <dt>售后服务</dt>
+                <dd><a href="#">联系客服</a></dd>
+                <dd><a href="#">订单查询</a></dd>
+                <dd><a href="#">退换货流程及原则</a></dd>
+            </dl>
+
+            <div class="col-contact">
+                <p class="phone">400-100-5678</p>
+                <p>周一至周日 8:00-18:00<br />（仅收市话费）</p>
+                <input type="button" value="在线客户" />
+            </div>
+            <div class="clr20"></div>
+            <div class="footer-b">
+                <p><a href="#">关于我们</a>  |  <a href="#">手机商城</a>  |  <a href="#">联系我们</a></p>
+                <p>2013 © DEHUA.com,All Rights Reserver. cz科技 版权所有　　网站备案号：闽ICP备0000号-1</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

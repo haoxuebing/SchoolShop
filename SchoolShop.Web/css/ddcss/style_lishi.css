@@ -1,0 +1,69 @@
+/* CSS Document */
+
+/* ��ҳ�Ҳ� */
+.Product_right{
+	margin-top:20px;
+	width:982px;}
+.Line{
+	display:block;
+	position:absolute; left:10px; top:19px;
+	border-left:2px solid #6dd67b;
+	min-height:50px;
+	z-index:2}
+.Product{
+	height:100%;
+	display:block;
+	border-left:2px solid #CCC;
+	margin-left:10px;
+	position:relative;
+	padding-left:10px;
+	}
+.Product_i{
+	z-index: 3;
+	position:absolute; left:-10px; top:1px;
+	width:17px;
+	height:17px;
+	background:url(../img/shangjia.png) -113px -143px;}
+.Product_h4{
+	font-size:18px;
+	font-family:"Microsoft YaHei";
+	color:#9b9a98;}
+.Product_h4 span{
+	font-size:14px;
+	margin-left:10px;
+	line-height:47px;}
+.Product_h4 span:last-child {
+	cursor: pointer;
+}
+.Product_ul img{
+	display:block;
+	width:220px;
+	height:250px;}
+.Product_li{
+	float:left;
+	margin-left:20px;
+	margin-bottom:10px;}
+.Product_li i{
+	cursor: pointer;
+	position:absolute; right:5px; top:5px;
+	width:10px;
+	height:10px;
+	background:url(../img/shangjia.png) 0 -88px;}
+.Product_li p{
+	position:absolute; left:0px; bottom:10px;
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#5c5c5c;
+	width:220px;
+	text-align:center;}
+.Last{
+	width:100%;
+	height:180px;
+	text-align:center;
+	line-height:150px;
+	position:relative;}
+.Last i{
+	width:113px;
+	height:150px;
+	position:absolute; left:-46px; top:0px;
+	background:url(../img/goods-bottom.png);}

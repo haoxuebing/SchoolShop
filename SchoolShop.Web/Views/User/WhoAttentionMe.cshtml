@@ -1,0 +1,221 @@
+﻿@using SchoolShop.Model
+@{
+    List<WhoAttention> list = this.ViewBag.list;
+}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>用户关注</title>
+    <link href="/css/base.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/ddcss/style_guanzhu.css" />
+    <link rel="stylesheet" href="/css/ddcss/left_caidan.css" />
+    <link rel="stylesheet" href="/css/ddcss/base.css" />
+    <link rel="stylesheet" href="/css/ddcss/bottom.css" />
+    <link rel="stylesheet" href="/css/ddcss/top2.css" />
+    <script src="/js/jquery-1.7.1.min.js"></script>
+    @*<script src="/js/ddcss/js_guanzhu.js"></script>*@
+    <script type="text/javascript">
+
+        $(function () {
+            $('#searchKeyWord').click(function () {
+                var keyWord = $('#keyWordText').val();
+                window.open("/Product/SearchProduct?keyWord=" + keyWord, "_self");
+            })
+
+            $('a[name="cancel"]').click(function () {
+                var aid = $(this).attr("type_id");
+                var pid = $(this).attr("type_pid");
+                $.post("/User/CancelAttention", { aid: aid, pid: pid }, function (msg) {
+                    if (msg == "ok") {
+                        $("#li" + aid).remove();
+                    }
+
+                }, "text")
+
+            })
+
+        })
+
+
+    </script>
+</head>
+
+<body onload="aa()">
+    <div class="Grey">
+        <!--顶部-->
+        @Html.Action("SSTop", "Shared")
+        <!--导航-->
+        <div class="nav">
+            <div class="juzhong clearfix">
+                <a href="/"><img src="/images/logo.png" /></a>
+                <a href="/User/UserInfo" class="nav_a nav_a1">个人中心</a>
+                <a href="/Security/UserSecurity" class="nav_a">帐户中心</a>
+                <a href="/User/UserMessage" class="nav_a">消息中心</a>
+                <div class="fr nav_div2">
+                    <input type="text" class="nav_text" id="keyWordText" value="请输入关键字" onfocus="this.value=''" onblur="if(!value){value=defaultValue;}" />
+                    <input type="button" value="搜索" class="nav_button" id="searchKeyWord" />
+                </div>
+            </div>
+        </div>
+        <!--内容左栏菜单-->
+        <div class="juzhong clearfix">
+            @Html.Action("SSLeft", "Shared")
+            <!--内容右栏菜单-->
+            <!--关注的商品-->
+            <div class="right_background" id="pay">
+                <div class="Pay clearfix">
+                    <a href="#" class="Pay_a">被关注的商品</a>
+                </div>
+                @*<div class="Shopping clearfix">
+                        <p class="Shopping_p fl" id="Menu">
+                            全选
+                            <input type="checkbox" />
+                        </p>
+                        <a href="#" class="Shopping_a fl" style="margin-top: 5px;">取消关注</a>
+                    </div>*@
+                <ul class="Pays clearfix">
+                    @foreach (var item in list)
+                    {
+                        <li class="Pay1" id="li@(item.UserAttentionID)">
+                            <a href="/Product/ProductDetail?pid=@(item.AttentionPID)"><img src="@item.ImgURL" style="margin-left:0px;height:161px;width:161px;" /></a>
+                            <a href="/Product/ProductDetail?pid=@(item.AttentionPID)" class="Pay1_a">
+                                品名：@item.ProductName
+                            </a>
+                            <p class="Pay1_p">价格：￥@(item.ProductPrice)元</p>
+                            <div class="Pay1_div clearfix">
+                                <p>关注人昵称：@(item.NickName)</p>
+                                <p>关注人性别：@(item.Gender == 1 ? "女" : "男")</p>
+                                <p>关注人电话：@(item.Mobile)</p>
+                            </div>
+                        </li>
+                    }
+                </ul>
+                @*<div class="Shopping clearfix">
+                        <div class="Shopp_right fr">
+                            <a href="#" class="Shopp_R_a fl">
+                                <i></i>
+                                上一页
+                            </a>
+                            <a href="#" class="Shopp_R_a2 hong">1</a>
+                            <a href="#" class="Shopp_R_a2">2</a>
+                            <a href="#" class="Shopp_R_a1 fl">
+                                下一页
+                                <i></i>
+                            </a>
+                            <p class="fl Shopp_R_p fl">
+                                <span class="fl">共2页到第</span>
+                                <i></i>
+                                <span class="fl">页</span>
+                            </p>
+                            <a href="#" class="fl Shopp_R_a3">确定</a>
+                        </div>
+                    </div>*@
+            </div>
+
+        </div>
+    </div>
+    <!--底部-->
+    <div class="bottom">
+        <div class="Sbox">
+            <ul class="Atthebottom ">
+                <li>
+                    <a href="#">
+                        全程冷链配送
+                        <i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        有机绿色无公害
+                        <i class="ai"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        从基地到餐桌
+                        <i class="ai1"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        满59元免运送费
+                        <i class="ai2"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        社区最后一公里
+                        <i class="ai3"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="Safety clearfix ">
+                <dl class="Safetys">
+                    <dt>食品安全</dt>
+                    <dd><a href="#">食品卫生</a></dd>
+                    <dd><a href="#">食品监督</a></dd>
+                    <dd><a href="#">质量检测</a></dd>
+                </dl>
+                <dl class="Safetys Novice">
+                    <dt>新手上路</dt>
+                    <dd><a href="#">注册登录</a></dd>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">团购说明</a></dd>
+                </dl>
+                <dl class="Safetys Distribution">
+                    <dt>配送方式</dt>
+                    <dd><a href="#">配送范围</a></dd>
+                    <dd><a href="#">配送费用</a></dd>
+                    <dd><a href="#">配送时间</a></dd>
+                </dl>
+                <dl class="Safetys Novice">
+                    <dt>支付方式</dt>
+                    <dd><a href="#">货到付款</a></dd>
+                    <dd><a href="#">货到刷卡</a></dd>
+                    <dd><a href="#">在线支付</a></dd>
+                </dl>
+                <dl class="Safetys Service">
+                    <dt>售后服务</dt>
+                    <dd><a href="#">退换货条件</a></dd>
+                    <dd><a href="#">退换货流程</a></dd>
+                    <dd><a href="#">退换货准则</a></dd>
+                </dl>
+                <div class="Client">
+                    <p class="Client_p">
+                        手机客户端
+                        <i></i>
+                    </p>
+                    <p class="Client_p1">轻松购物，迅速到家！</p>
+                    <div class="Client_div">
+                        <i class="Client_div_i"></i>
+                        <a href="#" class="Client_div_a"></a>
+                        <a href="#" class="Client_div_a1"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom1">
+        <div class="bottom1_div">
+            <a href="#">关于我们</a>
+            <i>|</i>
+            <a href="#">法律声明</a>
+            <i>|</i>
+            <a href="#">服务条款</a>
+            <i>|</i>
+            <a href="#">隐私声名</a>
+            <i>|</i>
+            <a href="#">联系我们</a>
+            <i>|</i>
+            <a href="#">网站地图</a>
+        </div>
+        <p class="bottom1_p">北京市公安局朝阳分局备案编号110105014669<span>|</span>京ICP证070359号</p>
+        <p class="bottom1_p1">
+            Copyright © 2004-2015 呆呆购物DDGW8.com 版权所有
+        </p>
+    </div>
+
+</body>
+</html>
+

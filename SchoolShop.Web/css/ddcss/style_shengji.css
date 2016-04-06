@@ -1,0 +1,174 @@
+/* CSS Document */
+
+/* ����ͼƬ */
+.box_right{
+	margin-top:27px;}
+.box_Upgrade{
+	width:888px;
+	height:476px;
+	background:#FFF;
+	padding-top: 20px;
+	padding-left:35px;
+	padding-right:35px;}
+.box_h2{
+	font-size:18px;
+	font-family:"The new song";
+	color:#000;
+	font-weight:bold;
+	line-height:60px;}
+.box_table{
+	margin-bottom: 10px;
+	border:1px solid #FFF;}
+.Bargain_th{
+	width:220px;
+	height:47px;
+	background:#86c6f2;
+	font-size:15px;
+	font-family:"The new song";
+	color:#FFF;}
+.Bargain_td{
+	height:67px;
+	background:#eeeeee;
+	text-align:left;
+	padding-left:12px;
+	border-color: #fff;
+	padding-right:21px;}
+/*.Bargain_td1{
+	height:87px;}*/
+.Bargain_td2{
+	line-height: 20px;
+	text-align: center;
+	height:69px;}
+.Bargain_td2 b {
+	color: red;
+	font-size: 20px;
+}
+.Bargain_td3{
+	box-sizing: border-box;
+	height:172px;
+	padding-top: 32px;
+	vertical-align: top;
+  border-bottom: none;
+	text-align:center;}
+.Bargain_td4 {
+	height: 76px;
+	text-align: center;
+	border-top: none;
+}
+.Bargain_td4 a{
+	display:inline-block;
+	width:131px;
+	height:27px;
+	font-size:12px;
+	font-family:"The new song";
+	color:#FFF;
+	background:#08ac29;
+	line-height:27px;
+	text-align:center;
+	margin-bottom: 7px;
+	border-radius:3px;}
+.Bargain_td4 a.second{
+	background-color: #42bd5a;
+}
+.box_h3{
+	font-size:18px;
+	font-family:"The new song";
+	color:#000;
+	font-weight:bold;
+	margin:17px 0 0 30px;}
+.box_Upgrade span {
+	line-height: 22px;
+	color: #4f4f4f;
+	font-size: 13px;
+	font-family: "Microsoft YaHei";
+}
+.Choice{
+	margin:30px 0 0 55px;}
+.Choice_li{
+	cursor: pointer;
+	font-size:13px;
+	font-family:"The new song";
+	color:#000;
+	float:left;
+	padding-left:18px;
+	margin-right:48px;
+	position:relative;}
+.Choice_li span{
+	font-family:Blackbody;}
+.Choice_li i{
+	position:absolute; left:0px; top:0px;
+	width:12px;
+	height:12px;
+	background:url(../img/hedaohang.png) -87px -11px;}
+.Choice_li.active i {
+  background: url(../img/hedaohang.png) -73px -11px;
+}
+.Recommend{
+	width:958px;
+	height:517px;
+	background:#FFF;
+	margin-top:25px;}
+.Recommend_div{
+	padding-top:65px;}
+.Recommend_div i{
+	width:375px;
+	border-top:1px solid #CCC;
+	float:left;
+	height:1px;
+	margin-top:12px;}
+.Recommend_div h3{
+	font-size:18px;
+	font-family:"Microsoft YaHei";
+	color:#474747;
+	padding:0 14px 0;
+	font-weight:bold;
+	}
+.R_ul_p{
+	font-size:13px;
+	font-family:"The new song";
+	color:#0e050a;
+	display:block;
+	margin-top:7px;}
+.R_ul_ps{
+	font-size:13px;
+	font-family:"The new song";
+	color:#08ac29;
+	margin-top:5px;
+	display:block;
+	float:left;}
+.R_ul_ps1{
+	font-size:13px;
+	font-family:"The new song";
+	color:#08ac29;
+	margin-top:5px;
+	display:block;
+	position:relative;
+	float:left;
+	margin-left:48px;}
+.R_ul_ps1 i{
+	position:absolute; left:-18px; top:2px;
+	width:13px;
+	height:11px;
+	background:url(../img/hedaohang.png) -102px -11px;}
+.R_ul_li{
+	float:left;
+	margin-right:14px;}
+.Recommend_ul{
+	margin-top:35px;
+	margin-left:30px;}
+.Explain{
+	font-size:15px;
+	font-family:"The new song";
+	color:#9a9a9a;
+	font-weight:bold;
+	margin:30px 0 0 37px;}
+.Explain_p{
+	font-size:12px;
+	font-family:"The new song";
+	color:#949494;
+	margin:15px 0 0 80px;}
+.Explain_p1{
+	font-size:12px;
+	font-family:"The new song";
+	color:#949494;
+	margin:5px 0 0 80px;}

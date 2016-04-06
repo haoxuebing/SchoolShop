@@ -1,0 +1,117 @@
+input,
+textarea {
+  outline: none;
+}
+a,
+input[type=submit],
+input[type=button],
+button {
+  cursor: pointer;
+}
+.hidden {
+  display: none !important;
+}
+.right {
+  float: right;
+}
+.border {
+  border: 1px solid #d6d6d6;
+}
+.border:focus {
+  border: 1px solid #a4e0b0;
+}
+.radius-round {
+  -webkit-border-radius: 50% 50% 50% 50%;
+  -moz-border-radius: 50% 50% 50% 50%;
+  border-radius: 50% 50% 50% 50%;
+}
+/*fix*/
+.nav_div2 {
+  width: 300px;
+  height: 28px;
+}
+.top_main {
+  width: 255px;
+  height: 30px;
+}
+.nav_a2 {
+  background-color: #48af5e;
+}
+.nav a.active {
+  background-color: #3C8F4D;
+}
+.box_left .box_Order .active {
+  color: #1fa339;
+}
+.box_left {
+  display: inline-block;
+}
+.personal-coupons {
+  display: inline-block;
+  vertical-align: top;
+  width: 850px;
+  height: 440px;
+  background-color: #ffffff;
+  padding: 19px;
+  margin: 30px;
+}
+.personal-coupons,
+.personal-coupons * {
+  box-sizing: border-box;
+}
+.personal-coupons .label-switch {
+  margin-left: 37px;
+  margin-bottom: -1px;
+  word-spacing: -6px;
+}
+.personal-coupons .label-switch a {
+  word-spacing: 0;
+  display: inline-block;
+  margin-right: 8px;
+  height: 33px;
+  width: 120px;
+  border: 1px solid #d2d2d2;
+  border-top: 2px solid #48af5e;
+  font-size: 16px;
+  color: #515151;
+  line-height: 31px;
+  text-align: center;
+}
+.personal-coupons .label-switch a.active {
+  font-weight: bold;
+  border-bottom: 1px solid #ffffff;
+}
+.personal-coupons table {
+  border-top: 1px solid #d2d2d2;
+  width: 100%;
+}
+.personal-coupons table th {
+  height: 71px;
+  padding-top: 34px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.personal-coupons table td {
+  height: 58px;
+  text-align: center;
+  border-top: 1px solid #d2d2d2;
+  color: rgba(0, 0, 0, 0.64);
+  font-size: 13px;
+}
+.personal-coupons table td.em-1 {
+  width: 100px;
+  color: #08ac29;
+  font-weight: bold;
+}
+.personal-coupons table td.em-2 {
+  width: 106px;
+  font-style: normal;
+  font-weight: bold;
+  color: #262626;
+}
+.personal-coupons table td:last-child {
+  width: 115px;
+}
+.personal-coupons table td p {
+  line-height: 20px;
+}

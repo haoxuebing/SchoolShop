@@ -1,0 +1,4 @@
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.FrameWork\bin\Debug\SchoolShop.FrameWork.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.FrameWork\bin\Debug\SchoolShop.FrameWork.pdb
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.FrameWork\obj\Debug\SchoolShop.FrameWork.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.FrameWork\obj\Debug\SchoolShop.FrameWork.pdb

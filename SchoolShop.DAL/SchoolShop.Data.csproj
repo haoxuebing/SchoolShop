@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{01803DDD-7841-48B9-A29D-A24430550F3B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SchoolShop.Data</RootNamespace>
+    <AssemblyName>SchoolShop.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\DALFactory.cs" />
+    <Compile Include="DAL\DialogDAL.cs" />
+    <Compile Include="DAL\ProductDAL.cs" />
+    <Compile Include="DAL\UsersDAL.cs" />
+    <Compile Include="EF\EF_SchoolShop.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EF_SchoolShop.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\EF_SchoolShop.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EF_SchoolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\EF_SchoolShop.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EF_SchoolShop.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SS_Catalogs.cs">
+      <DependentUpon>EF_SchoolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SS_Dialog.cs">
+      <DependentUpon>EF_SchoolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SS_Products.cs">
+      <DependentUpon>EF_SchoolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SS_ShopCart.cs">
+      <DependentUpon>EF_SchoolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SS_UserAttention.cs">
+      <DependentUpon>EF_SchoolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SS_UserBrowse.cs">
+      <DependentUpon>EF_SchoolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SS_UserOrder.cs">
+      <DependentUpon>EF_SchoolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SS_Users.cs">
+      <DependentUpon>EF_SchoolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\View_MyAttentions.cs">
+      <DependentUpon>EF_SchoolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\View_ShopCartView.cs">
+      <DependentUpon>EF_SchoolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\View_UserOrder.cs">
+      <DependentUpon>EF_SchoolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\View_WhoAttention.cs">
+      <DependentUpon>EF_SchoolShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SchoolShop.FrameWork\SchoolShop.FrameWork.csproj">
+      <Project>{1de455d3-a938-4452-9a65-b8c8a03d4d7c}</Project>
+      <Name>SchoolShop.FrameWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SchoolShop.Model\SchoolShop.Model.csproj">
+      <Project>{b9375d1b-4537-427a-8991-02e275bd2459}</Project>
+      <Name>SchoolShop.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="EF\EF_SchoolShop.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EF_SchoolShop.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="EF\EF_SchoolShop.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EF_SchoolShop.edmx</DependentUpon>
+      <LastGenOutput>EF_SchoolShop.Context.cs</LastGenOutput>
+    </None>
+    <None Include="EF\EF_SchoolShop.edmx.diagram">
+      <DependentUpon>EF_SchoolShop.edmx</DependentUpon>
+    </None>
+    <None Include="EF\EF_SchoolShop.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EF_SchoolShop.edmx</DependentUpon>
+      <LastGenOutput>EF_SchoolShop.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

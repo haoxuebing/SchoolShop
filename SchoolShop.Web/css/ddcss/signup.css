@@ -1,0 +1,190 @@
+body {
+	font-family: "microsoft yahei";
+}
+
+a {
+	cursor: pointer;
+}
+
+input[type=text]:focus, input[type=submit] {
+	outline: none;
+}
+
+.right {
+  float: right;
+}
+
+.Sbox {
+	width:1200px;
+	margin:0 auto;
+	position:relative;
+}
+.signup-w{
+	width:1200px;
+	margin:0 auto;}
+/*
+ * 注册7页面 style
+ */
+
+ .signup-header h1 {
+	 display: inline-block;
+	 font-size: 22px;
+	 color: rgba(0, 0, 0, 0.77);
+	 line-height: 80px;
+	 margin-left: 20px;
+	 vertical-align: bottom;
+ }
+
+.signup-over {
+	box-sizing: border-box;
+	border: 1px solid #d9d8d8;
+	border-top:2px solid #08ac29;
+	width: 632px;
+	height: 274px;
+	margin: 30px auto 0;
+	padding: 43px 0 0 0px;
+	text-align:center;
+	position:relative;
+	background:#FFF;
+}
+
+.correct-icon {
+	position: absolute; left:165px; top:44px;
+	width: 32px;
+	height: 32px;
+	background: url(../img/3_03.png);
+}
+
+.signup-over h1 {
+	margin-left: 40px;
+	font-size: 20px;
+	color: black;
+	line-height: 32px;
+}
+
+.signup-over-item {
+	margin-left: 40px;
+	margin-top: 24px;
+}
+.signup-over-item p {
+	font-size: 14px;
+	color: #3c3c3c;
+	line-height: 26px;
+}
+.signup-over-item .red {
+	color: #ff3333;
+}
+
+/*--*/
+.signup_over{
+	width:100%;
+	height:228px;
+	background:#FFF;
+	position:relative;
+	z-index:3;
+	margin-top:-43px;
+	padding-top:43px;}
+.yanse{
+	color:rgba(255, 0 , 0, 0.7);
+	text-decoration:underline ;
+	font-size:14px;
+	margin-left:5px;}
+.correct_text{
+	width:140px;
+	height:29px;
+	background:#15c2b4;
+	border:none;
+	font-size:14px;
+	font-family:"The new song";
+	color:#FFF;
+	margin-top:33px;
+	}
+.correct_div{
+	min-width:900px;
+	background:#f4f4f4;
+	padding-top:50px;
+	padding-bottom:25px;
+	margin-top:85px;}	
+.correct_ul{
+	width:900px;
+	margin:0 auto;}	
+.correct_dt{
+	font-size:36px;
+	font-family:"Microsoft YaHei";
+	color:#393939;
+	font-weight:bold;
+	width:900px;
+	text-align:center;
+	}	
+.correct_dd_img{
+	text-align:center;
+	width:192px;
+	height:128px;
+	margin-top:69px;}	
+.correct_dd_p{
+	font-size:16px;
+	font-family:"黑体";
+	color:#393939;
+	width:192px;
+	margin-top:45px;
+	text-align:center;}	
+.correct_dd_p span{
+	font-size:24px;
+	font-family:"黑体";
+	color:#f2434a;}	
+.correct_ul dd{
+	margin-left:33px;}	
+.correct_img{
+	position:absolute; right:280px; bottom:0px;
+	height:271px;
+	}	
+.correct_img1{
+	position:absolute; right:38px; bottom:0px;
+	height:310px;
+	z-index:2;}
+.correct_imgxiao{
+	height:239px;
+	display:block;
+	}	
+.correct_imgxiao3{
+	height:287px;
+	display:block;}
+.correct_dong{
+	-webkit-animation:run 1s linear;
+	animation-fill-mode:forwards;
+	position:absolute;
+	right:15px;}
+.correct_imgxiao1{
+	margin-left:-25px;}	
+.correct_imgxiao2{
+	margin-left:-49px;}	
+
+
+@-webkit-keyframes run{
+		0%{
+			right:280px;
+			bottom:0;
+		}
+		99%{
+			right:15px;
+			bottom:0;
+		}
+		
+		100%{
+			right:15px;
+			bottom:0;
+			z-index:2;
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,36 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.box_left {
+    margin-top: 27px;
+    width: 200px;
+    float: left;
+}
+
+.box_Order dt {
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    color: #131313;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.box_Order a {
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    color: #3f3f40;
+    padding-bottom: 12px;
+    display: block;
+}
+
+.box_Order1 {
+    margin-top: 20px;
+}
+
+.box_left .box_Order .active {
+    color: #1fa339;
+}
+
+.cy_ul_li {
+    border-bottom: 1px solid #CCC;
+}

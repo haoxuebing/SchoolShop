@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+.right {
+  float: right;
+}
+.seller-admin {
+  background-color: black;
+}
+.nav_top_seller,
+.nav_top_admin {
+  box-sizing: border-box;
+  width: 159px;
+  text-align: center;
+}
+.nav_top_seller {
+  color: #ffffff;
+  background-color: #1eb43a;
+}
+.seller-admin-box {
+  padding: 6px 0 106px;
+}
+.seller-admin-panel {
+  width: 203px;
+  height: auto;
+  border: 1px solid #efefef;
+  /*float: left;*/
+  display: inline-block;
+  background:#FFF;
+  margin-top:6px;
+  padding-bottom: 20px;
+}
+.admin-panel-item {
+  margin-top: 18px;
+}
+.admin-panel-item h3 {
+  height: 34px;
+  line-height: 34px;
+  margin-left: 27px;
+}
+.admin-panel-item h3 > label {
+  background: url(../img/a_02.jpg);
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  margin-top: 6px;
+}
+.admin-panel-item h3.active > label {
+  background: url(../img/a_01.jpg);
+}
+.admin-panel-item h3 > a {
+  font-size: 17px;
+  font-family: "microsoft yahei";
+  color: #1eb43a;
+  margin-left: 28px;
+}
+.admin-panel-item li {
+  height: 28px;
+  line-height: 28px;
+  text-align: left;
+  padding-left: 76px;
+}
+.admin-panel-item li.active {
+  background-color: #eaeaea;
+}
+.admin-panel-item li > a {
+  font-size: 12px;
+  font-family: 新宋体;
+  color: rgba(56, 56, 56, 0.69);
+}
+.admin-panel-item hr {
+  width: 170px;
+  /*border-color: #08ac29;*/
+  border-color: #cdcdcd;
+  border-top: none;
+}
+.admin-panel-item hr.active {
+  border-color: #08ac29;
+}
+.seller-admin-details {
+  display: inline-block;
+  width: 989px;
+  vertical-align: top;
+  /*float: right;*/
+  /*border: 1px solid #efefef;*/
+}
+/*-*/

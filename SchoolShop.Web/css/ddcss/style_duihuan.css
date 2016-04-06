@@ -1,0 +1,279 @@
+/* CSS Document */
+
+/* ¶Ò»»½ð±Ò */
+.beijing{
+	width:100%;
+	background:#f9f9f9;
+	padding-bottom:30px;}
+.juzhong{
+	width:1200px;
+	margin:0 auto;}
+
+.EX_Gold{
+	padding-top:20px;}
+.EX_Gold_div{
+	width:546px;
+	height:159px;
+	border:1px solid #48af5e;
+	border-top-left-radius:86px;
+	border-bottom-left-radius:86px;
+	padding:6px 0 6px;}
+.EX_Gold_img{
+	margin:37px 0 0 21px;}
+.EX_Member{
+	margin-left:15px;
+	color:#323232;
+	border-right:1px solid #c3f2cd;
+	height:100%;
+	padding-right:10px;}
+.EX_Member_p{
+	font-size:18px;
+	font-family:"Microsoft YaHei";
+	margin-top:25px;
+	}
+.EX_Member_p1{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	margin-left:25px;
+	position:relative;
+	margin-top:11px;}
+.EX_Member_p1 i{
+	position:absolute; left:-25px; top:-1px;
+	width:17px;
+	height:17px;
+	background:url(../img/zonghe1.png) no-repeat -180px -142px;}
+.EX_Member_span{
+	display:block;
+	width:198px;
+	height:14px;
+	background:#c3f2cd;}
+.EX_Member_span i{
+	display:block;
+	width:100px;
+	height:14px;
+	background:#48af5e;
+	margin-top:12px;}
+.EX_Member_p2{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	position:relative;
+	margin-top:3px;}
+.EX_Member1{
+	width:98px;
+	height:100%;
+	border-right:1px solid #c3f2cd;
+	text-align:center;
+	color:#323232;}
+.EX_Member1_p{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	position:relative;
+	margin-top:43px;}
+.EX_Member1_p1{
+	font-size:22px;
+	font-family:"Microsoft YaHei";
+	position:relative;
+	margin-top:10px;
+	color:#48af5e;
+	display:block;}
+.EX_Member1_p2{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	position:relative;
+	margin-top:5px;}
+.quxiao{
+	border:0;}
+.EX_Rule{
+	width:651px;
+	height:171px;
+	border:1px solid #48af5e;
+	background:#e9fded;
+	border-left:none;}
+.EX_Rule_dl{
+	margin:5px 0 0 10px;}
+.EX_Rule_dt{
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#007516;
+	font-weight:bold;}
+.EX_Rule_dl dd{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#505050;}
+
+
+/* µ¼º½ */
+.EX_nav{
+	height:46px;
+	border-top:2px solid #48af5e;
+	margin-top:25px;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#505050;
+	background:#FFF;
+	}
+.EX_nav p,.EX_nav1 p{
+	margin-top:15px;}
+.EX_nav a,.EX_nav1 a{
+	color:#505050;
+	margin-right:22px;
+	padding:0 3px 0;
+	height:21px;
+	float:left;
+	margin-top:15px;
+	line-height:21px;}
+.EX_nav .EX_nav_a{
+	background:#48af5e;
+	color:#FFF;}
+.EX_nav1 .EX_nav1_a{
+	background:#48af5e;
+	color:#FFF;
+	}
+.EX_nav1{
+	height:46px;
+	border-top:1px solid #CCC;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#505050;
+	background:#FFF;}
+.EX_nav1_text{
+	width:59px;
+	height:23px;
+	border:1px solid #d0d0d0;
+	margin-top:14px;
+	outline:none;}
+.EX_nav1_i{
+	font-size:20px;
+	color:#d0d0d0;
+	margin:14px 9px 0;}
+.EX_nav1 .EX_nav1_a2{
+	height:24px;
+	line-height:22px;
+	padding:0 14px 0;
+	background:#f5f5f5;
+	border:1px solid #d0d0d0;
+	margin-left:14px;
+	margin-right:0;}
+.EX_nav1 .EX_nav1_a3{
+	padding-left:16px;
+	position:relative;
+	margin-left:14px;}
+.EX_nav1_a3 i{
+	position:absolute; left:0px; top:4px;
+	width:13px;
+	height:13px;
+	background:url(../img/zonghe1.png) -248px -265px;}
+
+
+/* ÄÚÈÝ */
+.EX_Content{
+	border-top:2px solid #48af5e;
+	padding-top:20px;
+	background:#FFF;}
+.EX_Content_li{
+	width:218px;
+	height:332px;
+	margin-left:17px;
+	float:left;
+	}
+.EX_C_li_a{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#706d65;
+	overflow:hidden;
+	width:218px;
+	height:15px;
+	display:block;
+	margin-top:5px;
+	font-weight:bold;}
+.EX_C_li_p{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#b6b4b9;
+	margin-top:5px;}
+.EX_C_li_p span{
+	text-decoration:line-through;
+	}
+.EX_C_li_p1{
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#48af5e;
+	margin-top:5px;}
+.Join{
+	width:76px;
+	height:18px;
+	display:block;
+	border:1px solid #CCC;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#402b2b;
+	line-height:18px;
+	text-align:center;
+	margin-top:10px;}
+
+.shuzi a{
+	display:inline-block;
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#26232e;
+	line-height:25px;
+	padding:0 13px 0;
+	background:#f7f7f7;
+	border:1px solid #CCC;}
+.shuzi .shuzi_1{
+	background:#FFF;
+	border:none;
+	color:#F00;}
+.shuzi{
+	padding-left:860px;
+	padding-top:14px;
+	padding-bottom:30px;
+	margin-bottom:27px;
+	background:#FFF;}
+.shuzi .shuzi_2{
+	border:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

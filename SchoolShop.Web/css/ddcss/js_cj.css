@@ -1,0 +1,27 @@
+/* CSS Document */
+
+	window.onload=function(){ 
+		
+		
+		
+		var aId=document.getElementById('box_top');
+		var aLi1=aId.getElementsByTagName('a');
+			for(var r=0;r<aLi1.length; r++){
+			aLi1[r].onmouseover=function(){
+				for(var t=0; t<aLi1.length; t++){
+					aLi1[t].className='';}
+				this.className ='box_sps';
+				}
+			}
+		var yc = document.getElementById('yc');
+			var yc1=document.getElementById('yc1')
+			var yc3=document.getElementById('yc3')
+			yc.onclick = function(){
+				yc1.style.display = 'block';	
+				
+			}
+			yc3.onclick = function(){
+				yc1.style.display = 'none';	
+				
+			}
+	}

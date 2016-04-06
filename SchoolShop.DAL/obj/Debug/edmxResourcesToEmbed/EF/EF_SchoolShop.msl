@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="schoolshopModelStoreContainer" CdmEntityContainer="schoolshopEntities">
+    <EntitySetMapping Name="SS_Catalogs">
+      <EntityTypeMapping TypeName="schoolshopModel.SS_Catalogs">
+        <MappingFragment StoreEntitySet="SS_Catalogs">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="CatalogLevel" ColumnName="CatalogLevel" />
+          <ScalarProperty Name="CatalogName" ColumnName="CatalogName" />
+          <ScalarProperty Name="CatalogID" ColumnName="CatalogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SS_UserBrowse">
+      <EntityTypeMapping TypeName="schoolshopModel.SS_UserBrowse">
+        <MappingFragment StoreEntitySet="SS_UserBrowse">
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="BDateTime" ColumnName="BDateTime" />
+          <ScalarProperty Name="CatalogID" ColumnName="CatalogID" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ImgUrl" ColumnName="ImgUrl" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="BroeseID" ColumnName="BroeseID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SS_Users">
+      <EntityTypeMapping TypeName="schoolshopModel.SS_Users">
+        <MappingFragment StoreEntitySet="SS_Users">
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="CreditValue" ColumnName="CreditValue" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="QQNumber" ColumnName="QQNumber" />
+          <ScalarProperty Name="IDNumber" ColumnName="IDNumber" />
+          <ScalarProperty Name="HeadImage" ColumnName="HeadImage" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="LastLoginTime" ColumnName="LastLoginTime" />
+          <ScalarProperty Name="RegistTime" ColumnName="RegistTime" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="RealName" ColumnName="RealName" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SS_UserAttention">
+      <EntityTypeMapping TypeName="schoolshopModel.SS_UserAttention">
+        <MappingFragment StoreEntitySet="SS_UserAttention">
+          <ScalarProperty Name="DelFalg" ColumnName="DelFalg" />
+          <ScalarProperty Name="AttentionTime" ColumnName="AttentionTime" />
+          <ScalarProperty Name="ProductUID" ColumnName="ProductUID" />
+          <ScalarProperty Name="AttentionPID" ColumnName="AttentionPID" />
+          <ScalarProperty Name="AttrntionUID" ColumnName="AttrntionUID" />
+          <ScalarProperty Name="UserAttentionID" ColumnName="UserAttentionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SS_Products">
+      <EntityTypeMapping TypeName="schoolshopModel.SS_Products">
+        <MappingFragment StoreEntitySet="SS_Products">
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="AskCount" ColumnName="AskCount" />
+          <ScalarProperty Name="PrudouctDetail" ColumnName="PrudouctDetail" />
+          <ScalarProperty Name="SaleTime" ColumnName="SaleTime" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Describe" ColumnName="Describe" />
+          <ScalarProperty Name="ViewsCount" ColumnName="ViewsCount" />
+          <ScalarProperty Name="ImgURL" ColumnName="ImgURL" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="CatalogID" ColumnName="CatalogID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_WhoAttention">
+      <EntityTypeMapping TypeName="schoolshopModel.View_WhoAttention">
+        <MappingFragment StoreEntitySet="View_WhoAttention">
+          <ScalarProperty Name="QQNumber" ColumnName="QQNumber" />
+          <ScalarProperty Name="HeadImage" ColumnName="HeadImage" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="LastLoginTime" ColumnName="LastLoginTime" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="RealName" ColumnName="RealName" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="ImgURL" ColumnName="ImgURL" />
+          <ScalarProperty Name="DelFalg" ColumnName="DelFalg" />
+          <ScalarProperty Name="AttentionTime" ColumnName="AttentionTime" />
+          <ScalarProperty Name="ProductUID" ColumnName="ProductUID" />
+          <ScalarProperty Name="AttentionPID" ColumnName="AttentionPID" />
+          <ScalarProperty Name="AttrntionUID" ColumnName="AttrntionUID" />
+          <ScalarProperty Name="UserAttentionID" ColumnName="UserAttentionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SS_Dialog">
+      <EntityTypeMapping TypeName="schoolshopModel.SS_Dialog">
+        <MappingFragment StoreEntitySet="SS_Dialog">
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="DialogOver" ColumnName="DialogOver" />
+          <ScalarProperty Name="ReplyTime" ColumnName="ReplyTime" />
+          <ScalarProperty Name="ReplyContent" ColumnName="ReplyContent" />
+          <ScalarProperty Name="ReplyUID" ColumnName="ReplyUID" />
+          <ScalarProperty Name="ConsultTime" ColumnName="ConsultTime" />
+          <ScalarProperty Name="ConsultContent" ColumnName="ConsultContent" />
+          <ScalarProperty Name="ConsultUID" ColumnName="ConsultUID" />
+          <ScalarProperty Name="DialogPID" ColumnName="DialogPID" />
+          <ScalarProperty Name="DialogID" ColumnName="DialogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SS_ShopCart">
+      <EntityTypeMapping TypeName="schoolshopModel.SS_ShopCart">
+        <MappingFragment StoreEntitySet="SS_ShopCart">
+          <ScalarProperty Name="ShopCartID" ColumnName="ShopCartID" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="BuyTime" ColumnName="BuyTime" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="PUID" ColumnName="PUID" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_ShopCartView">
+      <EntityTypeMapping TypeName="schoolshopModel.View_ShopCartView">
+        <MappingFragment StoreEntitySet="View_ShopCartView">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ImgURL" ColumnName="ImgURL" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="BuyTime" ColumnName="BuyTime" />
+          <ScalarProperty Name="PUID" ColumnName="PUID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="ShopCartID" ColumnName="ShopCartID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_MyAttentions">
+      <EntityTypeMapping TypeName="schoolshopModel.View_MyAttentions">
+        <MappingFragment StoreEntitySet="View_MyAttentions">
+          <ScalarProperty Name="DelFalg" ColumnName="DelFalg" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="RealName" ColumnName="RealName" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="AttrntionUID" ColumnName="AttrntionUID" />
+          <ScalarProperty Name="Describe" ColumnName="Describe" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="ImgURL" ColumnName="ImgURL" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="UserAttentionID" ColumnName="UserAttentionID" />
+          <ScalarProperty Name="AttentionTime" ColumnName="AttentionTime" />
+          <ScalarProperty Name="ProductUID" ColumnName="ProductUID" />
+          <ScalarProperty Name="AttentionPID" ColumnName="AttentionPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_UserOrder">
+      <EntityTypeMapping TypeName="schoolshopModel.View_UserOrder">
+        <MappingFragment StoreEntitySet="View_UserOrder">
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="ImgURL" ColumnName="ImgURL" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
+          <ScalarProperty Name="ISPay" ColumnName="ISPay" />
+          <ScalarProperty Name="PUID" ColumnName="PUID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SS_UserOrder">
+      <EntityTypeMapping TypeName="schoolshopModel.SS_UserOrder">
+        <MappingFragment StoreEntitySet="SS_UserOrder">
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
+          <ScalarProperty Name="ISPay" ColumnName="ISPay" />
+          <ScalarProperty Name="PUID" ColumnName="PUID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

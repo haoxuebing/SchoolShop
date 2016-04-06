@@ -1,0 +1,265 @@
+﻿@using SchoolShop.Model
+@{
+    List<Dialog> consultList = this.ViewBag.consultList;
+    List<Dialog> replyList = this.ViewBag.replyList;
+
+}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>用户消息</title>
+    <link href="/css/base.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/ddcss/style_zixun.css" />
+    <link rel="stylesheet" href="/css/ddcss/left_caidan.css" />
+    <link rel="stylesheet" href="/css/ddcss/base.css" />
+    <link rel="stylesheet" href="/css/ddcss/bottom.css" />
+    <link rel="stylesheet" href="/css/ddcss/top2.css" />
+    @*<script language="JavaScript" type="text/javascript" src="/js/ddjs/js.js"></script>*@
+    <script src="~/Scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".clsa").click(function () {
+                var id = $(this).attr("id");
+                $(this).hide();
+                $("#ddiv" + id).show();
+            })
+
+            $(".clsaa").click(function() {
+                var dialogid = $(this).attr("tag_id");
+                var replyContent = $("#txt" + dialogid).val();
+                $.post("/User/AddReply", { dialogid: dialogid, replyContent: replyContent }, function (msg) {
+                    if (msg == "ok") {
+                        $(this).remove();
+                        $("#txt" + dialogid).remove();
+                        $("#ddiv" + dialogid).text(replyContent);
+                      
+                    }
+                }, "text");
+                     
+            })
+
+            $("#consult").click(function () {
+                if (!$(this).hasClass("Reply_li")) {
+                    $(this).addClass("Reply_li");
+                    $("#reply").removeClass("Reply_li");
+                    $("#consults").show();
+                    $("#replys").hide();
+                }
+
+            });
+            $("#reply").click(function () {
+                if (!$(this).hasClass("Reply_li")) {
+                    $(this).addClass("Reply_li");
+                    $("#consult").removeClass("Reply_li");
+                    $("#consults").hide();
+                    $("#replys").show();
+                }
+
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div class="Grey">
+        <!--顶部-->
+        @Html.Action("SSTop", "Shared")
+        <!--导航-->
+        <div class="nav">
+            <div class="juzhong clearfix">
+                <a href="/"><img src="/images/logo.png" /></a>
+                <a href="/User/UserInfo" class="nav_a nav_a1">个人中心</a>
+                <a href="/Security/UserSecurity" class="nav_a">帐户中心</a>
+                <a href="/User/UserMessage" class="nav_a  nav_a4">消息中心</a>
+                <div class="fr nav_div2">
+                    <input type="text" class="nav_text" id="keyWordText" value="请输入关键字" onfocus="this.value=''" onblur="if(!value){value=defaultValue;}" />
+                    <input type="button" value="搜索" class="nav_button" id="searchKeyWord" />
+                </div>
+            </div>
+        </div>
+        <!--内容左栏菜单-->
+        <div class="juzhong clearfix">
+            @Html.Action("SSLeft", "Shared")
+            <!--内容右-->
+            <div class="Con">
+                <ul class="Reply clearfix">
+                    <li class="Reply_li" id="consult">我的提问</li>
+                    <li id="reply">我的答复</li>
+                </ul>
+                <ul class="Replycontent" id="consults">
+                    @foreach (var item in consultList)
+                    {
+                        <li class="R_content_li">
+                            <div class="clearfix">
+                                <p class="R_C_p fl">我的咨询：@item.ConsultContent</p>
+                                <p class="R_C_p1 fr">@(item.ConsultTime)</p>
+                            </div>
+                            <p class="R_C_p2">
+                                <i>商家回复</i>：
+                                @(item.ReplyContent ?? "尚未回复")<span style="float: right; font-size: 12px; margin-right: 24px; color: #a2a2a2;">@(item.ReplyTime)</span>
+                            </p>
+                        </li>
+                    }
+
+
+                </ul>
+                <ul class="Replycontent" hidden id="replys">
+                    @foreach (var item in replyList)
+                    {
+                        <li class="R_content_li">
+                            <div class="clearfix">
+                                <p class="R_C_p fl">买家咨询：@item.ConsultContent</p>
+                                <p class="R_C_p1 fr">@(item.ConsultTime)</p>
+                            </div>
+                            <p class="R_C_p2">
+                                @if (item.ReplyContent != null)
+                                {
+                                    <i>我的回复：</i>
+                                    @(item.ReplyContent ?? "尚未回复")<span style="float:right;font-size:12px; margin-right:24px;color:#a2a2a2;">@(item.ReplyTime)</span>
+                                }
+                                else
+                                {
+                                    <i>我尚未回复：</i>
+                                    <a style="color: green;" class="clsa" id="@item.DialogID">去回复</a>
+                                    <div id="ddiv@(item.DialogID)" hidden style="margin-left: 171px;margin-top: -17px;">
+                                        <input type="text" id="txt@(item.DialogID)" placeholder="请回复" />
+                                        <a class="clsaa" style="color:green" tag_id="@(item.DialogID)">提交</a>
+                                    </div>
+                                }
+                            </p>
+                        </li>
+                    }
+
+
+                </ul>
+                @*<ul class="Page clearfix">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>下一页</li>
+                </ul>*@
+            </div>
+
+        </div>
+    </div>
+    <!--底部-->
+    <div class="bottom">
+        <div class="Sbox">
+            <ul class="Atthebottom ">
+                <li>
+                    <a href="#">
+                        全程冷链配送
+                        <i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        有机绿色无公害
+                        <i class="ai"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        从基地到餐桌
+                        <i class="ai1"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        满59元免运送费
+                        <i class="ai2"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        社区最后一公里
+                        <i class="ai3"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="Safety clearfix ">
+                <dl class="Safetys">
+                    <dt>食品安全</dt>
+                    <dd><a href="#">食品卫生</a></dd>
+                    <dd><a href="#">食品监督</a></dd>
+                    <dd><a href="#">质量检测</a></dd>
+                </dl>
+                <dl class="Safetys Novice">
+                    <dt>新手上路</dt>
+                    <dd><a href="#">注册登录</a></dd>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">团购说明</a></dd>
+                </dl>
+                <dl class="Safetys Distribution">
+                    <dt>配送方式</dt>
+                    <dd><a href="#">配送范围</a></dd>
+                    <dd><a href="#">配送费用</a></dd>
+                    <dd><a href="#">配送时间</a></dd>
+                </dl>
+                <dl class="Safetys Novice">
+                    <dt>支付方式</dt>
+                    <dd><a href="#">货到付款</a></dd>
+                    <dd><a href="#">货到刷卡</a></dd>
+                    <dd><a href="#">在线支付</a></dd>
+                </dl>
+                <dl class="Safetys Service">
+                    <dt>售后服务</dt>
+                    <dd><a href="#">退换货条件</a></dd>
+                    <dd><a href="#">退换货流程</a></dd>
+                    <dd><a href="#">退换货准则</a></dd>
+                </dl>
+                <div class="Client">
+                    <p class="Client_p">
+                        手机客户端
+                        <i></i>
+                    </p>
+                    <p class="Client_p1">轻松购物，迅速到家！</p>
+                    <div class="Client_div">
+                        <i class="Client_div_i"></i>
+                        <a href="#" class="Client_div_a"></a>
+                        <a href="#" class="Client_div_a1"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom1">
+        <div class="bottom1_div">
+            <a href="#">关于我们</a>
+            <i>|</i>
+            <a href="#">法律声明</a>
+            <i>|</i>
+            <a href="#">服务条款</a>
+            <i>|</i>
+            <a href="#">隐私声名</a>
+            <i>|</i>
+            <a href="#">联系我们</a>
+            <i>|</i>
+            <a href="#">网站地图</a>
+        </div>
+        <p class="bottom1_p">北京市公安局朝阳分局备案编号110105014669<span>|</span>京ICP证070359号</p>
+        <p class="bottom1_p1">
+            Copyright ? 2004-2015 呆呆购物DDGW8.com 版权所有
+        </p>
+    </div>
+
+    <!--遮罩
+    <div class="Mask" id="yc2"></div>
+    <div class="Verification" id="yc1">
+        <div class="Verif">
+            <p>手机验证</p>
+            <i id="yc"></i>
+        </div>
+        <p class="Verif_p">亲，需要验证的哦！</p>
+        <p class="Verif_p1">呆呆已经向您的手机号码<span>18210876123</span>发送验证码了哦，请注意查收！</p>
+        <div class="Verif_div clearfix">
+            <p class="fl">请填写验证码：</p>
+            <input type="text" class="fl Verif_text" />
+        </div>
+        <a href="#" class="Verif_a">提交</a>
+    </div>-->
+</body>
+</html>

@@ -1,0 +1,231 @@
+@charset "utf-8";
+/* CSS Document */
+.beijing{
+	background:#f3f3f3;}
+.Evaluation{
+	width:988px;
+	border:1px solid #DDD;
+	background:#FFF;
+	float:left;
+	margin-left:5px;}
+.Eval{
+	background:#f7f7f7;}
+.Eval p{
+	float:left;
+	font-size: 12px;
+    font-family: "microsoft yahei";
+    color: #666;
+	font-weight:bold;
+	line-height:30px;}
+.Eval_p{
+	margin-left:258px;}
+.Eval_p1{
+	margin-left:244px;}
+.Eval_p2{
+	margin-left:116px;}
+.Eva_Content{
+	border-top:1px solid #DDD;
+	height:196px;}
+.Exper{
+	width:526px;
+	margin:20px 0 0 20px;}
+.Exper_p{
+	font-size: 12px;
+    font-family: "microsoft yahei";
+    color: #666;
+	line-height:22px;}
+.Exper_p em{
+	color:#999;
+	margin-left:20px;}
+.Exper_a{
+	width:82px;
+	height:82px;
+	border:1px solid #DDD;
+	float:left;
+	text-align:center;}
+.Exper_a span{
+	height:100%;
+	display:inline-block;
+	vertical-align:middle;}
+.Exper_a img{
+	vertical-align:middle;}
+.Customer{
+	width:75px;
+	height:14px;
+	background:url(../img/shangjia.png) -74px -70px;
+	position:relative;
+	margin-top:97px;}
+.Customer i{
+	position:absolute; left:0px; top:0px;
+	width:75px;
+	height:14px;
+	background:url(../img/shangjia.png) -74px -86px;}
+.reviewers{
+	margin-left:62px;
+	margin-top:65px;}
+.revi_div{
+	font-size: 12px;
+    font-family: "microsoft yahei";
+    color: #666;
+	position:relative;
+	margin-bottom:5px;
+	width:130px;}
+.revi_div span{
+	line-height:16px;
+	margin-left:5px;}
+.revi_div img{
+	display:inline-block;
+	width:16px;
+	height:16px;}
+.revi_p{
+	font-size: 12px;
+    font-family: "microsoft yahei";
+    color: #666;
+	margin-bottom:10px;}
+.Reply{
+	font-size: 12px;
+    font-family: "microsoft yahei";
+    color: #3aba4f;
+	margin-left:60px;
+	line-height:196px;}
+.Reply1{
+	width:100%;
+	height:102px;
+	background:#f9f9f9;
+	position:relative;}
+.Reply1_i{
+	position:absolute; left:33px; top:-11px;
+	 width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 12px solid #f9f9f9;}
+.Reply1_ta{
+	width:933px;
+	height:27px;
+	padding:0;
+	margin-top:22px;
+	margin-left:22px;
+	line-height:27px;
+	padding-left:10px;}
+.Reply1_div{
+	width:100%;
+	text-align:right;}
+.Reply1_div input{
+	margin-right:21px;
+	margin-top:10px;}
+.zh_heng{
+	width:900px;
+	height:35px;
+	background:#e6e6e6;
+	margin-left:33px;
+	margin-top:23px;}
+.zh_select{
+	width:85px;
+	height:26px;
+	margin:5px 0 0 10px}
+.zh_tiao{
+	display:inline-block;
+	padding-right:30px;
+	margin-bottom:30px;}
+.zh_tiao li{
+	float:left;
+	font-size: 12px;
+    font-family: "microsoft yahei";
+    color: #50697a;
+	width:24px;
+	height:22px;
+	text-align:center;
+	line-height:22px;}
+.zh_tiao_a{
+	float:left;
+	font-size: 12px;
+    font-family: "microsoft yahei";
+    color: #50697a;
+	line-height:22px;
+	padding:0 5px 0;}
+.zh_tiao_text{
+	width:36px;
+	height:18px;
+	float:left;}
+.zh_tiao_a1{
+	width:42px;
+	height:22px;
+	border:1px solid #cecece;
+	float:left;
+	text-align:center;
+	line-height:22px;
+	margin-left:5px;}
+.zh_tiao .zh_li{
+	background:#08ac29;
+	color:#FFF;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

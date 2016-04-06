@@ -1,0 +1,359 @@
+/* CSS Document */
+
+/* ¿ìÏú */
+.juzhong{
+	width:1200px;
+	margin:0 auto;}
+.Fast_h3{
+	font-size:20px;
+	font-family:"Adobe STD";
+	color:#454545;
+	font-weight:bold;
+	line-height:42px;}
+.Fast_h3 span{
+	font-size:13px;
+	color:#787878;
+	font-weight:100;}
+.Fast_h3 em{
+	font-size:18px;
+	color:#787878;
+	font-weight:100;
+	margin:0 10px 0;}
+.Fast_left{
+	width:208px;
+	border:1px solid #dbdbdb;
+	border-top:2px solid #909090;}
+.Fast_h4{
+	line-height:37px;
+	font-size:16px;
+	font-family:"Arial";
+	color:#454545;
+	font-weight:bold;
+	padding-left:7px;
+	border-bottom:1px solid #dbdbdb;
+	background:#f7f7f7;}
+.Fast_p{
+	line-height:30px;
+	font-size:16px;
+	font-family:"Adobe STD";
+	color:#454545;
+	font-weight:bold;
+	padding-left:35px;
+	position:relative;
+	border-bottom:1px solid #dbdbdb;
+	background:#f7f7f7;}
+.Fast_p i{
+	position:absolute; left:10px; top:7px;
+	width:16px;
+	height:16px;
+	background:url(../img/zonghe1.png) -166px -215px;}
+.Fast_ul li{
+	line-height:25px;
+	margin-left:45px;}
+
+/* ÓÒÀ¸ */
+.Fast_right{
+	width:978px;}
+.Fast_right_div{
+	height:162px;
+	border:1px solid #dbdbdb;}
+.Full{
+	line-height:35px;
+	background:#f7f7f7;}
+.Full_p{
+	width:56px;
+	height:35px;
+	background:#08ac29;
+	text-align:center;
+	line-height:35px;
+	font-size:17px;
+	font-family:"The new song";
+	color:#FFF;}
+.Full_p1{
+	font-size:13px;
+	font-family:"The new song";
+	color:#4f4f4f;
+	margin-left:10px;}
+.Full_p1 span{
+	color:#08ac29;
+	padding:0 3px 0;}
+.Full_a{
+	float:right;
+	width:108px;
+	height:25px;
+	background:#08ac29;
+	text-align:center;
+	line-height:25px;
+	font-size:13px;
+	font-family:"The new song";
+	color:#FFF;
+	font-weight:bold;
+	margin-top:5px;
+	margin-right:5px;
+	border-radius:5px;}
+.Carousel{
+	width:943px;
+	height:70px;
+	margin-left:20px;
+	position:relative;
+	margin-top:26px;}
+.Carousel i{
+	position:absolute; bottom:0px;
+	width:16px;
+	height:54px;
+	background-image:url(../img/shangjia.png);}
+.Carousel_i{
+	left:0px;
+	background-position:-150px -69px;}
+.Carousel_i1{
+	right:0px;
+	background-position:-168px -69px;}
+.Carousel_ul{
+	margin:0 27px 0;}
+.Carousel_ul li{
+	margin-right:15px;
+	float:left;}
+.Carousel_ul img{
+	width:50px;
+	height:50px;
+	border:1px solid #DDD;
+	padding-bottom:4px;}
+.Carousel_ul_p{
+	font-size:13px;
+	font-family:"The new song";
+	color:#F00;}
+.Carousel_ul_p span{
+	color:#4f4f4f;}
+.Sort_p{
+	font-size:13px;
+	font-family:"The new song";
+	color:#7a7a7a;
+	line-height:26px;}
+.Sort{
+	margin-top:13px;
+	padding-bottom:5px;
+	border-bottom:1px solid #DDD; }
+.Sort_a{
+	width:44px;
+	height:24px;
+	border:1px solid #DDD;
+	display:block;
+	background:#f8f8f8;
+	line-height:26px;
+	text-align:center;
+	font-size:13px;
+	font-family:"The new song";
+	color:#7a7a7a;
+	margin-left:5px;}
+.Sort_p1{
+	font-size:13px;
+	font-family:"The new song";
+	color:#08ac29;
+	line-height:26px;}
+.Sort_span{
+	border-left:1px solid #DDD;
+	height:26px;
+	margin:0 15px 0;
+	display:block;}
+.Sort_p2{
+	font-size:13px;
+	font-family:"The new song";
+	color:#636363;
+	line-height:26px;}
+.Sort_a1{
+	width:56px;
+	height:18px;
+	border:1px solid #DDD;
+	display:block;
+	background:#f8f8f8;
+	font-size:13px;
+	font-family:"The new song";
+	color:#7a7a7a;
+	line-height:20px;
+	text-align:center;
+	margin-left:10px;
+	margin-top:2px;}
+.Section{
+	margin-top:10px;}
+.Section_p{
+	font-size:13px;
+	font-family:"The new song";
+	color:#7a7a7a;
+	line-height:25px;}
+.Section_a{
+	font-size:13px;
+	font-family:"The new song";
+	color:#7a7a7a;
+	padding-left:15px;
+	position:relative;
+	margin-right:12px;
+	float:left;
+	line-height:25px;}
+.Section_a i{
+	position:absolute; left:0px; top:6px;
+	width:12px;
+	height:12px;
+	background-image:url(../img/shangjia.png);
+	background-position:-15px -89px;}
+
+.Section_a:hover i{
+	background-position:-27px -89px;}
+.Section_text{
+	width:40px;
+	height:23px;
+	border:1px solid #DDD;
+	padding:0;
+	}
+.Section_em{
+	line-height:25px;
+	margin:0 2px 0;
+	color:#7a7a7a;}
+.Prod{
+	margin-top:25px;
+	margin-bottom:105px;}
+.Product{
+	width:187px;
+	text-align:center;
+	float:left;
+	margin-right:20px;}
+.Product img{
+	display:block;
+	width:187px;
+	height:162px;
+	border:1px solid #08ac29;}
+.Product_a{
+	font-size:13px;
+	font-family:"The new song";
+	color:#08ac29;
+	margin-top:14px;
+	display:block;
+	height:35px;
+	overflow:hidden;}
+.Product_p{
+	font-size:15px;
+	font-family:"The new song";
+	color:#d22c00;
+	font-weight:bold;
+	margin-top:5px;}
+.Product_a1{
+	width:88px;
+	height:18px;
+	border:1px solid #DDD;
+	background:#f6f6f6;
+	display:block;
+	font-size:13px;
+	font-family:"The new song";
+	color:#7a7a7a;
+	text-align:center;
+	line-height:18px;
+	margin-left:50px;
+	margin-top:15px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

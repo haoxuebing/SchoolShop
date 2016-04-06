@@ -1,0 +1,280 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{
+	height:100%;}
+.Buyers{
+	width:941px;
+	height:397px;
+	background:url(../img/Bargain1.png);
+	position:fixed; left:19%; top:15%;
+	z-index:20;}
+.Buyers_i{
+	position:absolute; right:50px; top:25px;
+	width:34px;
+	height:32px;
+	background:url(../img/shangjia.png) -58px -168px;}
+.Mask{
+	width:100%;
+	height:100%;
+	background:#000;
+	position:fixed; left:0px; top:0px;
+	z-index:10;
+	opacity:0.5;
+	filter:alpha(opacity:50);}
+.Head{
+	width:49px;
+	height:49px;
+	margin:40px 0 0 65px;}	
+.Conver{
+	margin-top:40px;
+	margin-left:15px;}	
+.Conver_i{
+	font-size:16px;
+	font-family:"Arial";
+	color:#F00;
+	font-weight:bold;}	
+.Conver_Number{
+	margin-top:15px;}
+.Conver_Number_p{
+	font-size:14px;
+	font-family:"Arial";
+	color:#000;
+	float:left;
+	margin-right:15px;}	
+.Conver_Number input{
+	width:63px;
+	height:14px;
+	border:1px solid #888;
+	text-align:center;
+	color:#F00;}	
+.Link p{
+	font-size:14px;
+	font-family:"Arial";
+	color:#000;
+	float:left;}
+.Link{
+	margin-top:10px;}	
+.Link input{
+	width:339px;
+	height:14px;
+	border:1px solid #888;
+	color:#F00;
+	float:left;}	
+.Menu{
+	margin-top:15px;}
+.Menu_p{
+	font-size:12px;
+	font-family:"Arial";
+	color:#909090;
+	float:left;}	
+.Menu_a{
+	font-size:12px;
+	font-family:"Arial";
+	color:#F00;
+	float:left;
+	margin-left:23px;}	
+.po{
+	width:409px;
+	height:8px;
+	background:url(../img/Bargain2.png);
+	display:block;
+	margin-top:10px;}	
+.portrait{
+	width:49px;
+	height:49px;}
+.Shops{
+	width:315px;
+	margin-left:5px;}	
+.Shop_p{
+	font-size:16px;
+	font-family:"Arial";
+	color:#F00;}	
+.Shop_p em{
+	font-size:12px;
+	font-family:"Arial";
+	color:#909090;
+	margin-left:10px;}	
+.Shop_p1{
+	font-size:12px;
+	font-family:"Arial";
+	color:#000;
+	margin-top:5px;}	
+.Shop_p2{
+	font-size:12px;
+	font-family:"Arial";
+	color:#000;
+	margin-top:5px;}	
+.Shop_p2 a{
+	color:#F00;
+	}	
+.Dialogue{
+	margin-top:15px;}	
+.Reply{
+	width:396px;
+	height:28px;
+	border:1px solid #F00;
+	margin-top:5px;
+	padding-left:10px;
+	line-height:30px;
+	font-size:12px;
+	font-family:"Arial";
+	color:#8f8f8f;}	
+.Bargain_img{
+	width:212px;
+	margin-right:65px;
+	margin-top:70px;}
+.Bargain_img li{
+	box-sizing:border-box;
+	width:50px;
+	height:50px;
+	background:url(../img/Bargain.png);
+	position:relative;
+	float:left;
+	margin-left:3px;
+	margin-top:10px;}	
+.Bargain_img p{
+	position:absolute; right:-103px; top:-20px;
+	font-size:14px;
+	font-family:"Arial";
+	color:#F00;
+	width:100px;
+	border:1px solid #000;
+	background:#FFF;
+	display:none;
+	}	
+.Bargain_img li:hover{
+	border:1px solid #F00;
+	border-radius:10px;}	
+.Bargain_img li:hover p{
+	display:block;}	
+.Point{
+	margin:18px 0 0 168px;}
+.Point li{
+	box-sizing:border-box;
+	border-radius:50%;
+	width:11px;
+	height:11px;
+	border:1px solid #F00;
+	float:left;
+	margin-left:11px;}	
+.Point_li i{
+	margin:2px 0 0 2px;
+	display:block;
+	width:5px;
+	height:5px;
+	background:#F00;
+	border-radius:50%;
+	}	
+	
+.Bargain_img ul{
+	display:none;}	
+.Bargain_img .Bargain_ul{
+	display:block;}	
+.Reply_text{
+	padding:0;
+	width:396px;
+	height:28px;
+	border:1px solid #F00;
+	margin-top:5px;
+	padding-left:10px;
+	line-height:30px;
+	font-size:12px;
+	font-family:"Arial";
+	color:#8f8f8f;
+	overflow:hidden;
+	outline:none;
+	resize:none;}	
+.Reply_but{
+	width:45px;
+	height:20px;
+	border:none;
+	background:#08ac29;}	
+.Reply_but1{
+	width:45px;
+	height:20px;
+	border:none;
+	background:#fff;}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

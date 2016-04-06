@@ -1,0 +1,520 @@
+.box_left {
+    display: inline-block;
+}
+
+.personal-info {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    /*height: 774px;*/
+    width: 850px;
+    background-color: #ffffff;
+    padding: 10px 12px;
+    margin: 30px;
+}
+
+    .personal-info .brief-info {
+        height: 175px;
+        width: 345px;
+        float: right;
+        border: 1px solid #48af5e;
+        /* border-radius > IE9 */
+        border-top-left-radius: 87px;
+        border-bottom-left-radius: 87px;
+    }
+
+.EX_Gold_div {
+    float: right;
+    width: 346px;
+    height: 159px;
+    border-top-left-radius: 86px;
+    border-bottom-left-radius: 86px;
+    padding: 6px 0 6px;
+}
+
+.EX_Gold_img {
+    margin: -7px 0px 0 173px;
+    width: 173px;
+    height: 173px;
+    border-radius: 50%;
+}
+
+.EX_Member {
+    margin-left: 15px;
+    color: #323232;
+    height: 100%;
+    padding-right: 10px;
+}
+
+.EX_Member_p {
+    font-size: 18px;
+    font-family: "Microsoft YaHei";
+    margin-top: 25px;
+}
+
+.EX_Member_p1 {
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    margin-left: 25px;
+    position: relative;
+    margin-top: 11px;
+}
+
+    .EX_Member_p1 i {
+        position: absolute;
+        left: -25px;
+        top: -1px;
+        width: 17px;
+        height: 17px;
+        background: url(../img/zonghe1.png) no-repeat -180px -142px;
+    }
+
+.EX_Member_span {
+    display: block;
+    width: 198px;
+    height: 14px;
+    background: #c3f2cd;
+}
+
+    .EX_Member_span i {
+        display: block;
+        width: 100px;
+        height: 14px;
+        background: #48af5e;
+        margin-top: 12px;
+    }
+
+.EX_Member_p2 {
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    position: relative;
+    margin-top: 3px;
+}
+
+
+.personal-info h2 {
+    display: inline-block;
+    margin: 10px 5px;
+    font-size: 12px;
+    color: #48af5e;
+    font-family: "Microsoft YaHei";
+    line-height: 20px;
+    border-bottom: 2px solid #48af5e;
+}
+
+.personal-info .personal-form {
+    margin-top: 20px;
+}
+
+.personal-info .form-item {
+    margin-bottom: 20px;
+}
+
+    .personal-info .form-item > span, .personal-info .item-passwd > span {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 96px;
+        text-align: right;
+        padding-right: 6px;
+        font-size: 14px;
+        color: #606060;
+        font-family: "Microsoft YaHei";
+        line-height: 30px;
+    }
+
+        .personal-info .form-item > span > b {
+            color: #48af5e;
+        }
+
+    .personal-info .form-item input[type=text] {
+        box-sizing: border-box;
+        width: 220px;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid #cecece;
+        padding-left: 5px;
+    }
+
+    .personal-info .form-item > a.button {
+        display: inline-block;
+        width: 134px;
+        height: 32px;
+        background-color: #5caae6;
+        border-radius: 5px;
+        line-height: 32px;
+        font-size: 16px;
+        color: #ffffff;
+        font-family: "Microsoft YaHei";
+        cursor: pointer;
+        /*text-align: center;*/
+    }
+
+        .personal-info .form-item > a.button i {
+            background: url(../img/upload.jpg);
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            margin-top: 8px;
+            margin-left: 24px;
+        }
+
+        .personal-info .form-item > a.button span {
+            margin-left: 44px;
+        }
+
+    .personal-info .form-item > input[type=button] {
+        width: 80px;
+        height: 28px;
+        background-color: #48af5e;
+        font-size: 14px;
+        color: #fffefe;
+        font-family: "Microsoft YaHei";
+        /*line-height: 20px;*/
+        border: none;
+        margin-left: 280px;
+        cursor: pointer;
+    }
+
+     .personal-info .form-item > input[type=submit] {
+        width: 80px;
+        height: 28px;
+        background-color: #48af5e;
+        font-size: 14px;
+        color: #fffefe;
+        font-family: "Microsoft YaHei";
+        /*line-height: 20px;*/
+        border: none;
+        margin-left: 280px;
+        cursor: pointer;
+    }
+    .personal-info .form-item select {
+        box-sizing: border-box;
+        height: 30px;
+        /*width: 70px;*/
+        padding: 5px;
+        /*border: 1px solid #cecece;*/
+    }
+
+    .personal-info .form-item label {
+        margin: 5px;
+    }
+
+.personal-info .item-passwd {
+    /*width: 330px;*/
+    display: inline-block;
+    vertical-align: top;
+}
+
+    .personal-info .item-passwd > span {
+        width: 90px;
+    }
+
+.personal-info .item-company {
+    display: inline-block;
+    margin: 0;
+}
+
+.personal-info .form-item > a {
+    margin-left: 10px;
+    color: #48af5e;
+}
+
+.personal-info .form-item .upload-box {
+    display: inline-block;
+    vertical-align: top;
+    height: 120px;
+    width: 100px;
+    margin-right: 20px;
+    position: relative;
+}
+
+    .personal-info .form-item .upload-box img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .personal-info .form-item .upload-box a {
+        display: block;
+        width: 96px;
+        height: 17px;
+        background-color: #5caae6;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        margin-left: 2px;
+        font-size: 11px;
+        color: #ffffff;
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+    }
+
+.hidden {
+    display: none !important;
+}
+
+.form-item-fix {
+    margin-top: 60px;
+}
+
+/*fix*/
+.nav_div2 {
+    width: 300px;
+    height: 28px;
+}
+
+.top_main {
+    width: 255px;
+    height: 30px;
+}
+
+.nav_a2 {
+    background-color: #48af5e;
+}
+
+.nav a.active {
+    background-color: #3C8F4D;
+}
+
+.Choice {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+    .Choice i {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        border: 5px solid #FFF;
+        width: 0px;
+        height: 0px;
+        border-top: 5px solid #000;
+    }
+
+    .Choice input {
+        width: 314px;
+        height: 28px;
+        border: 1px solid #cecece;
+        background: #FFF;
+        text-align: left;
+        margin-left: 15px;
+    }
+
+.Position {
+    width: 314px;
+    height: 28px;
+    background: #FFF;
+    position: absolute;
+    left: 16px;
+    top: -28px;
+}
+
+.Position_p {
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    color: #2f59ab;
+    font-weight: bold;
+    line-height: 28px;
+    margin-left: 10px;
+}
+
+.Position input {
+    margin-top: 4px;
+    margin-right: 10px;
+}
+
+
+.Occupation {
+    width: 690px;
+    background: #FFF;
+    margin-left: 16px;
+}
+
+.Sale_ul {
+    width: 522px;
+}
+
+.Sale_p {
+    width: 150px;
+    text-align: right;
+    line-height: 100%;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    color: grey;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.Sale_li {
+    width: 174px;
+    position: relative;
+    float: left;
+}
+
+.Sale_li_span {
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    color: #666;
+    line-height: 25px;
+    padding-left: 18px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+}
+
+.Sale_li_span1 {
+    border: 2px solid #c7c7c7;
+    display: block;
+    width: 151px;
+    height: 25px;
+    border-bottom: 2px solid #FFF;
+    position: relative;
+    z-index: 2px;
+    box-sizing: border-box;
+}
+
+.Sale_li_i {
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background: url(../img/zonghe1.png) -738px -265px;
+}
+
+.Sale_li_i1 {
+    position: absolute;
+    left: 4px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    background: url(../img/zonghe1.png) -738px -279px;
+}
+
+.Subclass {
+    position: absolute;
+    width: 360px;
+    background: #FFF;
+    border: 2px solid #c7c7c7;
+    margin-top: -2px;
+    z-index: 10;
+}
+
+.Subclass_li {
+    cursor: pointer;
+    width: 160px;
+    line-height: 18px;
+    padding-left: 20px;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    color: #3059a8;
+    position: relative;
+    float: left;
+}
+
+    .Subclass_li i {
+        position: absolute;
+        left: 3px;
+        top: 2px;
+        width: 13px;
+        height: 13px;
+        background: url(../img/zonghe1.png) -248px -265px;
+    }
+
+.Subclass_div {
+    width: 100%;
+    height: 38px;
+    background: #f5f5f5;
+    border-top: 1px solid #CCC;
+    margin-top: 5px;
+}
+
+.Subclass_div_p {
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    color: #666;
+    position: relative;
+    padding-left: 20px;
+    line-height: 38px;
+}
+
+    .Subclass_div_p i {
+        position: absolute;
+        left: 3px;
+        top: 13px;
+        width: 13px;
+        height: 13px;
+        background: url(../img/zonghe1.png) -248px -265px;
+    }
+
+.Subclass_input {
+    width: 60px;
+    height: 23px;
+    background: url(../img/zonghe1.png) -891px 0;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    color: #ad5700;
+    border: none;
+    margin-top: 7px;
+    margin-left: 49px;
+}
+
+.Subclass_input1 {
+    width: 48px;
+    height: 23px;
+    background: url(../img/zonghe1.png) -952px 0;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    color: #ad5700;
+    border: none;
+    margin-top: 7px;
+    margin-left: 5px;
+}
+
+.Sale1 {
+    min-height: 25px;
+    background: #eff6ff;
+}
+
+html, body {
+    height: 100%;
+}
+
+.zhezhao {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity:50);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+
+.Subclass_li .Subcl_i {
+    background-position: -233px -265px;
+}
+
+.meiyou {
+    display: none;
+}
+
+.Occup {
+    position: absolute;
+    left: -376px;
+    top: 0px;
+}
+
+.Sale1_lii {
+    position: absolute;
+    left: 0px;
+    top: 7px;
+    width: 13px;
+    height: 13px;
+    background: url(../img/zonghe1.png) -248px -265px;
+}
+
+.Sale_l .Sale1_lii {
+    background-position: -233px -265px;
+}

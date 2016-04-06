@@ -1,0 +1,14 @@
+﻿<div class="search-section">
+    <div class="keyword"><input name="keyword" id="keyWordText" type="text" value="请输入关键字" onfocus="this.value=''" onblur="if(!value){value=defaultValue;}" /></div>
+    <div class="btn" id="searchKeyWord"></div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('#searchKeyWord').click(function () {
+            var keyWord = $('#keyWordText').val();
+            window.open("/Product/SearchProduct?keyWord=" + keyWord, "_self");
+        })
+    })
+
+
+</script>

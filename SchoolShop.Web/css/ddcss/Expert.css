@@ -1,0 +1,454 @@
+/* CSS Document */
+
+
+
+/* ���� */
+.juzhong{
+	width:1200px;
+	margin:0 auto;}
+.party_h2{
+	font-size:18px;
+	font-family:"Microsoft YaHei";
+	color:#323232;
+	font-weight:bold;}
+.party_a{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#606060;
+	margin-top:6px;}
+.party span{
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#606060;
+	font-weight:bold;
+	float:left;
+	margin:2px 5px 0;}
+.party{
+	margin-top:5px;}
+
+.Introduction{
+	width:980px;
+	height:265px;
+	background:#f5f5f5;
+	border-top-left-radius:85px;
+	border-bottom-right-radius:85px;
+	margin-top:15px;}
+.Int_img{
+	width:157px;
+	height:157px;
+	border-radius:50%;}
+.Int_div{
+	padding:27px 0 0 32px;
+	}
+.Int_p{
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#08ac29;
+	font-weight:bold;
+	width:157px;
+	text-align:center;
+	margin-top:10px;}
+.Int_p1{
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#323232;
+	width:160px;
+	margin-top:5px;}
+.Int_div1{
+	margin-left:50px;
+	margin-top:20px;}
+.Int_p2{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#323232;
+	width:657px;
+	line-height:30px;}
+
+.Article{
+	width:955px;
+	height:320px;
+	background:#f5f5f5;
+	padding:25px 0 0 25px;
+	margin-top:20px;}
+.Article h4{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#3b3b3b;
+	margin-bottom:10px;
+	font-weight:bold;}
+.Article li{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#323232;
+	margin-bottom:5px;
+	width:240px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;}
+.Answer{
+	width:955px;
+	height:320px;
+	background:#f5f5f5;
+	padding:25px 0 0 25px;
+	margin-top:20px;}
+.Answer h4{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#3b3b3b;
+	margin-bottom:10px;
+	font-weight:bold;}
+.Answer li{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#323232;
+	margin-bottom:5px;
+	width:400px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;}
+.Article_Answer{
+	margin-top:40px;}
+.Test{
+	width:906px;
+	padding:0 27px 27px;
+	margin-top:45px;
+	background:#f5f5f5;}
+.Test_h4{
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#323232;
+	font-weight:bold;
+	width:980px;
+	text-align:center;
+	line-height:58px;}
+
+.Product_ul{
+	width:868px;
+	background:#FFF;
+	padding-right:20px;
+	padding-bottom:50px;
+	padding-left:20px;}
+.Product{
+	width:197px;
+	margin-left:20px;}
+.Product_p{
+	font-size:20px;
+	font-family:"Microsoft YaHei";
+	color:#df2f3d;
+	position:relative;
+	margin-top:10px;}
+.Product_p i{
+	position:absolute; left:76px; top:7px;
+	width:14px;
+	height:14px;
+	background:url(../img/zonghe1.png) 0 -232px;}
+.Product_a1{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#555555;
+	margin-top:5px;
+	display:block;}
+.Product_p1{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#a7a7a7;
+	margin-top:30px;
+	margin-bottom:5px;}
+.Product_p1 span{
+	color:#064d85;}
+.Product_p2,.Product_p3{
+	width:28px;
+	height:21px;
+	border-bottom:2px solid #e2e2e2;
+	border-top:2px solid #e2e2e2;
+	border-left:1px solid #e2e2e2;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#555555;
+	line-height:21px;
+	padding-left:21px;
+	position:relative;}
+.Product_p2 i{
+	position:absolute; left:4px; top:4px;
+	width:12px;
+	height:11px;
+	background:url(../img/zonghe1.png) 0 -250px;}
+.Product_p3 i{
+	position:absolute; left:4px; top:4px;
+	width:13px;
+	height:12px;
+	background:url(../img/zonghe1.png) -15px -249px;}
+.Product_a3{
+	display:block;
+	width:60px;
+	height:21px;
+	border:2px solid #e2e2e2;
+	border-left:1px solid #e2e2e2;
+	line-height:21px;
+	padding-left:23px;
+	position:relative;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#ca4246;}
+.Product_a3 i{
+	position:absolute; left:4px; top:4px;
+	width:16px;
+	height:15px;
+	background:url(../img/zonghe1.png) -35px -248px;}
+.gao{
+	margin-top:85px;}
+.pagination li{
+	height:25px;
+	border:1px solid #e5e6e7;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	display:inline-block;
+	line-height:25px;
+	padding:0 15px 0 13px;
+	background:#f5f5f5;}
+.pagination a{
+	color:#464845;}
+.pagination .pagination_li{
+	border:none;
+	background:#FFF;}
+.pagination .pagination_li a{
+	color:#d1446a;
+	font-weight:bold;}
+.pagination{
+	margin-bottom:47px;
+	margin-left:563px;
+	margin-top:20px;}
+
+.Page{
+	margin-left:820px;
+	margin-top:20px;}
+
+.Page a{
+	padding:0 5px 0;
+	height:20px;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#404040;
+	border:1px solid #666;
+	}
+
+/*�Ҳ�*/
+.On-line{
+	width:208px;
+	height:261px;
+	border:1px solid #dedede;
+	margin-top:43px;}
+.On-line_p{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#404040;
+	font-weight:bold;
+	width:194px;
+	height:50px;
+	padding:14px 0 0 8px;
+	border-bottom:1px solid #dedede;}
+.Arrange{
+	width:208px;
+	height:123px;
+	background:url(../img/Individual1.png);
+	border-bottom:1px solid #dedede;}
+.Bargain_table th,.Bargain_table td{
+	width:26px;
+	height:29px;
+	border:none;}
+.Bargain_table{
+	border:none;}
+.Bargain_td{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#404040;
+	padding:0 3px 0;}
+.Consu{
+	width:85px;
+	height:26px;
+	background:#20a339;
+	border:none;
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#FFF;
+	letter-spacing:5px;
+	margin:34px 0 0 113px;
+	border-radius:5px;}
+.Extension{
+	width:190px;
+	height:935px;
+	border:1px solid #CCC;
+	padding:0 9px 0;
+	margin-top:10px;}
+.Extension_a{
+	display:block;
+	margin-top:14px;}
+	.Extension_a img {
+	  width: 190px;
+	  height: 190px;
+	}
+.Extension_a2{
+	margin-top:25px;}
+.Fast_a{
+	font-size:12px;
+	color:#6e6e6e;
+	font-family:"Microsoft YaHei";
+	margin-top:10px;
+	height:34px;
+	overflow:hidden;
+	display:block;}
+.Fast_p{
+	font-size:14px;
+	color:#F00;
+	font-family:"Microsoft YaHei";
+	font-weight:bold;
+	margin-top:10px;
+	position:relative;}
+.Fast_p3{
+	font-weight:100;}
+.Fast_p3 span{
+	color:#979797;}
+.Fast_p i{
+	width:28px;
+	height:16px;
+	position:absolute; left:66px; top:0px;
+	background:url(../img/zonghe1.png) -18px -215px;}
+.Fast_p1{
+	font-size:12px;
+	color:#CCC;
+	font-family:"Microsoft YaHei";}
+.Fast_p1 i{
+	color:#1b567e;
+	margin-top:7px;}
+.Fast_div{
+	margin-top:15px;}
+.Fast_div p{
+	font-size:18px;
+	color:#FFF;
+	font-family:"Microsoft YaHei";
+	font-weight:bold;
+	width:20px;
+	height:28px;
+	background:url(../img/zonghe1.png) -43px -184px;
+	line-height:28px;
+	text-align:center;
+	float:left;
+	margin-left:3px;}
+.Fast_div i{
+	font-size:20px;
+	color:#CCC;
+	float:left;}
+.Selected_h3{
+	font-size:14px;
+	color:#6e6e6e;
+	font-family:"Microsoft YaHei";
+	font-weight:bold;
+	margin-top:8px;
+	margin-bottom:8px;
+	margin-left:10px;}
+
+
+.Article_wen p{
+	text-indent:2em;
+	line-height:20px;
+	}
+.Article_wen dd{
+	display:none;}
+.Article_wen{
+	width:675px;
+	height:215px;
+	background:#FFF;
+	font-size:12px;
+	color:#000;
+	font-family:"Microsoft YaHei";
+	padding:10px 10px 0;
+	overflow:auto;
+	}
+.Article_h3{
+	font-size:14px;
+	color:#000;
+	font-family:"Microsoft YaHei";
+	font-weight:bold;
+	text-align:center;
+	margin-bottom:10px;
+	}
+
+.Dialogue{
+	width:516px;
+	height:240px;
+	border:1px solid #CCC;
+	background:#f8f6f6;
+	overflow-y:scroll}
+.Dialogue_a{
+	display:block;
+	width:100%;
+	text-align:center;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#5eafea;}
+.Dialogue_p{
+	width:100%;
+	text-align:center;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#858585;
+	margin-top:12px;}
+.Buy{
+	width:100%;
+	min-height:60px;
+	text-align:right;
+	position:relative;}
+.Buy_p{
+	min-width:20px;
+
+	border:1px solid #CCC;
+	background:#FFF;
+	display:inline-block;
+	padding:5px 10px 5px;
+	border-radius:5px;
+	margin-right:75px;
+	margin-top:5px;
+	position:relative;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#858585;}
+.Buy_p i{
+	position:absolute; right:-8px; top:8px;
+	width:8px;
+	height:8px;
+	background:url(../img/shangjia.png) -21px -102px;}
+.Buy_i{
+	position:absolute; right:10px; top:-7px;
+	width:50px;
+	height:50px;
+	background:url(../img/shangjia.png) -50px -112px;}
+.Sell{
+	min-height:60px;}
+.Sell_p{
+	min-width:20px;
+	border:1px solid #CCC;
+	background:#FFF;
+	display:inline-block;
+	padding:5px 10px 5px;
+	border-radius:5px;
+	margin-left:75px;
+	margin-top:5px;
+	position:relative;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#858585;}
+.Sell_i{
+	position:absolute; left:10px; top:-7px;
+	width:50px;
+	height:50px;
+	background:url(../img/shangjia.png) 0 -112px;}
+.Sell_p i{
+	position:absolute; left:-10px; top:4px;
+	width:10px;
+	height:15px;
+	background:url(../img/shangjia.png) -136px -106px;}
+
+.Article_wen .Article_dd{
+	display:block;}
+.Article .Article_li{
+	color:#08ac29;}

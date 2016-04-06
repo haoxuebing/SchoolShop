@@ -1,0 +1,377 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/* 导航区 */
+.Center{
+	width:1025px;
+	margin:0 auto;}
+.center_top{
+	margin-top:35px;
+	}
+.Name{
+	margin-left:595px;}
+.Name,.Fraction{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#333;}
+.Score{
+	width:77px;
+	height:10px;
+	position:relative;
+	margin: 4px 8px;
+  background-color: #BFC0C3;}
+.Score span{
+	position:absolute;
+	left:0px; top:0px;
+	height:10px;
+	background-color: #08ac29;
+}
+.Plus{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#06ac28;
+	padding-left:12px;
+	position:relative;
+	margin-right:20px;}
+.Plus i{
+	position:absolute; left:0px; top:3px;
+	width:10px;
+	height:10px;
+	background:url(../img/hedaohang.png) -308px -82px;}
+.Plus1{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#06ac28;
+	padding-left:17px;
+	position:relative;
+	}
+.Plus1 i{
+	position:absolute; left:0px; top:5px;
+	width:14px;
+	height:10px;
+	background:url(../img/hedaohang.png) -289px -82px;}
+.Score1{
+	margin:0 10px 0;}
+
+.Colle{
+	min-width:1200px;
+	height:88px;
+	background:#291670;
+	margin-top:10px;}
+.ollection p{
+	font-size:30px;
+	font-family:"Microsoft YaHei";
+	color:#FFF;
+	font-weight:bold;
+	font-style: italic;}
+.ollection{
+	width: 1000px;
+    position: relative;
+    margin: 0 auto;
+    line-height: 88px;}
+
+.nav_dh{
+	width:1025px;
+	line-height:40px;
+	margin:0 auto;}
+.nav_dh li{
+	float:left;
+	padding:0 20px 0;
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#FFF;
+	font-weight:bold;}
+.nav_bj{
+	min-width:1200px;
+	height:40px;
+	background:#666;}
+.Center_nav{
+	width:1025px;
+	height:58px;
+	border:1px solid #CCC;
+	margin-top:10px;}
+
+
+/* 左栏 */
+.Branch{
+	width:194px;
+	height:411px;
+	border:1px solid #d1d1d1;}
+.Branch dt{
+	height:39px;
+	background:url(../img/shangjia.png);
+	border-bottom:1px solid #CCC;
+	text-indent:-1000em;}
+.Branch dd{
+	height:30px;
+	background:url(../img/shangjia.png) 0 -39px;
+	border-bottom:1px solid #CCC;
+	line-height:30px;
+	padding-left:30px;
+	position:relative;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#333;
+	font-weight:bold;}
+.Branch a{
+	display:block;
+	width:100%;
+	height:100%;}
+.i1{
+	position:absolute; left:17px; top:14px;
+	width:5px;
+	height:5px;
+	background:url(../img/shangjia.png) -8px -69px;}
+.i2{
+	position:absolute; right:13px; top:12px;
+	width:7px;
+	height:8px;
+	background:url(../img/shangjia.png) 0 -79px;}
+
+.Sales{
+	width:194px;
+	height:443px;
+	border:1px solid #CCC;
+	margin-top:20px;
+	}
+.Sales img {
+	width: 50px;
+	height: 50px;
+}
+.Sales dt{
+	line-height:29px;
+	background:#F7F7F7;
+	border-bottom:1px solid #DDD;
+	padding-left:8px;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#666;
+
+	}
+.Sales dd{
+	height:58px;
+	border-bottom:1px dotted #DDD;
+	position:relative;
+	padding:10px 0 0;
+	margin:0 5px 0;}
+.Sales_No1_i{
+	position:absolute; left:5px; top:23px;
+	width:18px;
+	height:18px;
+	background:url(../img/shangjia.png) -19px -69px;
+	text-align:center;
+	line-height:18px;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#F00;}
+.Sales_No1_a{
+	width:50px;
+	height:50px;
+	margin-left:15px;}
+.Sales_No1_div{
+	margin-left:5px;}
+.Sales_No1_div a{
+	width:111px;
+	height:30px;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#333;
+	display:block;
+	overflow:hidden;}
+.Sales_No1_div p{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#F00;
+	font-weight:bold;
+	margin-top:5px;}
+.Notice{
+	width:194px;
+	height:274px;
+	border:1px solid #DDD;
+	margin-top:20px;}
+.Notice dt{
+	line-height:29px;
+	background:#F7F7F7;
+	border-bottom:1px solid #DDD;
+	padding-left:8px;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#666;}
+.Notice dd{
+	border-bottom:1px dotted #DDD;
+	margin:0 5px 0;}
+.Notice_dd{
+	height:77px;
+	}
+.Notice_dd1 strong,
+.Notice_dd2 strong{
+	font-weight:bold;}
+.Notice_dd1{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#666;
+	height:45px;
+	padding-top:10px;}
+.Notice_dd2{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#666;
+	height:99px;
+	padding-top:10px;}
+.Sales_No1_i1{
+	background-position:-43px -69px;
+	color:#CCC;}
+
+/* 右栏 */
+.Details .yc{
+	display:block;}
+.Details ul{
+	display:none;}
+.Details li:hover .Details_i,
+.Details li:hover .Details_p{
+	display:block;}
+.Details_i{
+	position:absolute; left:0px; top:0px;
+	width:50px;
+	height:25px;
+	background:#000;
+	opacity:0.5;
+	filter:alpha(opacity:50);
+	display:none;}
+.Details_p{
+	position:absolute; left:0px; top:0px;
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#FFF;
+	width:50px;
+	height:25px;
+	text-align:center;
+	line-height:25px;
+	display:none;}
+.right_kuan{
+	width:816px;}
+.nav_right{
+	border-bottom:1px solid #DDD;
+	height:26px;}
+.nav_right li {
+	cursor: pointer;
+}
+.nav_right .nav_right_li{
+	background:#c60001;
+	border:solid 1px #c60001;
+	border-bottom:none;
+	color:#FFF;}
+.nav_right .nav_right_li a {
+	color: #fff;
+}
+.nav_right li{
+	float:left;
+	margin-left:7px;
+	padding:0 15px 0;
+	line-height:26px;
+	border:1px solid #DDD;
+	border-bottom:none;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#333;
+	font-weight:bold;
+position: relative;}
+.nav_right .icon {
+	padding-right: 24px;
+}
+.nav_right .icon i {
+	background-image: url(../img/zonghe.png);
+	background-position: -305px -2px;
+	position: absolute;
+	background-repeat: no-repeat;
+	width: 10px;
+	height: 12px;
+	top: 8px;
+  right: 8px;
+}
+.nav_right .up i {
+	background-image: url(../img/zonghe.png);
+	background-position: -285px 0px;
+	top: 6px;
+}
+.nav_right .down i {
+	background-image: url(../img/zonghe.png);
+	background-position: -295px -2px;
+}
+
+.Details li{
+	width:250px;
+	height:366px;
+	padding:0 10px 0;
+	margin-top:10px;
+	float:left;
+	border:1px solid #FFF;
+	border-top:1px dotted #DDD;}
+.Details li:hover{
+	border:1px solid #DDD;
+	box-shadow:0 0 8px #ddd;}
+.NO1_a{
+	height:220px;}
+.NO1_div img{
+	float:left;
+	width:25px;
+	height:25px;
+	border:1px solid #CCC;
+	margin-right:2px;}
+.NO1_a1{
+	width:220px;
+	height:32px;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#666;
+	overflow:hidden;
+	display:block;
+	margin-top:10px;}
+.NO1_P{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#E4393C;
+	font-weight:bold;
+	margin-top:10px;}
+.NO1_div1{
+	margin-top:10px;
+	position:relative;}
+.NO1_div1 i{
+	position:absolute; left:0px; top:0px;
+	width:76px;
+	height:14px;
+	background:url(../img/shangjia.png) -73px -86px;}
+.NO1_div1 a{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#005AA0;
+	margin-left:80px;}
+.NO1_div .NO1_div_img{
+	border:1px solid #F00;}
+.Page{
+	margin-top:15px;
+	margin-left:400px;
+	margin-bottom:20px;}
+.Page p{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#666;
+	line-height:22px;
+	}
+.Page li{
+	float:left;}
+.Page a{
+	line-height:22px;
+	border:1px solid #DDD;
+	padding:0 8px 0;
+	display:inline-block;
+	color:#005aa0;
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	margin-left:11px;}
+
+.Details_NO1 #selected-img, .Details_NO1 .selected-img {
+	width: 220px;
+	height: 220px;
+}

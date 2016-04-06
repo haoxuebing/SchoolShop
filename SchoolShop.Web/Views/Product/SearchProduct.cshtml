@@ -1,0 +1,231 @@
+﻿@using SchoolShop.Model
+@{
+   
+    int sort = this.ViewBag.sort;//推荐、最新、价格从高到低、价格从低到高、关注度(0--4)
+    string keyWord= this.ViewBag.keyWord;//关键字
+    List<Products> productsList = this.ViewBag.productsList;
+    int pageCount = this.ViewBag.pageCount;//总页数
+    int totalRecords =this.ViewBag.totalCount;//总记录数
+
+}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>产品列表</title>
+    <link href="/css/base.css" rel="stylesheet" type="text/css" />
+    <link href="/css/pro-list.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+    <link href="/css/kkpager_blue.css" rel="stylesheet" />
+    <script src="/js/kkpager.min.js"></script>
+
+    <script type="text/javascript">
+        function getParameter(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+
+        $(function () {
+            var pageCount =@pageCount;//获取总页码
+            var totalRecords = @totalRecords;//获取总条数
+            var pageNo = getParameter('pno');
+            if (!pageNo) {
+                pageNo = 1;
+            }
+            //生成分页
+            //有些参数是可选的，比如lang，若不传有默认值
+            kkpager.generPageHtml({
+                //当前页码
+                pno: pageNo,
+                //总页码
+                total: pageCount,
+                //总数据条数
+                totalRecords: totalRecords,
+                //链接前部
+                hrefFormer: '/Product/SearchProduct',
+                //链接尾部
+                hrefLatter: '',
+                getLink: function(n){
+                    return this.hrefFormer+this.hrefLatter+'?keyWord=@(keyWord)&pno=' + n+'&sort=@(sort)';
+                }
+
+            });
+
+            var sort=@(sort);
+            if(sort==0){
+                $('#tuijian').addClass("current");
+            }else if(sort==1){
+                $('#zuixin').addClass("current");
+            }else if(sort==2){
+                $('#didaogao').addClass("current");
+            }else if(sort==3){
+                $('#gaodaodi').addClass("current");
+            }else if(sort==4){
+                $('#guanzhu').addClass("current");
+            }
+
+            /*加关注*/
+            $('#shoppingCart').click(function(){
+                var pid=$(this).attr("tag");
+                $.post("/Product/AddShopCart",{pid:pid},function(msg){
+                    if(msg=="ok"){
+                        showDialog("提示","你已关注该商品,请及时与发布商品人联系");
+                    }else if(msg=="error")
+                    {
+                        showDialog("提示","关注失败");
+                        window.location.href="/User/Login";
+                    }else{
+                        showDialog("提示","关注失败");
+                    }
+
+                },"text");
+
+
+            })
+
+
+
+        })
+
+
+    </script>
+
+</head>
+
+<body>
+    <!------------top---------------->
+    @Html.Action("SSTop", "Shared")
+
+    <!------------header---------------->
+    <div class="header">
+        <div class="logo"><a href="/"><img src="/images/logo.png" width="190" /></a></div>
+        <div class="header-right">
+            @Html.Action("Search", "Shared")
+
+            @Html.Action("SUserShopCart", "Shared")
+        </div>
+    </div>
+
+    <!------------header-wrap---------------->
+    <div class="header-wrap">
+        <div class="navwrap">
+            <div id="nav">
+                @Html.Action("SSHeadLink", "Shared")
+
+                @Html.Action("SSCatalog", "Shared")
+            </div>
+        </div>
+    </div>
+
+
+    <!------------main---------------->
+    <div class="main">
+        <div class="big-class"><h1>@(keyWord)</h1></div> 
+        <div class="box-hd">
+            <div class="filter-lists">
+                <ul>
+                    <li id="tuijian"><a href="/Product/SearchProduct?keyWord=@(keyWord)&pno=1&sort=0" rel="nofollow">推荐</a>|</li>
+                    <li id="zuixin"><a href="/Product/SearchProduct?keyWord=@(keyWord)&pno=1&sort=1" rel="nofollow">最新</a>|</li>
+                    <li id="didaogao"><a href="/Product/SearchProduct?keyWord=@(keyWord)&pno=1&sort=2" rel="nofollow">价格从高到低</a>|</li>
+                    <li id="gaodaodi"><a href="/Product/SearchProduct?keyWord=@(keyWord)&pno=1&sort=3" rel="nofollow">价格从低到高</a>|</li>
+                    <li id="guanzhu"><a href="/Product/SearchProduct?keyWord=@(keyWord)&pno=1&sort=4" rel="nofollow">关注度</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="products-list" id="products-list">
+            <ul>
+                @foreach (var item in productsList)
+                {
+                    <li>
+                        <div class="img"><a href="/Product/ProductDetail?pid=@(item.PID)"><img src="@(item.ImgURL)" width="220" height="220" /></a></div>
+                        <div class="w">
+                            <div class="left"><p><a href="products-detailed.html">@(item.ProductName)</a></p><span>@(item.ProductPrice)元</span></div>
+                            <div class="right"><p>@(item.ViewsCount)次浏览</p></div>
+                        </div>
+                        <div class="btn">
+                            <a href="/Product/ProductDetail?pid=@(item.PID)" class="btn1">立即购买</a>
+                            <a href="javascript:void(0);" tag="@(item.PID)" class="btn2" id="shoppingCart">加关注</a>
+                        </div>
+                    </li>
+                }
+
+
+
+
+            </ul>
+            <div class="clr10"></div>
+            <div style="width:800px;margin:0 auto;">
+                <div id="kkpager"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!------底部-------->
+    <div class="footer">
+        <div class="footer-c">
+            <dl>
+                <dt>购买指南</dt>
+                <dd><a href="#">第一次购物体验</a></dd>
+                <dd><a href="#">品质保证原则</a></dd>
+                <dd><a href="#">会员申请条件</a></dd>
+            </dl>
+            <dl>
+                <dt>支付方式</dt>
+                <dd><a href="#">网银在线支付</a></dd>
+                <dd><a href="#">支付宝支付</a></dd>
+                <dd><a href="#">银联在线支付</a></dd>
+            </dl>
+            <dl>
+                <dt>配送方式</dt>
+                <dd><a href="#">配送方式</a></dd>
+            </dl>
+            <dl>
+                <dt>售后服务</dt>
+                <dd><a href="#">联系客服</a></dd>
+                <dd><a href="#">订单查询</a></dd>
+                <dd><a href="#">退换货流程及原则</a></dd>
+            </dl>
+
+            <div class="col-contact">
+                <p class="phone">400-100-5678</p>
+                <p>周一至周日 8:00-18:00<br />（仅收市话费）</p>
+                <input type="button" value="在线客户" />
+            </div>
+            <div class="clr20"></div>
+            <div class="footer-b">
+                <p><a href="#">关于我们</a>  |  <a href="#">手机商城</a>  |  <a href="#">联系我们</a></p>
+                <p>2013 © DEHUA.com,All Rights Reserver. cz科技 版权所有　　网站备案号：闽ICP备0000号-1</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script type="text/javascript" src="/js/Public.js"></script>
+
+
+<script type="text/javascript">
+    $(function () {
+        /*------------------------------排列互选框-----------------------------------*/
+        $(".box-hd .more a").click(function () {
+            if ($(this).find("i").attr("class") == "icon-check") {
+                $(this).find("i").attr("class", "icon-check-active");
+            }
+            else {
+                $(this).find("i").attr("class", "icon-check");
+            }
+        })
+
+        $("#products-list").find("li").hover(function () {
+            $(this).addClass("active");
+        }, function () {
+            $(this).removeClass("active");
+        })
+    })
+
+</script>
+</html>

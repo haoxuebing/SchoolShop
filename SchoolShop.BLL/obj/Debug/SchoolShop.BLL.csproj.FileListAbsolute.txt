@@ -1,0 +1,12 @@
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.BLL\bin\Debug\SchoolShop.BLL.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.BLL\bin\Debug\SchoolShop.BLL.pdb
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.BLL\bin\Debug\SchoolShop.DAL.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.BLL\bin\Debug\SchoolShop.Model.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.BLL\bin\Debug\EntityFramework.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.BLL\bin\Debug\SchoolShop.DAL.pdb
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.BLL\bin\Debug\SchoolShop.Model.pdb
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.BLL\bin\Debug\EntityFramework.xml
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.BLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.BLL\obj\Debug\SchoolShop.BLL.csprojResolveAssemblyReference.cache
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.BLL\obj\Debug\SchoolShop.BLL.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.BLL\obj\Debug\SchoolShop.BLL.pdb

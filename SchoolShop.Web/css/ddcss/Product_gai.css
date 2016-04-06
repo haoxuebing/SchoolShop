@@ -1,0 +1,764 @@
+@charset "utf-8";
+/* CSS Document */
+.seller-admin-panel{
+	background:#FFF;}
+.Informa{
+	width:985px;
+	margin-left:10px;}
+.Inform{
+	height:29px;
+	background:#dbdbdb;
+	border-top:1px solid #5e5e5e;
+	line-height:29px;
+	font-size:15px;
+	font-family:"The new song";
+	color:#000;
+	font-weight:bold;
+	padding-left:12px;}
+.Subclass{
+	font-size:12px;
+	font-family:"The new song";
+	color:#8d8d8d;
+	margin-top:10px;}
+.Subclass_a{
+	color:#3276df;}
+.Edit_content{
+	background:#FFF;
+	margin-top:5px;
+	padding-left:30px;
+	padding-top:40px;
+	padding-right:50px;
+	padding-bottom:60px;}
+.Com_name{
+	width:120px;
+	height:22px;
+	text-align:right;
+	line-height:22px;
+	font-size:12px;
+	font-family:"The new song";
+	color:#929499;}
+.Com_name em{
+	color:#F00;}
+.Com_name_txt{
+	width:402px;
+	height:20px;
+	border:1px solid #e5e5e5;
+	padding:0;}
+.Com_name_P{
+	font-size:12px;
+	font-family:"The new song";
+	color:#929499;
+	margin-left:15px;}
+.Com_name_P span{
+	color:#0a850a;}
+.Com_name_p1{
+	font-size:12px;
+	font-family:"The new song";
+	color:#F00;
+	margin-top:5px;}
+.margin_top{
+	margin-top:10px;}
+.Com_name_P2{
+	width:15px;
+	height:15px;
+	background:url(../img/shangjia.png) -113px -106px;
+	margin-top:4px;
+	margin-left:10px;}
+.Com_name_st{
+	width:202px;
+	height:22px;
+	border:1px solid #e6e6e6;
+	font-size:12px;
+	font-family:"The new song";
+	color:#333;}
+.Com_name_P3{
+	line-height:22px;
+	font-size:12px;
+	font-family:"The new song";
+	color:#929499;
+	margin-left:5px;}
+.Com_name_a{
+	color:#0e0eef;}
+.Com_name_a1{
+	color:#703e9d;}
+.Com_name_p4{
+	font-size:12px;
+	font-family:"The new song";
+	color:#929499;
+	line-height:22px;}
+.attribute{
+	font-size:14px;
+	font-family:"The new song";
+	color:#50545b;
+	font-weight:bold;
+	margin-top:10px;}
+.margin_top1{
+	margin-top:15px;}
+.Com_name_div p{
+	font-size:12px;
+	font-family:"The new song";
+	color:#929499;
+	padding-left:17px;
+	float:left;
+	line-height:22px;
+	margin-right:40px;
+	position:relative;}
+.Com_name_div i{
+	position:absolute; left:0px; top:4px;
+	width:13px;
+	height:13px;
+	background:url(../img/zonghe1.png) -248px -265px;}
+.Subject{
+	width:120px;
+	height:22px;
+	text-align:right;
+	line-height:22px;
+	font-size:14px;
+	font-family:"The new song";
+	color:#000;
+	font-weight:bold;
+	margin-top:10px;}
+.Prompt{
+	font-size:12px;
+	font-family:"The new song";
+	color:#0000f0;}
+.Com_name1{
+	width:127px;
+	height:22px;
+	padding:0;
+	border:1px solid #d6d6d7;}
+.Com_name_p6{
+	font-size:12px;
+	font-family:"The new song";
+	color:#929499;
+	line-height:24px;
+	margin-left:5px;}
+.margin_left{
+	margin-left:50px;}
+.margin_left1{
+	margin-left:15px;}
+.Attribute{
+	margin-top:20px;
+	padding-bottom:9px;
+	border-bottom:1px dotted #e6e6e6;}
+.Attribute_p{
+	font-size:12px;
+	font-family:"The new song";
+	color:#64676b;
+	margin-left:20px;}
+.Attribute_a{
+	width:71px;
+	height:21px;
+	text-align:center;
+	line-height:21px;
+	background:#e6e6e6;
+	font-size:12px;
+	font-family:"The new song";
+	color:#666;
+	margin-right:20px;}
+.Colors li{
+	margin-left:36px;
+	margin-top:12px;}
+.Colors i{
+	position:absolute; left:0px; top:3px;
+	width:13px;
+	height:13px;
+	background:url(../img/zonghe1.png) -248px -265px;
+	}
+.Color .Color_i{
+	background-position:-233px -265px;}
+
+.Colors em{
+	width:16px;
+	height:16px;
+	border:1px solid #f4f4f4;
+	float:left;
+	margin-left:18px;}
+
+.Colors_input{
+	width:73px;
+	height:18px;
+	border:none;
+	margin-left:5px;
+	font-size:12px;
+	font-family:"The new song";
+	color:#666;}
+.Sizes i{
+	position:absolute; left:0px; top:3px;
+	width:13px;
+	height:13px;
+	background:url(../img/zonghe1.png) -248px -265px;}
+.Size .Size_i{
+	background-position:-233px -265px;}
+.Sizes_input{
+	width:50px;
+	height:18px;
+	border:none;
+	font-size:12px;
+	font-family:"The new song";
+	color:#666;
+	margin-left:5px;}
+.Sizes_input1{
+	vertical-align:top;
+	width:15px;
+	height:15px;}
+.Sizes li{
+	margin-left:48px;
+	margin-top:12px;
+	margin-right:17px;}
+.Bargain_table{
+	border:1px solid #f3f3f3;
+	margin-top:25px;}
+.Bargain_table th{
+	background:#e8f2f4;
+	border-right:1px solid #cacaca;
+	height:34px;
+	font-size:12px;
+	font-family:"The new song";
+	color:#4e5359;}
+.Bargain_table .Bargain_i{
+	color:#F00;}
+.Bargain_th{
+	width:210px;}
+.Bargain_th1{
+	width:113px;}
+.Bargain_th2{
+	width:190px;}
+.Bargain_th5{
+	width:34px;}
+.Bargain_th2 input,
+.Bargain_th3 input{
+	width:57px;
+	height:20px;
+	border:1px solid #cacaca;}
+.Bargain_th3{
+	width:224px;}
+.Bargain_th4{
+	width:124px;}
+.Bargain_table td{
+	height:32px;
+	font-size:12px;
+	font-family:"The new song";
+	color:#4e5359;
+	border-top:1px solid #cacaca;
+	border-right:1px solid #cacaca;}
+.Bargain_td1{
+	}
+.Bargain_td1 em{
+	float:left;
+	width:16px;
+	height:16px;
+	background:#ceffff;
+	border:1px solid #cacaca;
+	margin-right:5px;
+	margin-left:5px;}
+.Bargain_td1 span{
+	line-height:18px;}
+
+.Bargain_td input{
+	width:67px;
+	height:20px;
+	border:1px solid #cacaca;
+	margin-right:5px;}
+
+.Com_picture{
+	border-top:1px solid #cacaca;
+	margin-top:10px;
+	padding-top:30px;}
+.Com_text{
+	font-size:12px;
+	font-family:"The new song";
+	color:#999;
+	margin-left:66px;}
+.Com_text em{
+	color:#F00;}
+.Com_text span{
+	color:#F00;
+	margin-left:12px;}
+.Com_img li{
+	float:left;
+	margin-left:17px;}
+.Com_Upload{
+	font-size:12px;
+	font-family:"The new song";
+	color:#1855ae;
+	font-weight:bold;
+	margin-top:44px;
+	margin-left:20px;
+	position:relative;}
+.Com_Upload i{
+	position:absolute; right:-15px; top:5px;
+	width:11px;
+	height:5px;
+	background:url(../img/zonghe1.png);}
+.Choice li{
+	font-size:14px;
+	font-family:"The new song";
+	color:#52555c;
+	float:left;
+	line-height:35px;
+	padding:0 15px 0;}
+.Choice .Choice_li{
+	border:1px solid #CCC;
+	background:#FFF;
+	border-bottom:none;}
+.Choice_img{
+	width:683px;
+	height:230px;
+	border:1px solid #CCC;
+	margin-top:-1px;}
+.Local_div_input{
+	width:87px;
+	height:31px;
+	background:#1976c3;
+	border:none;
+	font-size:16px;
+	font-family:"The new song";
+	color:#FFF;
+	font-weight:bold;}
+.Local_div_p{
+	font-size:12px;
+	font-family:"The new song";
+	color:#1855ae;
+	margin-top:15px;
+	margin-left:5px;}
+.Local_div{
+	margin-top:40px;
+	margin-left:298px;}
+.Prompt1{
+	font-size:12px;
+	font-family:"The new song";
+	color:#666;
+	margin-left:200px;
+	margin-top:25px;}
+.Prompt1 p{
+	margin-bottom:20px;}
+.margin_left2{
+	margin-left:66px;
+	margin-top:13px;}
+.Timing{
+	margin-top:30px;}
+.Timing_p{
+	font-size:12px;
+	font-family:"The new song";
+	color:#656565;
+	line-height:23px;}
+.Timing_p1{font-size:12px;
+	font-family:"The new song";
+	color:#656565;
+	position:relative;
+	padding-left:22px;
+	line-height:23px;}
+.Timing_p1 i{
+	position:absolute; left:0px; top:5px;
+	width:13px;
+	height:13px;
+	background:url(../img/zonghe1.png) -248px -265px;}
+.Timing_text{
+	width:160px;
+	height:23px;
+	border:1px solid #CCC;
+	padding-left:10px;}
+.Timing_div{
+	display:inline-block;}
+.Timing_div i{
+	position:absolute; right:5px; top:6px;
+	width:14px;
+	height:13px;
+	background:url(../img/shangjia.png) -113px -124px;}
+.Com_Upload1{
+	width:96px;
+	height:20px;
+	font-size:12px;
+	font-family:"The new song";
+	color:#666;
+	text-align:center;
+	line-height:20px;
+	background:#e6e6e6;}
+.Com_Udiv{
+	margin-left:10px;}
+.Com_Upload2{
+	font-size:12px;
+	font-family:"The new song";
+	color:#1855ae;
+	font-weight:bold;
+	margin-top:20px;
+	margin-left:20px;
+	position:relative;}
+.Com_Upload2 i{
+	position:absolute; right:12px; top:5px;
+	width:11px;
+	height:5px;
+	background:url(../img/zonghe1.png);}
+.Com_text strong{
+	position:absolute; left:-23px; top:-2px;
+	width:16px;
+	height:16px;
+	border:1px solid #CCC;
+	background:#ccffff;
+	}
+.UMeditor{
+	height:405px;
+	margin-top:50px;}
+.UMeditor_s{
+	height:300px;
+	width:825px;
+	margin-top:15px;
+	margin-left:75px;}
+.UMeditor_p{
+	font-size:12px;
+	font-family:"The new song";
+	color:#656565;}
+.UMeditor_p em{
+	color:#F00;}
+.UMeditor_ul{
+	width:844px;
+	border-bottom:2px solid #366fb9;
+	margin-left:60px;}
+.UMeditor_ul li{
+	width:70px;
+	height:28px;
+	background:url(../img/as1.png) repeat-x;
+	text-align:center;
+	line-height:28px;
+	font-size:12px;
+	font-family:"The new song";
+	color:#656565;
+	float:left;
+	margin-left:15px;}
+.UMeditor_ul .UMeditor_li{
+	background:url(../img/as2.png) repeat-x;
+	color:#FFF;}
+.Prese{
+	width:827px;
+	height:26px;
+	border-top:1px solid #c5c5c5;
+	background:#EEE;
+	margin-top:31px;
+	margin-left:75px;
+	position:relative;
+	z-index:1000;
+	line-height:26px;}
+.Prese_p{
+	font-size:12px;
+	font-family:"The new song";
+	color:#50545b;
+	margin-left:120px;}
+.Prese_a{
+	width:57px;
+	height:20px;
+	border:1px solid #ccc;
+	background:#FFF;
+	padding-left:23px;
+	line-height:20px;
+	font-size:12px;
+	font-family:"The new song";
+	color:#50545b;
+	position:relative;
+	margin-left:150px;
+	margin-top:1px;}
+.Prese_a i{
+	position:absolute; left:4px; top:4px;
+	width:14px;
+	height:13px;
+	background:url(../img/shangjia.png) -131px -124px;}
+.Prese_select{
+	width:228px;
+	height:20px;
+	background:#FFF;
+	border:1px solid #c0c0c0;
+	font-size:12px;
+	font-family:"The new song";
+	color:#50545b;
+	margin-left:10px;
+	margin-top:2px;}
+.Prese_i{
+	position:absolute; right:6px; top:5px;
+	width:15px;
+	height:15px;
+	background:url(../img/shangjia.png) -147px -124px;}
+.Customer_h4{
+	font-size:12px;
+	font-family:"The new song";
+	color:#616161;
+	font-weight:bold;
+	margin-top:25px;}
+.Invoice{
+	font-size:12px;
+	font-family:"The new song";
+	color:#616161;
+	line-height:20px;
+	width:85px;
+	text-align:right;}
+.Invoice_in{
+	line-height:20px;
+	vertical-align:top;
+	font-size:12px;
+	font-family:"The new song";
+	color:#616161;
+	}
+.Invoice_ra{
+	margin-left:15px;}
+.Invoi{
+	margin-top:15px;}
+.Promise{
+	font-size:12px;
+	font-family:"The new song";
+	color:#616161;
+	margin-top:10px;
+	display:inline-block;}
+.Promise p{
+	width:85px;
+	text-align:right;}
+.Promise label{
+	line-height:20px;}
+.Promise a{
+	color:#00588b;}
+.Promise_te{
+	width:327px;
+	height:25px;
+	border:1px solid #c4c4c4;}
+.Promise_p{
+	line-height:27px;}
+.Promise i{
+	position:absolute; right:-24px; top:5px;
+	width:13px;
+	height:22px;
+	background:url(../img/shangjia.png) -169px -124px;}
+.Start{
+	margin-top:48px;
+	margin-left:172px;}
+.Start input{
+	width:114px;
+	height:35px;
+	background:#03ae24;
+	font-size:16px;
+	font-family:"The new song";
+	color:#FFF;
+	border-radius:5px;
+	float:left;
+	margin-right:82px;
+	outline:none;
+	border:0px;}
+
+
+
+.shadow-box {
+  display: none;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(186, 186, 186, 0.59);
+}
+.shadow-box .show-box {
+  position: absolute;
+  width: 702px;
+  height: 558px;
+  background-color: #ffffff;
+}
+
+.shadow-box .show-box .sub-1 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 29px;
+  background: #f3f3f3;
+  padding: 0 10px;
+}
+.shadow-box .show-box .sub-1 span {
+  line-height: 29px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  color: #636363;
+}
+.shadow-box .show-box .sub-1 a {
+  float: right;
+  background: url(../img/x.jpg);
+  width: 19px;
+  height: 19px;
+  margin-top: 5px;
+}
+.shadow-box .show-box .sub-2 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 76px;
+  padding: 20px 0 0 35px;
+  color: #9b9a9a;
+  font-family: "Microsoft YaHei";
+}
+.shadow-box .show-box .sub-2 label {
+  height: 25px;
+  line-height: 25px;
+  margin-right: 30px;
+  margin-left: 4px;
+  font-size: 12px;
+}
+.shadow-box .show-box .sub-2 label:first-child {
+  margin-right: 10px;
+}
+.shadow-box .show-box .sub-2 select {
+  width: 79px;
+  height: 25px;
+  padding-left: 6px;
+  font-size: 13px;
+  color: inherit;
+}
+.shadow-box .show-box .sub-2 a {
+  color: #06ac27;
+}
+
+
+
+.classification {
+	box-sizing: border-box;
+	border: 1px solid #EBECEF;
+	height: 120px;
+	width: 448px;
+	margin-left: 78px;
+	overflow: auto;
+	padding: 4px;
+}
+.classification .item {
+	line-height: 22px;
+}
+.classification label, .classification input[type=checkbox] {
+	vertical-align: top;
+}
+.classification input[type=checkbox] {
+	margin-top: 6px;
+}
+.classification input[type=text] {
+	display: inline-block;
+	width: 300px;
+	line-height: 22px;
+	border: none;
+	outline: none;
+}
+.Range{
+	font-size:12px;
+	color: #9b9a9a;
+    font-family: "Microsoft YaHei";
+	line-height:22px;
+	margin-left:15px;
+	}
+
+.Range_div{
+	font-size:12px;
+	color: #9b9a9a;
+    font-family: "Microsoft YaHei";
+	padding-top:3px;
+	}
+.Range_div label{
+	vertical-align:top;
+	line-height:17px;}
+.sub-5{
+	height:460px;}
+.Color_em{
+	position:absolute; right:-18px; top:0px;
+	width:15px;
+	height:15px;
+	background:url(../img/shangjia.png) 0 -257px;}
+.kuan{
+	width:95px;
+	margin-left:48px;
+	margin-top:12px;}
+
+
+.Sizer{
+	width:150px;
+	 height:20px; 
+	 border:1px solid #CCC;
+	 margin-top:10px;
+	 margin-left:10px;}
+.Sizer1{
+	position:fixed; 
+	left:40%; top:40%; 
+	width:300px; 
+	height:46px; 
+	border:1px solid #666;
+	background:#FFF;
+	font-size:12px;
+	color: #666;
+    font-family: "Microsoft YaHei";}
+.Sizer_p{
+	margin-top:10px;
+	margin-left:5px;
+	line-height:24px;}
+.Sizer_but{
+	height:24px;
+	margin-top:10px;
+	margin-left:15px;
+	font-size:12px;
+	color: #666;
+    font-family: "Microsoft YaHei";}
+.Sizer_p1{
+	margin-top:10px;
+	margin-left:5px;
+	line-height:24px;}
+
+
+.Prompts{
+	display: none;
+	height:20px;
+	padding:0 5px 0;
+	border:1px solid #ffbdbe;
+	color:#e4393c;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	background:#ffebeb;
+	line-height:20px;
+	float:left;
+	margin-left:15px;}
+
+
+.Space{
+	margin-top:30px;
+	margin-left:20px;
+	width:637px;
+	border:1px solid #CCC;}
+.Space img{
+	padding-top:5px;
+	width:70px;
+	height:63px;
+	margin-left:15px;
+	margin-bottom:5px;}
+.number{
+	margin-right:24px;}
+.number a{
+	display:inline-block;
+	padding:0 8px 0;
+	height:23px;
+	line-height:25px;
+	border:1px solid #CCC;
+	margin-top:10px;}
+.number_jz{
+	width:100%;
+	text-align:right;}
+.number .number_a{
+	border:1px solid #FFF;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

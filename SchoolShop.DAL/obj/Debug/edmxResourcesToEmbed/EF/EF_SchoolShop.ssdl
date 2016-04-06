@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="schoolshopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SS_Catalogs">
+    <Key>
+      <PropertyRef Name="CatalogID" />
+    </Key>
+    <Property Name="CatalogID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CatalogName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CatalogLevel" Type="int" Nullable="false" />
+    <Property Name="ParentID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SS_Dialog">
+    <Key>
+      <PropertyRef Name="DialogID" />
+    </Key>
+    <Property Name="DialogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DialogPID" Type="int" Nullable="false" />
+    <Property Name="ConsultUID" Type="int" Nullable="false" />
+    <Property Name="ConsultContent" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsultTime" Type="datetime" Nullable="false" />
+    <Property Name="ReplyUID" Type="int" Nullable="false" />
+    <Property Name="ReplyContent" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReplyTime" Type="datetime" />
+    <Property Name="DialogOver" Type="int" Nullable="false" />
+    <Property Name="DelFlag" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SS_Products">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" Nullable="false" />
+    <Property Name="CatalogID" Type="varchar" MaxLength="50" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ProductPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ImgURL" Type="nvarchar" MaxLength="100" />
+    <Property Name="ViewsCount" Type="int" />
+    <Property Name="Describe" Type="nvarchar" MaxLength="200" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="SaleTime" Type="datetime" />
+    <Property Name="PrudouctDetail" Type="nvarchar" MaxLength="4000" />
+    <Property Name="AskCount" Type="int" />
+    <Property Name="DelFlag" Type="int" />
+  </EntityType>
+  <EntityType Name="SS_ShopCart">
+    <Key>
+      <PropertyRef Name="ShopCartID" />
+    </Key>
+    <Property Name="ShopCartID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PID" Type="int" Nullable="false" />
+    <Property Name="PUID" Type="int" Nullable="false" />
+    <Property Name="UID" Type="int" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="BuyTime" Type="datetime" Nullable="false" />
+    <Property Name="DelFlag" Type="int" />
+  </EntityType>
+  <EntityType Name="SS_UserAttention">
+    <Key>
+      <PropertyRef Name="UserAttentionID" />
+    </Key>
+    <Property Name="UserAttentionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AttrntionUID" Type="int" />
+    <Property Name="AttentionPID" Type="int" />
+    <Property Name="ProductUID" Type="int" />
+    <Property Name="AttentionTime" Type="datetime" />
+    <Property Name="DelFalg" Type="int" />
+  </EntityType>
+  <EntityType Name="SS_UserBrowse">
+    <Key>
+      <PropertyRef Name="BroeseID" />
+    </Key>
+    <Property Name="BroeseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UID" Type="int" Nullable="false" />
+    <Property Name="PID" Type="int" Nullable="false" />
+    <Property Name="ImgUrl" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProductPrice" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="CatalogID" Type="varchar" MaxLength="20" />
+    <Property Name="BDateTime" Type="datetime" Nullable="false" />
+    <Property Name="DelFlag" Type="int" />
+  </EntityType>
+  <EntityType Name="SS_UserOrder">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PID" Type="int" Nullable="false" />
+    <Property Name="UID" Type="int" Nullable="false" />
+    <Property Name="PUID" Type="int" Nullable="false" />
+    <Property Name="ISPay" Type="int" />
+    <Property Name="OrderTime" Type="datetime" />
+    <Property Name="DelFlag" Type="int" />
+  </EntityType>
+  <EntityType Name="SS_Users">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Mobile" Type="varchar" MaxLength="15" />
+    <Property Name="Email" Type="varchar" MaxLength="30" />
+    <Property Name="NickName" Type="nvarchar" MaxLength="20" />
+    <Property Name="RealName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Birthday" Type="datetime" />
+    <Property Name="RegistTime" Type="datetime" Nullable="false" />
+    <Property Name="LastLoginTime" Type="datetime" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="Gender" Type="int" />
+    <Property Name="HeadImage" Type="varchar" MaxLength="100" />
+    <Property Name="IDNumber" Type="varchar" MaxLength="30" />
+    <Property Name="QQNumber" Type="varchar" MaxLength="15" />
+    <Property Name="note" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreditValue" Type="int" />
+    <Property Name="DelFlag" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“schoolshop.dbo.View_MyAttentions”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="View_MyAttentions">
+    <Key>
+      <PropertyRef Name="UserAttentionID" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="ProductPrice" />
+    </Key>
+    <Property Name="AttentionPID" Type="int" />
+    <Property Name="ProductUID" Type="int" />
+    <Property Name="AttentionTime" Type="datetime" />
+    <Property Name="UserAttentionID" Type="int" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ProductPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ImgURL" Type="nvarchar" MaxLength="100" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Describe" Type="nvarchar" MaxLength="200" />
+    <Property Name="AttrntionUID" Type="int" />
+    <Property Name="NickName" Type="nvarchar" MaxLength="20" />
+    <Property Name="RealName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="int" />
+    <Property Name="DelFalg" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“schoolshop.dbo.View_ShopCartView”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="View_ShopCartView">
+    <Key>
+      <PropertyRef Name="ShopCartID" />
+      <PropertyRef Name="PID" />
+      <PropertyRef Name="UID" />
+      <PropertyRef Name="PUID" />
+      <PropertyRef Name="BuyTime" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="Price" />
+    </Key>
+    <Property Name="ShopCartID" Type="int" Nullable="false" />
+    <Property Name="PID" Type="int" Nullable="false" />
+    <Property Name="UID" Type="int" Nullable="false" />
+    <Property Name="PUID" Type="int" Nullable="false" />
+    <Property Name="BuyTime" Type="datetime" Nullable="false" />
+    <Property Name="DelFlag" Type="int" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ImgURL" Type="nvarchar" MaxLength="100" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“schoolshop.dbo.View_UserOrder”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="View_UserOrder">
+    <Key>
+      <PropertyRef Name="OrderID" />
+      <PropertyRef Name="PID" />
+      <PropertyRef Name="UID" />
+      <PropertyRef Name="PUID" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="ProductPrice" />
+    </Key>
+    <Property Name="OrderID" Type="int" Nullable="false" />
+    <Property Name="PID" Type="int" Nullable="false" />
+    <Property Name="UID" Type="int" Nullable="false" />
+    <Property Name="PUID" Type="int" Nullable="false" />
+    <Property Name="ISPay" Type="int" />
+    <Property Name="OrderTime" Type="datetime" />
+    <Property Name="DelFlag" Type="int" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ProductPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ImgURL" Type="nvarchar" MaxLength="100" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“schoolshop.dbo.View_WhoAttention”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="View_WhoAttention">
+    <Key>
+      <PropertyRef Name="UserAttentionID" />
+    </Key>
+    <Property Name="UserAttentionID" Type="int" Nullable="false" />
+    <Property Name="AttrntionUID" Type="int" />
+    <Property Name="AttentionPID" Type="int" />
+    <Property Name="ProductUID" Type="int" />
+    <Property Name="AttentionTime" Type="datetime" />
+    <Property Name="DelFalg" Type="int" />
+    <Property Name="ImgURL" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProductPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Mobile" Type="varchar" MaxLength="15" />
+    <Property Name="Email" Type="varchar" MaxLength="30" />
+    <Property Name="NickName" Type="nvarchar" MaxLength="20" />
+    <Property Name="RealName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Birthday" Type="datetime" />
+    <Property Name="LastLoginTime" Type="datetime" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="Gender" Type="int" />
+    <Property Name="HeadImage" Type="varchar" MaxLength="100" />
+    <Property Name="QQNumber" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityContainer Name="schoolshopModelStoreContainer">
+    <EntitySet Name="SS_Catalogs" EntityType="Self.SS_Catalogs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SS_Dialog" EntityType="Self.SS_Dialog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SS_Products" EntityType="Self.SS_Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SS_ShopCart" EntityType="Self.SS_ShopCart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SS_UserAttention" EntityType="Self.SS_UserAttention" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SS_UserBrowse" EntityType="Self.SS_UserBrowse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SS_UserOrder" EntityType="Self.SS_UserOrder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SS_Users" EntityType="Self.SS_Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="View_MyAttentions" EntityType="Self.View_MyAttentions" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_MyAttentions].[AttentionPID] AS [AttentionPID], 
+    [View_MyAttentions].[ProductUID] AS [ProductUID], 
+    [View_MyAttentions].[AttentionTime] AS [AttentionTime], 
+    [View_MyAttentions].[UserAttentionID] AS [UserAttentionID], 
+    [View_MyAttentions].[ProductName] AS [ProductName], 
+    [View_MyAttentions].[ProductPrice] AS [ProductPrice], 
+    [View_MyAttentions].[ImgURL] AS [ImgURL], 
+    [View_MyAttentions].[PhoneNumber] AS [PhoneNumber], 
+    [View_MyAttentions].[Describe] AS [Describe], 
+    [View_MyAttentions].[AttrntionUID] AS [AttrntionUID], 
+    [View_MyAttentions].[NickName] AS [NickName], 
+    [View_MyAttentions].[RealName] AS [RealName], 
+    [View_MyAttentions].[Gender] AS [Gender], 
+    [View_MyAttentions].[DelFalg] AS [DelFalg]
+    FROM [dbo].[View_MyAttentions] AS [View_MyAttentions]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_ShopCartView" EntityType="Self.View_ShopCartView" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_ShopCartView].[ShopCartID] AS [ShopCartID], 
+    [View_ShopCartView].[PID] AS [PID], 
+    [View_ShopCartView].[UID] AS [UID], 
+    [View_ShopCartView].[PUID] AS [PUID], 
+    [View_ShopCartView].[BuyTime] AS [BuyTime], 
+    [View_ShopCartView].[DelFlag] AS [DelFlag], 
+    [View_ShopCartView].[ProductName] AS [ProductName], 
+    [View_ShopCartView].[ImgURL] AS [ImgURL], 
+    [View_ShopCartView].[Price] AS [Price]
+    FROM [dbo].[View_ShopCartView] AS [View_ShopCartView]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_UserOrder" EntityType="Self.View_UserOrder" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_UserOrder].[OrderID] AS [OrderID], 
+    [View_UserOrder].[PID] AS [PID], 
+    [View_UserOrder].[UID] AS [UID], 
+    [View_UserOrder].[PUID] AS [PUID], 
+    [View_UserOrder].[ISPay] AS [ISPay], 
+    [View_UserOrder].[OrderTime] AS [OrderTime], 
+    [View_UserOrder].[DelFlag] AS [DelFlag], 
+    [View_UserOrder].[ProductName] AS [ProductName], 
+    [View_UserOrder].[ProductPrice] AS [ProductPrice], 
+    [View_UserOrder].[ImgURL] AS [ImgURL], 
+    [View_UserOrder].[PhoneNumber] AS [PhoneNumber]
+    FROM [dbo].[View_UserOrder] AS [View_UserOrder]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_WhoAttention" EntityType="Self.View_WhoAttention" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_WhoAttention].[UserAttentionID] AS [UserAttentionID], 
+    [View_WhoAttention].[AttrntionUID] AS [AttrntionUID], 
+    [View_WhoAttention].[AttentionPID] AS [AttentionPID], 
+    [View_WhoAttention].[ProductUID] AS [ProductUID], 
+    [View_WhoAttention].[AttentionTime] AS [AttentionTime], 
+    [View_WhoAttention].[DelFalg] AS [DelFalg], 
+    [View_WhoAttention].[ImgURL] AS [ImgURL], 
+    [View_WhoAttention].[ProductPrice] AS [ProductPrice], 
+    [View_WhoAttention].[ProductName] AS [ProductName], 
+    [View_WhoAttention].[Mobile] AS [Mobile], 
+    [View_WhoAttention].[Email] AS [Email], 
+    [View_WhoAttention].[NickName] AS [NickName], 
+    [View_WhoAttention].[RealName] AS [RealName], 
+    [View_WhoAttention].[Birthday] AS [Birthday], 
+    [View_WhoAttention].[LastLoginTime] AS [LastLoginTime], 
+    [View_WhoAttention].[Address] AS [Address], 
+    [View_WhoAttention].[Gender] AS [Gender], 
+    [View_WhoAttention].[HeadImage] AS [HeadImage], 
+    [View_WhoAttention].[QQNumber] AS [QQNumber]
+    FROM [dbo].[View_WhoAttention] AS [View_WhoAttention]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

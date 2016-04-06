@@ -1,0 +1,361 @@
+
+.Price {
+  width: 580px;
+  height: 150px;
+  margin-top: 5px;
+}
+.Price_p {
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: #ff0000;
+  padding-top: 10px;
+}
+.Price_p1 {
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: #ff0000;
+}
+.Price_p2 span {
+  font-size: 40px;
+  font-family: "Microsoft YaHei";
+  color: #ff0000;
+  font-weight: bold;
+  margin-top: 15px;
+  float: left;
+  text-decoration: line-through;
+}
+.Price_p2 em {
+  font-size: 18px;
+  font-family: "Microsoft YaHei";
+  color: #8a8888;
+  margin-top: 36px;
+  float: left;
+  margin-left: 10px;
+}
+.Price_p2 b {
+  font-size: 18px;
+  font-family: "Microsoft YaHei";
+  color: #000;
+  float: left;
+  margin: 36px 10px 0;
+}
+.Price_p2 strong {
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  color: #8a8888;
+  margin-top: 36px;
+  float: left;
+  border-bottom: 1px solid #e4007f;
+}
+.Price_p3 {
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  color: #474747;
+  margin-top: 10px;
+}
+
+.Join1 {
+  margin-top: 25px;
+}
+.Join1 input {
+  width: 40px;
+  height: 26px;
+  border: 1px solid #CCC;
+  border-right: none;
+  text-align: center;
+  line-height: 26px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.Join1_span {
+  margin-top: 5px;
+}
+.Join1_span i {
+  display: block;
+  width: 15px;
+  height: 13px;
+  border: 1px solid #CCC;
+  line-height: 15px;
+  text-align: center;
+  background: #f1f1f1;
+  color: #a3a3a3;
+  cursor: pointer;
+}
+.Join1_p {
+  float: left;
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: #a6a6a6;
+  margin-top: 20px;
+  margin-left: 5px;
+}
+.Join1_a {
+  width: 133px;
+  height: 35px;
+  background: #08ac29;
+  display: block;
+  font-size: 20px;
+  font-family: "Microsoft YaHei";
+  color: #FFF;
+  font-weight: bold;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 5px;
+}
+.Prompt {
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: #666;
+  margin-left: 10px;
+  margin-top: 25px;
+}
+
+
+/* ����˵�� */
+
+.Bargain_h3 {
+  font-size: 18px;
+  font-family: "Microsoft YaHei";
+  color: #08ac29;
+  font-weight: bold;
+  margin-top: 9px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #cccccc;
+}
+.Bargain_span {
+  border-top: 3px solid #CCC;
+  margin-top: 2px;
+  display: block;
+}
+.Bargain_th {
+  width: 219px;
+  height: 40px;
+  font-size: 18px;
+  font-family: "Microsoft YaHei";
+  color: #939393;
+  font-weight: normal;
+}
+.Bargain_th1 {
+  width: 194px;
+  height: 40px;
+  font-size: 18px;
+  font-family: "Microsoft YaHei";
+  color: #939393;
+  font-weight: normal;
+}
+.Bargain_th2 {
+  width: 214px;
+  height: 40px;
+  font-size: 18px;
+  font-family: "Microsoft YaHei";
+  color: #939393;
+  font-weight: normal;
+}
+.Bargain_th3 {
+  width: 255px;
+  height: 40px;
+  font-size: 18px;
+  font-family: "Microsoft YaHei";
+  color: #939393;
+  font-weight: normal;
+}
+.Bargain_td {
+  height: 40px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  color: #484848;
+}
+.Bargain_table {
+  margin: 30px 0 0 135px;
+  border: 1px solid #c9c9c9;
+}
+.Bargain_div {
+  width: 896px;
+  height: 83px;
+  background: #f1f1f1;
+  margin: 18px 0 0 135px;
+}
+.Bargain_p {
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  color: #696969;
+  line-height: 38px;
+  margin-left: 25px;
+}
+.Bargain_p1 {
+  font-size: 13px;
+  font-family: "he new song";
+  color: #696969;
+  margin-left: 87px;
+}
+
+/* �������� */
+
+.zong {
+  margin-top: 38px;
+}
+.search {
+  width: 206px;
+  height: 120px;
+  border: 1px solid #dddddd;
+}
+.search_h4 {
+  font-size: 13px;
+  font-family: "Microsoft YaHei";
+  line-height: 27px;
+  border-bottom: 1px solid #dddddd;
+  background: #f7f7f7;
+  padding-left: 15px;
+  color: #666;
+}
+.search_p {
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: #666;
+  margin-left: 22px;
+  margin-top: 10px;
+}
+.search_p input {
+  width: 106px;
+  height: 16px;
+  border: 2px solid #CCC;
+}
+.search_p1 {
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: #666;
+  margin-left: 22px;
+  margin-top: 3px;
+}
+.search_p1 span {
+  letter-spacing: 12px;
+}
+.search_p1 input {
+  width: 41px;
+  height: 16px;
+  border: 2px solid #CCC;
+}
+.search_input {
+  width: 43px;
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: #333;
+  font-weight: bold;
+  margin: 5px 0 0 72px;
+}
+.Classification {
+  width: 206px;
+  height: 227px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+.Classification p {
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: #666;
+  line-height: 27px;
+  border-bottom: 1px solid #ccc;
+  padding-left: 35px;
+  background: #f7f7f7;
+  position: relative;
+  cursor: pointer
+}
+.Classification p i {
+  width: 15px;
+  height: 16px;
+  position: absolute;
+  left: 11px;
+  top: 5px;
+  background: url(../img/zonghe1.png) no-repeat -166px -233px;
+}
+
+/* �곤�Ƽ� */
+
+.Selected_h3 {
+  font-size: 14px;
+  color: #6e6e6e;
+  font-family: "Microsoft YaHei";
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 10px;
+}
+.Extension {
+  width: 190px;
+  height: 935px;
+  border: 1px solid #CCC;
+  padding: 0 9px 0;
+  margin-top: 10px;
+}
+.Extension_a {
+  display: block;
+  margin-top: 14px;
+}
+.Extension_a img {
+  width: 190px;
+  height: 190px;
+}
+.Extension_a2 {
+  margin-top: 25px;
+}
+.Fast_a {
+  font-size: 12px;
+  color: #6e6e6e;
+  font-family: "Microsoft YaHei";
+  margin-top: 10px;
+  height: 34px;
+  overflow: hidden;
+  display: block;
+}
+.Fast_p {
+  font-size: 14px;
+  color: #F00;
+  font-family: "Microsoft YaHei";
+  font-weight: bold;
+  margin-top: 10px;
+  position: relative;
+}
+.Fast_p3 {
+  font-weight: 100;
+}
+.Fast_p3 span {
+  color: #979797;
+}
+.Fast_p i {
+  width: 28px;
+  height: 16px;
+  position: absolute;
+  left: 66px;
+  top: 0px;
+  background: url(../img/zonghe1.png) -18px -215px;
+}
+.Fast_p1 {
+  font-size: 12px;
+  color: #CCC;
+  font-family: "Microsoft YaHei";
+}
+.Fast_p1 i {
+  color: #1b567e;
+  margin-top: 7px;
+}
+.Fast_div {
+  margin-top: 15px;
+}
+.Fast_div p {
+  font-size: 18px;
+  color: #FFF;
+  font-family: "Microsoft YaHei";
+  font-weight: bold;
+  width: 20px;
+  height: 28px;
+  background: url(../img/zonghe1.png) -43px -184px;
+  line-height: 28px;
+  text-align: center;
+  float: left;
+  margin-left: 3px;
+}
+.Fast_div i {
+  font-size: 20px;
+  color: #CCC;
+  float: left;
+}

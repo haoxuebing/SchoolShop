@@ -1,0 +1,16 @@
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.DAL\bin\Debug\SchoolShop.Data.dll.config
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.DAL\bin\Debug\SchoolShop.Data.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.DAL\bin\Debug\SchoolShop.Data.pdb
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.DAL\bin\Debug\EntityFramework.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.DAL\bin\Debug\SchoolShop.FrameWork.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.DAL\bin\Debug\SchoolShop.Model.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.DAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.DAL\bin\Debug\SchoolShop.FrameWork.pdb
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.DAL\bin\Debug\SchoolShop.Model.pdb
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.DAL\bin\Debug\EntityFramework.xml
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.DAL\obj\Debug\SchoolShop.Data.csprojResolveAssemblyReference.cache
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.DAL\obj\Debug\SchoolShop.Data.dll
+C:\Users\雪冰\Documents\Visual Studio 2013\Projects\SchoolShop\SchoolShop.DAL\obj\Debug\SchoolShop.Data.pdb

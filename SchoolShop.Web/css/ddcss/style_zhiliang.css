@@ -1,0 +1,290 @@
+/* CSS Document */
+
+/* 导航分类小类 */
+.zong{
+	min-width:1200px;
+	height:445px;
+	background:#000;}
+.Carousel{
+	width:1200px;
+	margin:0 auto;
+	position:relative;}
+.Carousel_img li{
+	display:none;}
+.Carousel_img .Carousel_img_li{
+	display:block;}
+.Carousel_Point li{
+	width:16px;
+	height:16px;
+	background:#FFF;
+	border-radius:50%;
+	float:left;
+	margin-right:17px;
+	border:2px solid #FFF;}
+.Carousel_Point .Carousel_li{
+	background:#08ac29;
+	box-shadow:2px 1px 5px #000 inset;}
+.Carousel_Point{
+	position:absolute; right:35px; bottom:20px;}
+.hui{
+	width:1109px;
+	margin:0 auto;
+	background:#ebebeb;
+	padding:31px 60px 0 31px;
+	}
+.Industry_h2{
+	font-size:30px;
+	font-family:"Microsoft YaHei";
+	font-weight:600;
+	color:#007516;}
+.Industry_p{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#414141;
+	width:735px;
+	margin-top:10px;}
+.Industry{
+	width:1081px;
+	padding-bottom:20px;
+	background:#FFF;
+	border-radius:10px;
+	position:relative;
+	margin-top:35px;}
+.Industry_a{
+	padding-top:19px;
+	margin-left:19px;
+	display:block;}
+.Industry_dl dt{
+	font-size:20px;
+	font-family:"Microsoft YaHei";
+	color:#007516;}
+.Industry_dl a{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#414141;}
+.Industry_dl dd{
+	width:90px;
+	float:left;
+	margin-top:5px;}
+.Industry_dl{
+	margin-top:20px;
+	margin-left:25px;
+	width:900px;}
+.Industry_i{
+	position:absolute; right:15px; top:40px;
+	width:27px;
+	height:77px;
+	background:url(../img/hedaohang.png) -162px -30px;}
+.Blank{
+	width:1200px;
+	height:50px;
+	background:#FFF;
+	margin-top:60px;
+	display:block;
+	margin-left:-31px;}
+.Expert{
+	font-size:30px;
+	font-family:"Microsoft YaHei";
+	font-weight:600;
+	color:#007516;
+	margin-top:40px;}
+.line_li{
+	width:269px;
+	height:164px;
+	background:#FFF;
+	border-radius:10px;
+	padding:21px 0 0 21px;
+	margin-right:60px;
+	margin-top:44px;}
+.line_li_p p{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#3c3c3c;
+	margin-left:30px;
+	margin-top:5px;}
+.line_li_p a{
+	width:84px;
+	height:28px;
+	background:#08ac29;
+	display:block;
+	line-height:28px;
+	text-align:center;
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#FFF;
+	margin-left:30px;
+	margin-top:32px;}
+.On-line1{
+	width:1011px;
+	 overflow:hidden;
+	  margin-left:55px;}
+.On-line{
+	
+	width:10000px;
+	 position:relative;
+	}
+.line_i{
+	position:absolute; left:-5px; top:210px;
+	width:23px;
+	height:75px;
+	background:url(../img/hedaohang.png) -190px -32px;
+	z-index:999;}
+.line_i1{
+	position:absolute; right:12px; top:210px;
+	width:23px;
+	height:75px;
+	background:url(../img/hedaohang.png) -220px -32px;
+	z-index:999;}
+.blank{
+	height:122px;
+	width:1200px;
+	background:#FFF;
+	display:block;
+	margin-top:67px;
+	margin-left:-31px;}
+
+.Industry_dl1{
+	width:832px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2bfc781c75b84c4fb57cb6a390c1d419" Name="Diagram1" ZoomLevel="77">
+        <EntityTypeShape EntityType="schoolshopModel.SS_Catalogs" Width="1.5" PointX="3.375" PointY="4.75" />
+        <EntityTypeShape EntityType="schoolshopModel.SS_UserBrowse" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="schoolshopModel.SS_Users" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="schoolshopModel.SS_UserAttention" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="schoolshopModel.SS_Products" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="schoolshopModel.View_WhoAttention" Width="1.5" PointX="4.75" PointY="7.75" />
+        <EntityTypeShape EntityType="schoolshopModel.SS_Dialog" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="schoolshopModel.SS_ShopCart" Width="1.5" PointX="7.375" PointY="7.75" />
+        <EntityTypeShape EntityType="schoolshopModel.View_ShopCartView" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="schoolshopModel.View_MyAttentions" Width="1.5" PointX="9.375" PointY="4.75" />
+        <EntityTypeShape EntityType="schoolshopModel.View_UserOrder" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="schoolshopModel.SS_UserOrder" Width="1.5" PointX="9.375" PointY="9.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,133 @@
+@charset "utf-8";
+/* CSS Document */
+.Pension_account{
+	width:810px;
+	background:#FFF;
+	padding:0 20px 20px;
+	float:left;
+	margin-top:28px;}
+.Pension_div{
+	padding-bottom:20px;
+	border-bottom:1px solid #f5f5f5;}
+.Pens_img{
+	margin-top:50px;}
+.Pens_div{
+	margin-top:44px;
+	margin-left:24px;}
+.Pens_div_p{
+	font-size:30px;
+	font-family:"Microsoft YaHei";
+	color:#1fa339;
+	line-height:30px;
+	margin-bottom:20px;}
+.Pens_div_p1{
+	width:307px;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#ee751b;}
+.Pens_div1{
+	margin-top:44px;
+	margin-left:85px;}
+.Pens_input{
+	width:102px;
+	height:30px;
+	border:none;
+	background:#47ae5f;
+	border-radius:5px;
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#FFF;}
+.Pens_div1_p{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#414041;
+	width:102px;
+	text-align:center;
+	margin-top:5px;}
+.Pens_input1{
+	width:102px;
+	height:30px;
+	border:none;
+	background:#47ae5f;
+	border-radius:5px;
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#FFF;
+	margin-top:35px;}
+.Pens_input:disabled, .Pens_input1:disabled {
+	background-color: #c8c8c8;
+	cursor: not-allowed;
+}
+.Detailed{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#313232;
+	margin-top:25px;
+	padding-bottom:15px;}
+.Detailed_p{
+	width:155px;
+	margin-left:30px;}
+.Detailed_p1{
+	width:220px;}
+.Detailed_p2{
+	margin-left:30px;}
+.Bargain_table{
+	width:810px;
+	border:1px solid #d9d9d9;
+	font-size:12px;
+	color:#040000;
+	font-family:"Microsoft YaHei";}
+th,td{
+	border:none;}
+.Bargain_th{
+	width:187px;
+	background:#d9d9d9;
+	height:30px;
+	}
+.Bargain_th1{
+	width:229px;
+	background:#d9d9d9;}
+.Bargain_th2{
+	width:184px;
+	background:#d9d9d9;}
+.Bargain_th3{
+	background:#d9d9d9;}
+td{
+	height:20px;}
+.Flip_a,.Flip_a2{
+	width:64px;
+	height:26px;
+	border:1px solid #CCC;
+	float:left;
+	text-align:center;
+	line-height:28px;
+	font-size:13px;
+	font-family:"Microsoft YaHei";
+	color:#CCC;
+	position:relative;
+	border-radius:5px;
+	margin-left:5px;}
+.Flip_a i{
+	position:absolute; left:5px; top:9px;
+	width:5px;
+	height:9px;
+	background:url(../img/zonghe1.png) -250px -249px;}
+.Flip_a1{
+	line-height:26px;
+	padding:0 9px 0;
+	font-size:13px;
+	font-family:"Microsoft YaHei";
+	color:#de662b;
+	float:left;
+	margin-left:5px;}
+.Flip_a2 i{
+	position:absolute; right:5px; top:9px;
+	width:5px;
+	height:9px;
+	background:url(../img/zonghe1.png) -256px -249px;}
+.Flip{
+	width:810px;
+	text-align:right;
+	margin-top:10px;}
+.Flip_div{
+	display:inline-block;}

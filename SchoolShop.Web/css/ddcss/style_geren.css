@@ -1,0 +1,354 @@
+/* CSS Document */
+
+/* 我的消息 */
+.xiaoxi{
+	width:795px;
+	margin-bottom:60px;
+	background:#FFF;
+	margin-top:23px;
+	padding:0 42px 0;
+	margin-right:105px;}
+.ews_ul{
+	margin-top:15px;
+	}
+.ews_em{
+	border-bottom:2px solid #b5b5b5;
+	display:block;
+	margin-top:-2px;}
+.ews_ul li{
+	font-size:16px;
+	font-family:"Microsoft YaHei";
+	color:#807e7e;
+	float:left;
+	line-height:29px;
+	padding:0 9px 0;
+	background:#FFF;}
+.ews_ul .ews_ul_li{
+	border:2px solid #b5b5b5;
+	border-bottom:none;
+	color:#48af5e;}
+.ul_box li{
+	display:none;
+	}
+	
+.ul_box .li_box{
+	display:block;}	
+	
+
+.ews_div{
+	width:100%;
+	height:132px;
+	border-bottom:1px solid #b5b5b5;
+	position:relative;
+	padding-top:45px;}	
+.ews_div_i{
+	position:absolute; left:0px; top:69px;
+	width:13px;
+	height:13px;
+	background:url(../img/zonghe1.png) -248px -265px;}	
+.ews_div_img{
+	margin-left:33px;}	
+.Come{
+	width:525px;
+	margin-left:27px;}	
+.Come_p{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#a9a9a9;}	
+.Come_p span{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#48af5e;}		
+.Come_a{
+	font-size:15px;
+	font-family:"The new song";
+	color:#007ec7;
+	font-weight:900;
+	line-height:40px;}	
+.Come_p1{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#545454;
+	line-height:25px;}
+.Time{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#a9a9a9;}	
+	
+.Batch_p{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#545454;}	
+.Batch_a{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#000;
+	width:76px;
+	height:20px;
+	border:1px solid #d3d3d3;
+	background:#f7f7f7;
+	float:left;
+	text-align:center;
+	line-height:20px;
+	margin-left:10px;}		
+.Batch_a1{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#000;
+	width:130px;
+	height:20px;
+	border:1px solid #d3d3d3;
+	background:#f7f7f7;
+	float:right;
+	text-align:center;
+	line-height:20px;}	
+.Batch{
+	margin-top:25px;
+	margin-bottom:50px;}	
+	
+/* 砍价 */
+.Title{
+	margin-top:29px;}	
+.Title p{
+	font-size:13px;
+	font-family:"Microsoft YaHei";
+	color:#807e7e;
+	float:left;}	
+.Title_p{
+	margin-left:50px;}	
+.Title_p1{
+	margin-left:110px;}	
+.Title i{
+	position:absolute; left:0px; top:0px;
+	width:13px;
+	height:13px;
+	background:url(../img/zonghe1.png) -248px -265px;}
+.Com{
+	width:165px;
+
+	}	
+.Com img{
+	width:155px;
+	height:156px;}	
+.Com_p{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#807e7e;
+	margin-top:12px;}	
+.Com_p1{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#807e7e;}	
+.Com_p1 span{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#F00;
+	font-weight:bold;
+	text-decoration:line-through;
+	margin-left:5px;
+	display:inline-block;
+	margin-top:10px;}	
+.Dialogue{
+	width:564px;
+	height:172px;
+	border:1px solid #CCC;
+	background:#f8f6f6;}	
+.Dialogue_a{
+	display:block;
+	width:564px;
+	text-align:center;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#5eafea;}	
+.Dialogue_p{
+	width:564px;
+	text-align:center;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#858585;
+	margin-top:12px;}	
+.Buy{
+	width:564px;
+	text-align:right;
+	position:relative;}	
+.Buy_p{
+	min-width:20px;
+	
+	border:1px solid #CCC;
+	background:#FFF;
+	display:inline-block;
+	padding:5px 10px 5px;
+	border-radius:5px;
+	margin-right:75px;
+	margin-top:5px;
+	position:relative;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#858585;}	
+.Buy_p i{
+	position:absolute; right:-8px; top:8px;
+	width:8px;
+	height:8px;
+	background:url(../img/shangjia.png) -21px -102px;}
+.Buy_i{
+	position:absolute; right:10px; top:-7px;
+	width:50px;
+	height:50px;
+	background:url(../img/shangjia.png) -50px -112px;}	
+.Sell_p{
+	min-width:20px;
+	border:1px solid #CCC;
+	background:#FFF;
+	display:inline-block;
+	padding:5px 10px 5px;
+	border-radius:5px;
+	margin-left:75px;
+	margin-top:5px;
+	position:relative;
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#858585;}	
+.Sell_i{
+	position:absolute; left:10px; top:-7px;
+	width:50px;
+	height:50px;
+	background:url(../img/shangjia.png) 0 -112px;}	
+.Sell_p i{
+	position:absolute; left:-10px; top:4px;
+	width:10px;
+	height:15px;
+	background:url(../img/shangjia.png) -136px -106px;}	
+.Bargain{
+	width:77px;
+	height:31px;
+	border:1px solid #d2d2d2;
+	display:block;
+	border-radius:5px;
+	text-align:center;
+	line-height:31px;
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+	color:#858585;
+	margin-top:10px;
+	margin-left:489px;}	
+.Dial{
+	margin-left:42px;
+	margin-top:15px;}	
+.Com_zong{
+	padding-bottom:15px;
+	border-bottom:1px solid #CCC;}	
+	
+/* 专家 */
+.Exp{
+	padding-bottom:15px;
+	border-bottom:1px solid #CCC;}	
+.Expert{
+	margin-top:15px;
+	margin-left:46px;}
+.Expert img{
+	width:119px;
+	height:157px;}
+.Expert_p{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+	color:#383838;
+	margin-top:8px;}	
+.Exp_i{
+	position:absolute; left:0px; top:15px;
+	width:13px;
+	height:13px;
+	background:url(../img/zonghe1.png) -248px -265px;}	
+.exp_i{
+	background-position:0 -162px;}	
+	
+input[type="checkbox"].bx_hun:checked + .ews_div_i{background:url(../img/zonghe1.png) no-repeat -233px -265px;}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
